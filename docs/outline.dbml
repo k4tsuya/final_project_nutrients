@@ -1,0 +1,65 @@
+//    <: one-to-many. E.g: users.id < posts.user_id
+//    >: many-to-one. E.g: posts.user_id > users.id
+//    -: one-to-one. E.g: users.id - user_infos.user_id
+//    <>: many-to-many. E.g: authors.id <> books.id
+
+Table UserInfo{
+    ID integer [primary key]
+    Nutrition_tracker Nutrition_tracker [ref: - Nutrition_tracker.ID]
+    email string
+    PW hashed_string
+    username integer
+    role roles
+    favourites fav [ref: - fav.ID]
+    history history [ref: - history.ID]
+}
+
+Table Nutrition_tracker{
+    ID integer [primary key]
+    Nutrient Nutrient [ref: < Nutrient.ID]
+    Nutrient_range Nutrient_range [ref: < Nutrient_range.Nutrient]
+}
+
+Table Nutrient_range{
+    Nutrient Nutrient [ref: - Nutrient.ID]
+    min float
+    max float
+}
+
+Table Nutrient{
+    ID integer [primary key]
+    name string
+    expected_per_100g float
+    meassurement_unit string
+}
+
+Table Ingredients{
+    ID integer [primary key]
+    name string
+    Nutrient Nutrient [ref: <> Nutrient.ID]
+}
+
+Table Nutrition_List{
+    ID integer [primary key]
+    Nutrient Nutrient [ref: < Nutrient.ID]
+}
+
+Table fav{
+    ID integer [primary key]
+    Nutrient Nutrient [ref: < Nutrient.ID]
+    Ingredients Ingredients [ref: < Ingredients.ID]
+    recipes recipes [ref: < recipes.ID]
+}
+
+table recipes{
+    ID integer [primary key]
+    Ingredients Ingredients [ref: < Ingredients.ID]
+    steps string
+    estimated_time_in_min float
+}
+
+Table history{
+    ID integer [primary key]
+    recipes recipes [ref: < recipes.ID]
+    Ingredients Ingredients [ref: < Ingredients.ID]
+}
