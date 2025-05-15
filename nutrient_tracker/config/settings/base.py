@@ -40,7 +40,12 @@ DEFAULT_APPS = [
     "django.contrib.staticfiles",
 ]
 
-CUSTOM_APPS = []
+CUSTOM_APPS = [
+    "apps.food_data",
+    "apps.nutrient_data",
+    "apps.tracker_data",
+    "apps.user_info",
+]
 
 INSTALLED_APPS = [*DEFAULT_APPS, *CUSTOM_APPS]
 
