@@ -20,3 +20,10 @@ DATABASES = {
         "PORT": env.str("DB_PORT"),
     },
 }
+
+# Session settings
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
+
+SESSION_COOKIES_SECURE = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIES_AGE = 300
