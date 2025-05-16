@@ -20,6 +20,8 @@ DATABASES = {
         "PORT": env.str("DB_PORT"),
     },
 }
+AUTH_USER_MODEL = 'user_info.User'
+
 
 # Session settings
 SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
