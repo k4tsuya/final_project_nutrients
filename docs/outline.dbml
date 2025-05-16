@@ -5,11 +5,10 @@
 
 Table UserInfo{
     ID integer [primary key]
-    Nutrition_tracker Nutrition_tracker [ref: - Nutrition_tracker.ID]
     email string
     PW hashed_string
-    username integer
-    role roles
+    username integer [ref: - Nutrition_tracker.ID]
+    role string
     favourites fav [ref: - fav.ID]
     history history [ref: - history.ID]
 }
@@ -22,6 +21,7 @@ Table Nutrition_tracker{
 
 Table Nutrient_range{
     Nutrient Nutrient [ref: - Nutrient.ID]
+    current_value float
     min float
     max float
 }
@@ -29,14 +29,13 @@ Table Nutrient_range{
 Table Nutrient{
     ID integer [primary key]
     name string
-    expected_per_100g float
-    meassurement_unit string
 }
 
 Table Ingredients{
     ID integer [primary key]
     name string
-    Nutrient Nutrient [ref: <> Nutrient.ID]
+    Nutrient_per_100g Nutrient [ref: <> Nutrient.ID] //meassurement unit maybe in the nutrient name
+    is_fav boolean
 }
 
 Table Nutrition_List{
@@ -51,11 +50,12 @@ Table fav{
     recipes recipes [ref: < recipes.ID]
 }
 
-table recipes{
+Table recipes{
     ID integer [primary key]
     Ingredients Ingredients [ref: < Ingredients.ID]
     steps string
     estimated_time_in_min float
+    is_fav boolean
 }
 
 Table history{
