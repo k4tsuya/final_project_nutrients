@@ -1,18 +1,10 @@
-from django.db import models
+"""Django REST Framework models for nutrient data."""
+
+from rest_framework import serializers
 
 # Create your models here.
 
 
-class Nutrient(models.Model):
-    name = models.CharField(max_length=100)
-    is_favorite = models.BooleanField(default=False)
-    # is_micronutrient determines if its macro or micro nutrients
-    is_micronutrient = models.BooleanField(default=False)
-    meassure_unit = models.CharField(max_length=2)  # g, mg, µg
-
-    class Meta:
-        verbose_name = "Nutrient"
-        verbose_name_plural = "Nutrients"
-
-    def __str__(self):
-        return self.name
+# Serializers
+class NutrientSerializer(serializers.ModelSerializer):
+    """Serializer for nutrient data."""

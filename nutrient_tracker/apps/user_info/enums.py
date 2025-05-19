@@ -24,7 +24,6 @@ class Role:
 
     ADMIN: str = "admin"
     USER: str = "user"
-    GUEST: str = "guest"
 
     @classmethod
     def get_roles(cls) -> list:
@@ -32,9 +31,8 @@ class Role:
         return [
             (cls.ADMIN, "ADMIN"),
             (cls.USER, "USER"),
-            (cls.GUEST, "GUEST"),
         ]
 
     @classmethod
     def get_default_role(cls) -> str:
-        return cls.GUEST
+        return cls.USER
