@@ -1,10 +1,9 @@
-from django.db import models
-from django.contrib.auth.models import AbstractUser
-from apps.user_info.enums import Role, Gender
-
+from apps.food_data.models import Ingredient, Recipe
 from apps.nutrient_data.models import Nutrient
 from apps.tracker_data.models import NutrientTracker
-from apps.food_data.models import Ingredient, Recipe
+from apps.user_info.enums import Gender, Role
+from django.contrib.auth.models import AbstractUser
+from django.db import models
 
 
 # Create your models here.
@@ -17,7 +16,12 @@ class User(AbstractUser):
     email = models.EmailField(unique=True, blank=False, null=False)
     # PW needs hashing for security
     password = models.CharField(max_length=128, blank=False, null=False)
-    username = models.CharField(max_length=100, unique=True, blank=False, null=False)
+    username = models.CharField(
+        max_length=100,
+        unique=True,
+        blank=False,
+        null=False,
+    )
     # Gender.male,female,others
     gender = models.CharField(
         max_length=10,
@@ -26,7 +30,8 @@ class User(AbstractUser):
     )
     nutrient_tracker = models.ManyToManyField(NutrientTracker)
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """Return the string representation of the user."""
         return self.username
 
     class Meta:
@@ -35,28 +40,38 @@ class User(AbstractUser):
 
 
 class Favorite(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="favorite")
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="favorite",
+    )
     nutrient = models.ManyToManyField(Nutrient)
     ingredient = models.ManyToManyField(Ingredient)
     recipe = models.ManyToManyField(Recipe)
 
-    def __str__(self):
-        return f"{self.user} - Favourite List"
-
     class Meta:
         verbose_name = "Favorite"
         verbose_name_plural = "Favorites"
 
+    def __str__(self) -> str:
+        """Return the string representation of the favorite list."""
+        return f"{self.user} - Favorite List"
+
 
 class History(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="history")
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="history",
+    )
     nutrient = models.ManyToManyField(Nutrient, max_length=10)
     ingredient = models.ManyToManyField(Ingredient, max_length=10)
     recipe = models.ManyToManyField(Recipe, max_length=10)
 
-    def __str__(self):
-        return f"{self.user} - Favourite List"
-
     class Meta:
         verbose_name = "Favorite"
         verbose_name_plural = "Favorites"
+
+    def __str__(self) -> str:
+        """Return the string representation of the favorite list."""
+        return f"{self.user} - Favorite List"
