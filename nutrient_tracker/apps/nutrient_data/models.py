@@ -16,3 +16,7 @@ class Nutrient(models.Model):
 
     def __str__(self):
         return self.name
+
+# turn this into a rest API
+# add categories for the different forms of nutrients
+# add nutrient value from given databank

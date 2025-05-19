@@ -25,3 +25,7 @@ class NutrientTracker(models.Model):
     class Meta:
         verbose_name = "Nutrient Tracker"
         verbose_name_plural = "Nutrient Trackers"
+
+
+# compare nutrient ranges
+# compare intake to current value and ranges
