@@ -51,7 +51,19 @@ class CustomUserAdmin(admin.ModelAdmin):
                 ),
             },
         ),
+        (
+            "Important Trackers",
+            {
+                "fields": (
+                    "nutrient_tracker",
+                    "favorite",
+                    "history",
+                ),
+            }
+        )
     )
 
 
 admin.site.register(User, CustomUserAdmin)
+admin.site.register(Favorite)
+admin.site.register(History)
