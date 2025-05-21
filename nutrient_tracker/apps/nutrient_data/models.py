@@ -3,15 +3,14 @@
 from django.db import models
 from apps.nutrient_data.enums import Category, Subcategory
 
-# Create your models here.
-
-from rest_framework import serializers
-
 
 # Create your models here.
 class Nutrient(models.Model):
-    name = models.CharField(max_length=100)
-    is_favorite = models.BooleanField(default=False)    # needs to be handled differently
+    food_group = models.CharField(max_length=100, blank=False)
+    food_name = models.CharField(max_length=100, unique=True, blank=False)
+    is_favorite = models.BooleanField(
+        default=False
+    )  # needs to be handled differently
     # is_micronutrient determines if its macro or micro nutrients
     category = models.CharField(  # macro, micro
         max_length=100,
@@ -23,19 +22,14 @@ class Nutrient(models.Model):
         choices=Subcategory.get_choices(),
         default=Subcategory.get_default_subcategory(),
     )
-    meassure_unit = models.CharField(max_length=2)  # g, mg, µg
+    measure_unit = models.CharField(max_length=2)  # g, mg, µg
 
     class Meta:
         verbose_name = "Nutrient"
         verbose_name_plural = "Nutrients"
 
     def __str__(self):
-        return self.name
-
-
-# Serializers
-class NutrientSerializer(serializers.ModelSerializer):
-    """Serializer for nutrient data."""
+        return self.food_name
 
 
 # turn this into a rest API

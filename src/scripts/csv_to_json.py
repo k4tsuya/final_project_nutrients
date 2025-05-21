@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 try:
-    with Path.open("../data/nevo_nutrient_data.csv") as csv_file:
+    with Path.open("../data/nevo_nutrient_data.csv", "r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         data = []
         for row in csv_reader:
