@@ -1,27 +1,17 @@
 from django.db import models
 from apps.nutrient_data.models import Nutrient
-
+from apps.user_info.models import User
 
 # Create your models here.
 
 
-class NutrientRange(models.Model):
-    nutrient = models.ForeignKey(Nutrient, on_delete=models.DO_NOTHING)
-    min = models.FloatField()
-    max = models.FloatField()
-    current_value = models.FloatField()
-
-    class Meta:
-        verbose_name = "Nutrient Range"
-        verbose_name_plural = "Nutrient Ranges"
-
-    def __str__(self):
-        return f"{self.nutrient.name}"
-
-
 class NutrientTracker(models.Model):
     date = models.DateField()
-    nutrient_range = models.ManyToManyField(NutrientRange)
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name="nutrient_trackers")
+    nutrient = models.ForeignKey(Nutrient, on_delete=models.DO_NOTHING)
+    min = models.DecimalField(default=0, decimal_places=2, max_digits=10)
+    max = models.DecimalField(default=0, decimal_places=2, max_digits=10)
+    current_value = models.DecimalField(default=0, decimal_places=2, max_digits=10)
 
     class Meta:
         verbose_name = "Nutrient Tracker"

@@ -1,6 +1,5 @@
 from apps.food_data.models import Ingredient, Recipe
 from apps.nutrient_data.models import Nutrient
-from apps.tracker_data.models import NutrientTracker
 from apps.user_info.enums import Gender, Role
 from django.contrib.auth.models import AbstractUser
 from django.db import models
@@ -74,7 +73,8 @@ class User(AbstractUser):
         choices=Gender.get_gender(),
         default=Gender.get_default_gender(),
     )
-    nutrient_tracker = models.ManyToManyField(NutrientTracker, blank=True)
+    # nutrient_tracker = models.ManyToManyField(NutrientTracker, blank=True)
+    # maybe grab associated nutrient_trackers for frontend a different way
     favorite = models.ForeignKey(
         Favorite,
         on_delete=models.SET_NULL,
