@@ -8,8 +8,7 @@ from django.dispatch import receiver
 
 @receiver(post_delete, sender=User)
 def delete_nutrient_tracker(sender, instance, **kwargs):
-    if instance.nutrient_tracker:
-        instance.nutrient_tracker.all().delete()
+    NutrientTracker.objects.filter(user=instance).delete()
 
 
 @receiver(post_save, sender=User)
