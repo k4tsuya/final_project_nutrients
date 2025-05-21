@@ -22,7 +22,8 @@ class Recipe(models.Model):
 class Ingredient(models.Model):
     name = models.CharField(max_length=100)
     is_favorite = models.BooleanField(default=False)
-    nutrients_per_100g = models.ManyToManyField(Nutrient)
+    nutrients = models.ManyToManyField(Nutrient)
+    nutrition_value = models.JSONField(default=dict)
 
     def __str__(self):
         return self.name
