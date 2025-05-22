@@ -16,7 +16,7 @@ class NutrientRange(models.Model):
         verbose_name_plural = "Nutrient Ranges"
 
     def __str__(self):
-        return f"{self.nutrient.name}"
+        return f"{self.nutrient.food_name}"
 
 
 class NutrientTracker(models.Model):
