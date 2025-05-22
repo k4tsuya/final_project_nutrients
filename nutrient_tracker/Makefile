@@ -12,3 +12,6 @@ dev-makemigrations:
 
 dev-migrate:
 	python manage.py migrate  --settings=config.settings.dev
+
+dev-superuser:
+	python manage.py createsuperuser  --settings=config.settings.dev
