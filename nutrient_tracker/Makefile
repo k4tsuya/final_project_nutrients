@@ -15,3 +15,6 @@ dev-migrate:
 
 dev-superuser:
 	python manage.py createsuperuser  --settings=config.settings.dev
+
+dev-test:
+	python manage.py test --settings=config.settings.dev

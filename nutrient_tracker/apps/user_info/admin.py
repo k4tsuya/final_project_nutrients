@@ -55,7 +55,6 @@ class CustomUserAdmin(admin.ModelAdmin):
             "Important Trackers",
             {
                 "fields": (
-                    "nutrient_tracker",
                     "favorite",
                     "history",
                 ),
