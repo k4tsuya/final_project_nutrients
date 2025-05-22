@@ -1,12 +1,8 @@
 from apps.food_data.models import Ingredient, Recipe
 from apps.nutrient_data.models import Nutrient
-from apps.tracker_data.models import NutrientTracker
 from apps.user_info.enums import Gender, Role
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-
-from django.db.models.signals import post_delete
-from django.dispatch import receiver
 
 
 class Favorite(models.Model):
@@ -74,7 +70,8 @@ class User(AbstractUser):
         choices=Gender.get_gender(),
         default=Gender.get_default_gender(),
     )
-    nutrient_tracker = models.ManyToManyField(NutrientTracker, blank=True)
+    # nutrient_tracker = models.ManyToManyField(NutrientTracker, blank=True)
+    # maybe grab associated nutrient_trackers for frontend a different way
     favorite = models.ForeignKey(
         Favorite,
         on_delete=models.SET_NULL,
@@ -116,14 +113,3 @@ class User(AbstractUser):
         verbose_name = "User"
         verbose_name_plural = "Users"
 
-
-@receiver(post_delete, sender=User)
-def delete_user_history(sender, instance, **kwargs):
-    if instance.history:
-        instance.history.delete()
-
-
-@receiver(post_delete, sender=User)
-def delete_user_favorite(sender, instance, **kwargs):
-    if instance.favorite:
-        instance.favorite.delete()

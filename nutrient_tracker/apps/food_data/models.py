@@ -22,7 +22,7 @@ class Recipe(models.Model):
 class Ingredient(models.Model):
     name = models.CharField(max_length=100)
     is_favorite = models.BooleanField(default=False)
-    nutrients = models.ManyToManyField(Nutrient)
+    nutrients = models.ManyToManyField(Nutrient, blank=True)
     nutrition_value = models.JSONField(default=dict)
 
     def __str__(self):
