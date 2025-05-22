@@ -4,9 +4,6 @@ from apps.user_info.enums import Gender, Role
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-from django.db.models.signals import post_delete
-from django.dispatch import receiver
-
 
 class Favorite(models.Model):
     nutrient = models.ManyToManyField(
@@ -116,14 +113,3 @@ class User(AbstractUser):
         verbose_name = "User"
         verbose_name_plural = "Users"
 
-
-@receiver(post_delete, sender=User)
-def delete_user_history(sender, instance, **kwargs):
-    if instance.history:
-        instance.history.delete()
-
-
-@receiver(post_delete, sender=User)
-def delete_user_favorite(sender, instance, **kwargs):
-    if instance.favorite:
-        instance.favorite.delete()
