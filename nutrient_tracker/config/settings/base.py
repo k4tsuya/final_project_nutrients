@@ -63,15 +63,17 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "config.urls"
 
-TEMPLATE_DIR = "config/templates"
+TEMPLATES_DIR = BASE_DIR / "config" / "templates"
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [TEMPLATE_DIR],
+        # /basedir/config/my_templates
+        "DIRS": [TEMPLATES_DIR, TEMPLATES_DIR / "user"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
+                "django.template.context_processors.debug",
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",

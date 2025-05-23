@@ -70,8 +70,7 @@ class User(AbstractUser):
         choices=Gender.get_gender(),
         default=Gender.get_default_gender(),
     )
-    # nutrient_tracker = models.ManyToManyField(NutrientTracker, blank=True)
-    # maybe grab associated nutrient_trackers for frontend a different way
+    # grab associated nutrient_trackers for frontend a different way
     favorite = models.ForeignKey(
         Favorite,
         on_delete=models.SET_NULL,

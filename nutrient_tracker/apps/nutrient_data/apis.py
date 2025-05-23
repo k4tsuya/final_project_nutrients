@@ -10,10 +10,6 @@ from rest_framework import status
 from django.http import JsonResponse
 
 
-# with Path.open("apps/nutrient_data/data/nevo_nutrient_data.json") as data_file:
-#     nutrient_data = json.load(data_file)
-
-
 class NutrientList(APIView):
     def get(self, request, *args):
         return Response()
