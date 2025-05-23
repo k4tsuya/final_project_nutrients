@@ -9,7 +9,9 @@ from apps.user_info.models import User
 class NutrientTrackerTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.create(username="testuser")
-        self.nutrient = Nutrient.objects.create(name="testnutrient", meassure_unit="mg")
+        self.nutrient = Nutrient.objects.create(
+            name="testnutrient", meassure_unit="mg"
+        )
         self.tracker = NutrientTracker.objects.create(
             user=self.user,
             min=0,

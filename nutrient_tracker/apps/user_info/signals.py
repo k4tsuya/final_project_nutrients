@@ -14,14 +14,9 @@ from apps.food_data.models import Ingredient, Recipe
 #     additional logic
 
 
+# add entry to user favorite when button is clicked on recipe, ingredient or nutrient
 
-
-# add entry to user favorite when button is clicked on recipe, ingredient or nutrient 
-
-# remove entry to user favorite when button is clicked on recipe, ingredient or nutrient 
-
-
-
+# remove entry to user favorite when button is clicked on recipe, ingredient or nutrient
 
 
 @receiver(post_delete, sender=User)

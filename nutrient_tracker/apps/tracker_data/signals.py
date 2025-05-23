@@ -14,7 +14,6 @@ def delete_nutrient_tracker(sender, instance, **kwargs):
 @receiver(post_save, sender=User)
 def create_nutrient_tracker(sender, instance, created, **kwargs):
     if created:
-
         nutrients = Nutrient.objects.all()
         NutrientTracker.objects.bulk_create(
             [

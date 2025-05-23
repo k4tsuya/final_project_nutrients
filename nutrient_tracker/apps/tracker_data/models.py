@@ -14,7 +14,9 @@ class NutrientTracker(models.Model):
     nutrient = models.ForeignKey(Nutrient, on_delete=models.DO_NOTHING)
     min = models.DecimalField(default=0, decimal_places=2, max_digits=10)
     max = models.DecimalField(default=0, decimal_places=2, max_digits=10)
-    current_value = models.DecimalField(default=0, decimal_places=2, max_digits=10)
+    current_value = models.DecimalField(
+        default=0, decimal_places=2, max_digits=10
+    )
 
     class Meta:
         verbose_name = "Nutrient Tracker"

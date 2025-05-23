@@ -7,14 +7,12 @@ from pathlib import Path
 import json
 from apps.nutrient_data.models import Nutrient
 from rest_framework import status
-
-with open("apps/nutrient_data/data/nevo_nutrient_data.json") as data_file:
-    nutrient_data = json.load(data_file)
+from django.http import JsonResponse
 
 
 class NutrientList(APIView):
     def get(self, request, *args):
-        return Response(nutrient_data)
+        return Response()
 
     def post(self, request, *args):
-        return Response(nutrient_data)
+        return Response()

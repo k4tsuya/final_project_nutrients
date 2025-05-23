@@ -13,7 +13,9 @@ class IngredientTestCase(TestCase):
 
         self.testIngredient = Ingredient.objects.create(
             name="raw potatoes",
-            nutrition_value=[{"name": "potassium", "value": 100, "unit": "mg"}],
+            nutrition_value=[
+                {"name": "potassium", "value": 100, "unit": "mg"}
+            ],
         )
 
         self.testIngredient.nutrients.add(self.testNutrient)
@@ -25,9 +27,13 @@ class IngredientTestCase(TestCase):
         print("checking name went well")
         self.assertEqual(self.testIngredient.nutrients.count(), 1)
         print("checking nutrient count went well")
-        self.assertEqual(self.testIngredient.nutrients.first(), self.testNutrient)
+        self.assertEqual(
+            self.testIngredient.nutrients.first(), self.testNutrient
+        )
         print("checking nutrient went well")
-        print("clarification: ", test_potato.nutrients.first(), self.testNutrient)
+        print(
+            "clarification: ", test_potato.nutrients.first(), self.testNutrient
+        )
         self.assertEqual(
             test_potato.nutrition_value,
             [{"name": "potassium", "value": 100, "unit": "mg"}],
