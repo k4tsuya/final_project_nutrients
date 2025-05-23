@@ -8,7 +8,7 @@ import json
 from apps.nutrient_data.models import Nutrient
 from rest_framework import status
 
-with Path.open("apps/nutrient_data/data/nevo_nutrient_data.json") as data_file:
+with open("apps/nutrient_data/data/nevo_nutrient_data.json") as data_file:
     nutrient_data = json.load(data_file)
 
 
