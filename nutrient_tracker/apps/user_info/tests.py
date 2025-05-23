@@ -16,7 +16,9 @@ class UserTestCase(TestCase):
             gender="male",
         )
 
-        self.nutrient = Nutrient.objects.create(name="testnutrient", meassure_unit="mg")
+        self.nutrient = Nutrient.objects.create(
+            name="testnutrient", meassure_unit="mg"
+        )
         self.tracker = NutrientTracker.objects.create(
             user=self.user,
             min=0,
@@ -52,11 +54,15 @@ class UserTestCase(TestCase):
 
     def test_history_access_success(self):
         self.assertEqual(self.history.user, self.user)
-        self.assertEqual(self.history.nutrient.count(), 0)  # amount of history entries
+        self.assertEqual(
+            self.history.nutrient.count(), 0
+        )  # amount of history entries
         self.assertEqual(
             self.history.ingredient.count(), 0
         )  # amount of history entries
-        self.assertEqual(self.history.recipe.count(), 0)  # amount of history entries
+        self.assertEqual(
+            self.history.recipe.count(), 0
+        )  # amount of history entries
 
     def test_history_access_fail(self):
         self.assertEqual(self.history.user, self.user)
@@ -66,7 +72,9 @@ class UserTestCase(TestCase):
         self.assertNotEqual(
             self.history.ingredient.count(), 1
         )  # amount of history entries
-        self.assertNotEqual(self.history.recipe.count(), 1)  # amount of history entries
+        self.assertNotEqual(
+            self.history.recipe.count(), 1
+        )  # amount of history entries
 
     def test_favorite_access(self):
         self.assertEqual(self.favorite.user, self.user)

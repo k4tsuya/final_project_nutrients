@@ -26,7 +26,9 @@ def recipe_detail(request, pk):
 
 def ingredient_list(request):
     ingredients = Ingredient.objects.all()
-    return render(request, "ingredient_list.html", {"ingredients": ingredients})
+    return render(
+        request, "ingredient_list.html", {"ingredients": ingredients}
+    )
 
 
 def ingredient_detail(request, pk):
@@ -34,7 +36,9 @@ def ingredient_detail(request, pk):
     if request.user.is_authenticated:
         limit_m2m_field(request.user.history.ingredient)
         request.user.history.ingredient.add(ingredient)
-    return render(request, "ingredient_detail.html", {"ingredient": ingredient})
+    return render(
+        request, "ingredient_detail.html", {"ingredient": ingredient}
+    )
 
 
 def nutrient_list(request):

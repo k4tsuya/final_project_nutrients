@@ -25,7 +25,7 @@ class NutrientTestCase(TestCase):
             subcategory="mineral",
             meassure_unit="mg",
         )
-    
+
     def test_nutrient_access_will_work(self):
         """check if nutrients can be created and maybe contain some values"""
         testing_nutrients = Nutrient.objects.all()
