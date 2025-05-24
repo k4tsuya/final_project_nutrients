@@ -4,12 +4,12 @@
 ---
 
 <div style="background:#F5F1E6;padding:12px;border-radius:8px;margin-top:8px">  
-<img src="https://img.icons8.com/color/24/000000/python.png" style="background:#F5F1E6;border-radius:4px"/> Python  
-<img src="https://img.icons8.com/ios-filled/24/000000/django.png" style="background:#F5F1E6;border-radius:4px"/> Django  
-<img src="https://img.icons8.com/color/24/000000/postgreesql.png" style="background:#F5F1E6;border-radius:4px"/> PostgreSQL  
-<img src="https://img.icons8.com/color/24/000000/sql.png" style="background:#F5F1E6;border-radius:4px"/> SQL  
-<img src="https://img.icons8.com/color/24/000000/html-5.png" style="background:#F5F1E6;border-radius:4px"/> HTML  
-<img src="https://img.icons8.com/color/24/000000/javascript.png" style="background:#F5F1E6;border-radius:4px"/> JavaScript  
+  <img src="https://img.icons8.com/color/24/000000/python.png" style="background:#F5F1E6;border-radius:4px"/> Python  
+  <img src="https://img.icons8.com/ios-filled/24/000000/django.png" style="background:#F5F1E6;border-radius:4px"/> Django  
+  <img src="https://img.icons8.com/color/24/000000/postgreesql.png" style="background:#F5F1E6;border-radius:4px"/> PostgreSQL  
+  <img src="https://img.icons8.com/color/24/000000/sql.png" style="background:#F5F1E6;border-radius:4px"/> SQL  
+  <img src="https://img.icons8.com/color/24/000000/html-5.png" style="background:#F5F1E6;border-radius:4px"/> HTML  
+  <img src="https://img.icons8.com/color/24/000000/javascript.png" style="background:#F5F1E6;border-radius:4px"/> JavaScript  
 </div>  
 
 ---
@@ -27,17 +27,17 @@
 - Spot weekly patterns with **trend charts**  
 
 #### <span style="color:#8A9B7E">⚠️ "Am I overdoing sodium?"</span>  
-- Yellow/red alerts for excess intake  
+- Red alerts for excess intake  
 - Science-backed **safe limits**  
 
 ---
 
 #### <span style="color:#8A9B7E">📊 "Am I nutritionally balanced?"</span>  
-```mermaid  
-pie showData  
-    title Today's Macros  
-    "Protein" : 25  
-    "Vitamins" : 45  
-    "Amino Acids" : 30  
+```mermaid
+pie showData
+    title Today's Macros
+    "Protein (Green)" : 25
+    "Vitamins (Amber)" : 45
+    "Amino Acids (Red)" : 30
 
 
