@@ -14,9 +14,15 @@
 
 ---
 
-### ✨ Why this APP?  
+#### 🧭 Coming Next
+Mobile-friendly UI
+Meal planning templates
 
-#### <span style="color:#8A9B7E">🔍 "What's really in my food?"</span>  
+---
+
+## ✨ Why this APP?  
+
+#### <span style="color:##8A9B7E">🔍 "What's really in my food?"</span>  
 - Filter by **147 macro/micro nutrients** (iron, vitamin D, etc.)  
 - Compare foods side-by-side  
 - Color-coded nutrient density ratings  
@@ -39,5 +45,13 @@ pie showData
     "Protein (Green)" : 25
     "Vitamins (Amber)" : 45
     "Amino Acids (Red)" : 30
+
+
+
+
+
+
+
+
 
 
