@@ -42,9 +42,9 @@ Meal planning templates
 ```mermaid
 pie showData
     title Today's Macros
-    "Protein (Green)" : 25
-    "Vitamins (Amber)" : 45
-    "Amino Acids (Red)" : 30
+    "Protein" : 25
+    "Vitamins" : 45
+    "Amino Acids" : 30
 
 
 
