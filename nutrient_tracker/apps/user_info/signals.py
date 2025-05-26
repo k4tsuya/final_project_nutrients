@@ -2,7 +2,7 @@ from django.db.models.signals import request_finished, post_delete
 from django.dispatch import receiver
 
 from apps.user_info.models import User, Favorite, History
-from apps.nutrient_data.models import Nutrient
+from apps.nutrient_data.models import IngredientList
 from apps.food_data.models import Ingredient, Recipe
 
 # add a signal for when an action is performed

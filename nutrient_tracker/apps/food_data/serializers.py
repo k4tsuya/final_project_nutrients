@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Nutrient
+from ..food_data.models import Ingredient
 
 
-class NutrientDataSerializer(serializers.Serializer):
+class IngredientDataSerializer(serializers.Serializer):
     food_group = serializers.CharField(max_length=150)
     food_name = serializers.CharField(max_length=150)
     quantity = serializers.CharField(max_length=150)
@@ -375,5 +375,5 @@ class NutrientDataSerializer(serializers.Serializer):
 
 class NutrientDataSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Nutrient
+        model = Ingredient
         fields = "__all__"

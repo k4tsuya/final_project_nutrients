@@ -1,6 +1,6 @@
 from django.test import TestCase
 from apps.food_data.models import Ingredient
-from apps.nutrient_data.models import Nutrient
+from apps.food_data.models import Nutrient
 
 
 # Create your tests here.

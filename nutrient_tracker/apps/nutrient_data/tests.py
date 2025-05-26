@@ -1,25 +1,25 @@
 from django.test import TestCase
-from apps.nutrient_data.models import Nutrient
+from apps.nutrient_data.models import IngredientList
 
 
 # Create your tests here.
 class NutrientTestCase(TestCase):
     def setUp(self):
-        self.testNutrient1 = Nutrient.objects.create(
+        self.testNutrient1 = IngredientList.objects.create(
             name="potassium",
             category="micro",
             subcategory="mineral",
             meassure_unit="mg",
         )
 
-        self.testNutrient2 = Nutrient.objects.create(
+        self.testNutrient2 = IngredientList.objects.create(
             name="sodium",
             category="micro",
             subcategory="mineral",
             meassure_unit="mg",
         )
 
-        self.testNutrient3 = Nutrient.objects.create(
+        self.testNutrient3 = IngredientList.objects.create(
             name="calcium",
             category="micro",
             subcategory="mineral",
@@ -28,7 +28,7 @@ class NutrientTestCase(TestCase):
 
     def test_nutrient_access_will_work(self):
         """check if nutrients can be created and maybe contain some values"""
-        testing_nutrients = Nutrient.objects.all()
+        testing_nutrients = IngredientList.objects.all()
         self.assertEqual(testing_nutrients.count(), 3)
         self.assertEqual(self.testNutrient1.name, "potassium")
         self.assertEqual(self.testNutrient2.name, "sodium")
@@ -45,7 +45,7 @@ class NutrientTestCase(TestCase):
 
     def test_nutrient_access_wont_work(self):
         """check if access to ingredients will fail"""
-        testing_nutrients = Nutrient.objects.all()
+        testing_nutrients = IngredientList.objects.all()
         for nutrient in testing_nutrients:
             self.assertNotEqual(nutrient.name, "sugar")
             self.assertNotEqual(nutrient.category, "macro")
