@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Nutrient
-from .serializers import NutrientDataSerializer
+from ..food_data.serializers import NutrientDataSerializer
 from django.db import transaction
 # Create your views here.
 

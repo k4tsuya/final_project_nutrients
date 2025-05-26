@@ -94,7 +94,7 @@ class User(AbstractUser):
         super().save(force_insert, force_update, *args, **kwargs)
         # if self.pk:
         #     if self.nutrient_tracker is None:
-        #         nutrients = Nutrient.objects.all()
+        #         nutrients = IngredientList.objects.all()
         #         self.nutrient_tracker = NutrientTracker.objects.bulk_create(
         #             [
         #                 NutrientTracker(date=self.date_joined, nutrient_range=nutrient)
