@@ -26,8 +26,8 @@ from apps.user_info.views import (
 from apps.tracker_data.views import NutrientTrackerListView
 api_urls = [
     path("food/", include("apps.food_data.urls")),
-    # path("nutrient/", include("apps.nutrient_data.urls")),
-    # path("tracker/", include("apps.tracker_data.urls")),
+    path("nutrient/", include("apps.nutrient_data.urls")),
+    path("tracker/", include("apps.tracker_data.urls")),
     path("user/", include("apps.user_info.urls")),
 ]
 urlpatterns = [
