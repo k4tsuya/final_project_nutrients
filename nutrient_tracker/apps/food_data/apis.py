@@ -1,15 +1,16 @@
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from django.http import Http404
-from rest_framework.decorators import api_view
+import json
+from pathlib import Path
+
+from apps.food_data.models import Ingredient
 from apps.food_data.serializers import (
     IngredientDataSerializer,
 )
-from pathlib import Path
-import json
-from apps.food_data.models import Ingredient
-from rest_framework import status
-from django.http import JsonResponse
+from django.http import Http404, JsonResponse
+from rest_framework import filters, generics, status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .filters import IngredientFilter, CategoryFilter
 
 
 class IngredientView(APIView):
@@ -22,3 +23,15 @@ class IngredientView(APIView):
 
     def post(self, request, *args):
         return Response()
+
+
+class IngredientSearchNameDetail(generics.ListAPIView):
+    queryset = Ingredient.objects.all()
+    serializer_class = IngredientDataSerializer
+    filterset_class = IngredientFilter
+
+
+class IngredientCategoryDetail(generics.ListAPIView):
+    queryset = Ingredient.objects.all()
+    serializer_class = IngredientDataSerializer
+    filterset_class = CategoryFilter
