@@ -108,7 +108,7 @@ class History(models.Model):
 
 class TrackedNutrients(models.Model):
     # One to One because a user can only have one tracked nutrient table
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     # many to one because a user can have many nutrient_trackers
     nutrient = models.ForeignKey(NutrientTracker, on_delete=models.CASCADE, null=True)
 

@@ -23,6 +23,7 @@ from apps.user_info.views import (
     logout_view,
     HomeView,
 )
+from apps.tracker_data.views import NutrientTrackerListView
 
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
@@ -31,4 +32,5 @@ urlpatterns = [
     path("register/", register_view, name="register"),
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
+    path("tracker/", NutrientTrackerListView.as_view(), name="tracker_pagination"),
 ]
