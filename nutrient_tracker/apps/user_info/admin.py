@@ -2,7 +2,7 @@ from typing import ClassVar
 
 from django.contrib import admin
 
-from .models import Favorite, History, User
+from .models import Favorite, History, User, TrackedNutrients
 
 # Register your models here.
 
@@ -50,15 +50,6 @@ class CustomUserAdmin(admin.ModelAdmin):
                     "user_permissions",
                 ),
             },
-        ),
-        (
-            "Important Trackers",
-            {
-                "fields": (
-                    "favorite",
-                    "history",
-                ),
-            }
         )
     )
 
@@ -66,3 +57,4 @@ class CustomUserAdmin(admin.ModelAdmin):
 admin.site.register(User, CustomUserAdmin)
 admin.site.register(Favorite)
 admin.site.register(History)
+admin.site.register(TrackedNutrients)

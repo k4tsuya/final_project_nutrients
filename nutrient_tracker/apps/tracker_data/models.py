@@ -1,6 +1,5 @@
 from django.db import models
 from apps.nutrient_data.models import Nutrient
-from apps.user_info.models import User
 from django.utils import timezone
 
 # Create your models here.
@@ -8,9 +7,7 @@ from django.utils import timezone
 
 class NutrientTracker(models.Model):
     date = models.DateField(default=timezone.now())
-    user = models.ForeignKey(
-        User, on_delete=models.DO_NOTHING, related_name="nutrient_trackers"
-    )
+    user = models.ForeignKey("user_info.User", on_delete=models.CASCADE)
     nutrient = models.ForeignKey(Nutrient, on_delete=models.DO_NOTHING)
     min = models.DecimalField(default=0, decimal_places=2, max_digits=10)
     max = models.DecimalField(default=0, decimal_places=2, max_digits=10)
@@ -23,7 +20,7 @@ class NutrientTracker(models.Model):
         verbose_name_plural = "Nutrient Trackers"
 
     def __str__(self):
-        return f"{self.date} - Nutrient Tracker"
+        return f"{self.date} - {self.user.username}'s Nutrient Tracker"
 
 
 # compare nutrient ranges
