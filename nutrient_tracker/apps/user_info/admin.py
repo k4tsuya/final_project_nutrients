@@ -94,21 +94,9 @@ class CustomHistoryAdmin(admin.ModelAdmin):
     )
 
 
-class CustomTrackedNutrientsAdmin(admin.ModelAdmin):
-    fieldsets = (
-        (
-            "Account info",
-            {
-                "fields": (
-                    "user",
-                    "nutrient",
-                ),
-            },
-        ),
-    )
-
-
 admin.site.register(User, CustomUserAdmin)
 admin.site.register(Favorite, CustomFavoriteAdmin)
 admin.site.register(History, CustomHistoryAdmin)
-admin.site.register(TrackedNutrients, CustomTrackedNutrientsAdmin)
+admin.site.register(
+    TrackedNutrients,
+)

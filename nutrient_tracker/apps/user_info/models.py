@@ -31,7 +31,7 @@ class User(AbstractUser):
 
     def save(self, force_insert=False, force_update=False, *args, **kwargs):
         super().save(force_insert, force_update, *args, **kwargs)
-        
+
         print("User primary key:", self.pk)
         if self.pk:
             tracked_nutrients = TrackedNutrients.objects.create(
@@ -110,7 +110,9 @@ class TrackedNutrients(models.Model):
     # One to One because a user can only have one tracked nutrient table
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     # many to one because a user can have many nutrient_trackers
-    nutrient = models.ForeignKey(NutrientTracker, on_delete=models.CASCADE, null=True)
+    nutrient_tracker = models.ForeignKey(
+        NutrientTracker, on_delete=models.CASCADE, null=True
+    )
 
     class Meta:
         verbose_name = "Tracked Nutrient"
