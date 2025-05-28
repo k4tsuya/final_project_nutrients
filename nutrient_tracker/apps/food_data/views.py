@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from apps.food_data.models import Ingredient, Recipe
-from apps.nutrient_data.models import Nutrient
 
 
 # Create your views here.
@@ -39,16 +38,3 @@ def ingredient_detail(request, pk):
     return render(
         request, "ingredient_detail.html", {"ingredient": ingredient}
     )
-
-
-def nutrient_list(request):
-    nutrients = Nutrient.objects.all()
-    return render(request, "nutrient_list.html", {"nutrients": nutrients})
-
-
-def nutrient_detail(request, pk):
-    nutrient = get_object_or_404(Nutrient, pk=pk)
-    if request.user.is_authenticated:
-        limit_m2m_field(request.user.history.nutrient)
-        request.user.history.nutrient.add(nutrient)
-    return render(request, "nutrient_detail.html", {"nutrient": nutrient})
