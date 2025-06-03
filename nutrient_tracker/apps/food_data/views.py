@@ -1,13 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from apps.food_data.models import Ingredient, Recipe
+from scripts.utils import limit_m2m_field
 
 
 # Create your views here.
-def limit_m2m_field(m2m_field, limit=10):
-    current_items = list(m2m_field.all())
-    if len(current_items) > limit:
-        m2m_field.remove(current_items[0])
-        m2m_field.save()
+
 
 
 def recipe_list(request):

@@ -28,6 +28,8 @@ class Nutrient(models.Model):
         return self.nutrient_name
 
 
+
+
 # turn this into a rest API
 # add categories for the different forms of nutrients
 # add nutrient value from given databank

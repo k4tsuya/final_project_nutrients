@@ -12,14 +12,14 @@ from rest_framework.views import APIView
 from apps.tracker_data.models import NutrientTracker
 
 
-class IngredientView(APIView):
+class NutrientTrackerList(APIView):
     def get(self, request, format=None):
         ingredients = NutrientTracker.objects.all()
         serializer = NutrientTrackerSerializer(ingredients, many=True)
         return Response(serializer.data)
 
 
-class IngredientDetail(APIView):
+class NutrientTrackerDetail(APIView):
     def get_object(self, pk):
         try:
             return NutrientTracker.objects.get(pk=pk)
