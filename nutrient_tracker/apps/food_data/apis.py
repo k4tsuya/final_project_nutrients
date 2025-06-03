@@ -11,27 +11,27 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .filters import IngredientFilter, CategoryFilter
+from rest_framework.pagination import PageNumberPagination
 
 
-class IngredientView(APIView):
+class IngredientView(generics.ListAPIView):
+    queryset = Ingredient.objects.all()
     serializer_class = IngredientDataSerializer
-
-    def get(self, request):
-        nutrients = Ingredient.objects.all()
-        serializer = self.serializer_class(nutrients, many=True)
-        return Response(serializer.data)
-
-    def post(self, request, *args):
-        return Response()
+    pagination_class = PageNumberPagination
+    pagination_class.page_size = 5
 
 
 class IngredientSearchNameDetail(generics.ListAPIView):
     queryset = Ingredient.objects.all()
     serializer_class = IngredientDataSerializer
     filterset_class = IngredientFilter
+    pagination_class = PageNumberPagination
+    pagination_class.page_size = 5
 
 
 class IngredientCategoryDetail(generics.ListAPIView):
     queryset = Ingredient.objects.all()
     serializer_class = IngredientDataSerializer
     filterset_class = CategoryFilter
+    pagination_class = PageNumberPagination
+    pagination_class.page_size = 5
