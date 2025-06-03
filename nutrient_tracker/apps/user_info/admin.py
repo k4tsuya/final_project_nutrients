@@ -50,11 +50,53 @@ class CustomUserAdmin(admin.ModelAdmin):
                     "user_permissions",
                 ),
             },
-        )
+        ),
+    )
+
+
+class CustomFavoriteAdmin(admin.ModelAdmin):
+    list_display: ClassVar[list] = [
+        "user",
+    ]
+
+    fieldsets = (
+        (
+            "Account info",
+            {
+                "fields": (
+                    "user",
+                    "ingredient",
+                    "recipe",
+                    "nutrient",
+                ),
+            },
+        ),
+    )
+
+
+class CustomHistoryAdmin(admin.ModelAdmin):
+    list_display: ClassVar[list] = [
+        "user",
+    ]
+
+    fieldsets = (
+        (
+            "Account info",
+            {
+                "fields": (
+                    "user",
+                    "ingredient",
+                    "recipe",
+                    "nutrient",
+                ),
+            },
+        ),
     )
 
 
 admin.site.register(User, CustomUserAdmin)
-admin.site.register(Favorite)
-admin.site.register(History)
-admin.site.register(TrackedNutrients)
+admin.site.register(Favorite, CustomFavoriteAdmin)
+admin.site.register(History, CustomHistoryAdmin)
+admin.site.register(
+    TrackedNutrients,
+)
