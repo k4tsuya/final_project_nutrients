@@ -373,7 +373,7 @@ class IngredientDataSerializer(serializers.Serializer):
     )
 
 
-class NutrientDataSerializer(serializers.ModelSerializer):
+class IngredientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ingredient
         fields = "__all__"

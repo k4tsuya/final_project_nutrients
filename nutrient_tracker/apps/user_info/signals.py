@@ -5,7 +5,7 @@ from apps.user_info.models import User, Favorite, History
 from apps.nutrient_data.models import IngredientList
 from apps.food_data.models import Ingredient, Recipe
 
-# add a signal for when an action is performed
+# send a signal for when an action is performed
 
 # style:
 
@@ -17,15 +17,3 @@ from apps.food_data.models import Ingredient, Recipe
 # add entry to user favorite when button is clicked on recipe, ingredient or nutrient
 
 # remove entry to user favorite when button is clicked on recipe, ingredient or nutrient
-
-
-@receiver(post_delete, sender=User)
-def delete_user_history(sender, instance, **kwargs):
-    if instance.history:
-        instance.history.delete()
-
-
-@receiver(post_delete, sender=User)
-def delete_user_favorite(sender, instance, **kwargs):
-    if instance.favorite:
-        instance.favorite.delete()

@@ -1,54 +1,11 @@
 from apps.food_data.models import Ingredient, Recipe
 from apps.nutrient_data.models import Nutrient
+from apps.tracker_data.models import NutrientTracker
 from apps.user_info.enums import Gender, Role
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-class Favorite(models.Model):
-    nutrient = models.ManyToManyField(
-        Nutrient,
-    )
-    ingredient = models.ManyToManyField(
-        Ingredient,
-    )
-    recipe = models.ManyToManyField(
-        Recipe,
-    )
-
-    class Meta:
-        verbose_name = "Favorite"
-        verbose_name_plural = "Favorites"
-
-    def __str__(self) -> str:
-        """Return the string representation of the favorite list."""
-        return "Favorite List"
-
-
-class History(models.Model):
-    nutrient = models.ManyToManyField(
-        Nutrient,
-        max_length=10,
-    )
-    ingredient = models.ManyToManyField(
-        Ingredient,
-        max_length=10,
-    )
-    recipe = models.ManyToManyField(
-        Recipe,
-        max_length=10,
-    )
-
-    class Meta:
-        verbose_name = "History"
-        verbose_name_plural = "Histories"
-
-    def __str__(self) -> str:
-        """Return the string representation of the favorite list."""
-        return "History List"
-
-
-# Create your models here.
 class User(AbstractUser):
     role = models.CharField(
         max_length=10,
@@ -71,38 +28,21 @@ class User(AbstractUser):
         default=Gender.get_default_gender(),
     )
     # grab associated nutrient_trackers for frontend a different way
-    favorite = models.ForeignKey(
-        Favorite,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-    )
-    history = models.ForeignKey(
-        History,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-    )
 
     def save(self, force_insert=False, force_update=False, *args, **kwargs):
-        print("User primary key:", self.pk)
-        if not self.pk:
-            if self.favorite is None:
-                self.favorite = Favorite.objects.create()
-            if self.history is None:
-                self.history = History.objects.create()
         super().save(force_insert, force_update, *args, **kwargs)
-        # if self.pk:
-        #     if self.nutrient_tracker is None:
-        #         nutrients = IngredientList.objects.all()
-        #         self.nutrient_tracker = NutrientTracker.objects.bulk_create(
-        #             [
-        #                 NutrientTracker(date=self.date_joined, nutrient_range=nutrient)
-        #                 for nutrient in nutrients
-        #             ]
-        #         )
-        # super().save(force_insert, force_update, *args, **kwargs)
-        print("User saved:", self.pk)
+        
+        print("User primary key:", self.pk)
+        if self.pk:
+            tracked_nutrients = TrackedNutrients.objects.create(
+                user=self, nutrient=None
+            )
+            tracked_nutrients.save()
+            favourites = Favorite.objects.create(user=self)
+            favourites.save()
+            history = History.objects.create(user=self)
+            history.save()
+        super().save(force_insert, force_update, *args, **kwargs)
 
     def __str__(self) -> str:
         """Return the string representation of the user."""
@@ -111,3 +51,70 @@ class User(AbstractUser):
     class Meta:
         verbose_name = "User"
         verbose_name_plural = "Users"
+
+
+class Favorite(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
+    nutrient = models.ManyToManyField(
+        Nutrient,
+    )
+    ingredient = models.ManyToManyField(
+        Ingredient,
+    )
+    recipe = models.ManyToManyField(
+        Recipe,
+    )
+
+    class Meta:
+        verbose_name = "Favorite"
+        verbose_name_plural = "Favorites"
+
+    def __str__(self) -> str:
+        """Return the string representation of the favorite list."""
+        return f"{self.user.username}'s Favorite List"
+
+
+class History(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
+    nutrient = models.ManyToManyField(
+        Nutrient,
+        max_length=10,
+    )
+    ingredient = models.ManyToManyField(
+        Ingredient,
+        max_length=10,
+    )
+    recipe = models.ManyToManyField(
+        Recipe,
+        max_length=10,
+    )
+
+    class Meta:
+        verbose_name = "History"
+        verbose_name_plural = "Histories"
+
+    def __str__(self) -> str:
+        """Return the string representation of the favorite list."""
+        return f"{self.user.username}'s History List"
+
+
+class TrackedNutrients(models.Model):
+    # One to One because a user can only have one tracked nutrient table
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # many to one because a user can have many nutrient_trackers
+    nutrient = models.ForeignKey(NutrientTracker, on_delete=models.CASCADE, null=True)
+
+    class Meta:
+        verbose_name = "Tracked Nutrient"
+        verbose_name_plural = "Tracked Nutrients"
+
+    def __str__(self):
+        return f"{self.user.username}'s tracked nutrients"

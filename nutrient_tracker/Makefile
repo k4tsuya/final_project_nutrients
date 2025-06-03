@@ -18,3 +18,6 @@ dev-superuser:
 
 dev-test:
 	python manage.py test --settings=config.settings.dev
+
+dev-loaddata:
+	python manage.py loaddata ${filename} --settings=config.settings.dev
