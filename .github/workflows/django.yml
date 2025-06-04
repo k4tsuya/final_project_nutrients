@@ -27,4 +27,4 @@ jobs:
         pip install -r nutrient_tracker/config/requirements/requirements.txt
     - name: Run Tests
       run: |
-        python manage.py test
+        python nutrient_tracker/manage.py test
