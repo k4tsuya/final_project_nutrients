@@ -1,0 +1,36 @@
+<!--basic structure to display          -->
+<!--nutrient trackers for LOGGED IN USER-->
+{% block super %}
+{% for tracker in nutrient_trackers %}
+    <div">
+        <p>{{ tracker }}</p>
+        <p>{{ tracker.date }}</p>
+        <p>{{ tracker.nutrient }}</p>
+        <p>{{ tracker.current_value }}</p>
+        <p>{{ tracker.min }}</p>
+        <p>{{ tracker.max }}</p>
+    </div>
+{% endfor %}
+<!---------------------------------------->
+
+<!-- basic structure for pagination     -->
+<!-- taken from official documentation  -->
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock super %}
+<!---------------------------------------->
