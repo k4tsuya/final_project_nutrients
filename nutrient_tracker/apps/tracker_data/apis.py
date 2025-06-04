@@ -8,11 +8,16 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
 
 from apps.tracker_data.models import NutrientTracker
 
 
 class NutrientTrackerList(APIView):
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        return super().get_permissions()
+
     def get(self, request, format=None):
         ingredients = NutrientTracker.objects.all()
         serializer = NutrientTrackerSerializer(ingredients, many=True)
@@ -20,6 +25,10 @@ class NutrientTrackerList(APIView):
 
 
 class NutrientTrackerDetail(APIView):
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        return super().get_permissions()
+
     def get_object(self, pk):
         try:
             return NutrientTracker.objects.get(pk=pk)

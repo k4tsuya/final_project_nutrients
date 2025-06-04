@@ -14,6 +14,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
 
 
 class UserView(APIView):
@@ -52,6 +53,10 @@ class UserView(APIView):
 class UserDetailView(APIView):
     serializer_class = UserSerializer
 
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        return super().get_permissions()
+
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
         serializer = self.serializer_class(user)
@@ -82,6 +87,10 @@ class UserDetailView(APIView):
 class UserHistoryView(APIView):
     serializer_class = HistorySerializer
 
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        return super().get_permissions()
+
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
         serializer = self.serializer_class(user.history)
@@ -91,6 +100,10 @@ class UserHistoryView(APIView):
 class UserFavoriteView(APIView):
     serializer_class = FavoriteSerializer
 
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        return super().get_permissions()
+
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
         serializer = self.serializer_class(user.favorite)
@@ -99,6 +112,10 @@ class UserFavoriteView(APIView):
 
 class TrackedNutrientsView(APIView):
     serializer_class = TrackedNutrientsSerializer
+
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        return super().get_permissions()
 
     def get(self, request, pk):
         trackers = NutrientTracker.objects.filter(user_id=pk)

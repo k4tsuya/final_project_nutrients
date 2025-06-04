@@ -24,12 +24,19 @@ from apps.user_info.views import (
     HomeView,
 )
 from apps.tracker_data.views import NutrientTrackerListView
+
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 api_urls = [
     path("food/", include("apps.food_data.urls")),
     path("nutrient/", include("apps.nutrient_data.urls")),
     path("tracker/", include("apps.tracker_data.urls")),
     path("user/", include("apps.user_info.urls")),
 ]
+
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
     path("admin/", admin.site.urls),
@@ -38,4 +45,6 @@ urlpatterns = [
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
     path("tracker/", NutrientTrackerListView.as_view(), name="tracker_pagination"),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]

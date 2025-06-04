@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-
+# limit who can see the nutrient tracker
 class NutrientTrackerListView(ListView):
     model = NutrientTracker
     template_name = "nutrient_tracker_list.html"

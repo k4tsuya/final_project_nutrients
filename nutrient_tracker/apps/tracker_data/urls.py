@@ -3,6 +3,6 @@ from apps.tracker_data import apis
 
 
 urlpatterns = [
-    path("trackers/", apis.IngredientView.as_view()),
-    path("trackers/<int:pk>/", apis.IngredientDetail.as_view()),
+    path("trackers/", apis.NutrientTrackerList.as_view()),
+    path("trackers/<int:pk>/", apis.NutrientTrackerDetail.as_view()),
 ]
