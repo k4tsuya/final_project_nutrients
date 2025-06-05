@@ -1,0 +1,65 @@
+name: Nutrient Tracker
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  DJANGO_SETTINGS_MODULE: config.settings.test
+
+jobs:
+  verify_build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+        
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_DB: nutrient
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Fixed cache path
+    - name: Cache pip packages
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cache/pip
+          venv/
+        key: ${{ runner.os }}-pip-${{ hashFiles('requirements/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |  # Removed working-directory since we'll use the root
+        python -m pip install --upgrade pip
+        pip install -r requirements/requirements.txt
+        pip install psycopg2-binary
+
+    - name: Basic Django sanity check
+      run: python manage.py check
+
+    # Future test section (commented out)
+    # - name: Run all tests
+    #   run: |
+    #     python manage.py test \
+    #       apps.food_data.tests \
+    #       apps.nutrient_data.tests \
+    #       apps.tracker_data.tests \
+    #       apps.user_info.tests \
+    #       --noinput
