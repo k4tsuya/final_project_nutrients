@@ -23,12 +23,19 @@ from apps.user_info.views import (
     logout_view,
     HomeView,
 )
-
+from apps.tracker_data.views import NutrientTrackerListView
+api_urls = [
+    path("food/", include("apps.food_data.urls")),
+    path("nutrient/", include("apps.nutrient_data.urls")),
+    path("tracker/", include("apps.tracker_data.urls")),
+    path("user/", include("apps.user_info.urls")),
+]
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
     path("admin/", admin.site.urls),
-    path("api/v1/", include("apps.food_data.urls")),
+    path("api/v1/", include(api_urls)),
     path("register/", register_view, name="register"),
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
+    path("tracker/", NutrientTrackerListView.as_view(), name="tracker_pagination"),
 ]

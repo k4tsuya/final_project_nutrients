@@ -31,11 +31,11 @@ class User(AbstractUser):
 
     def save(self, force_insert=False, force_update=False, *args, **kwargs):
         super().save(force_insert, force_update, *args, **kwargs)
-        
+
         print("User primary key:", self.pk)
-        if self.pk:
+        if not self.pk:
             tracked_nutrients = TrackedNutrients.objects.create(
-                user=self, nutrient=None
+                user=self, nutrient_tracker=None
             )
             tracked_nutrients.save()
             favourites = Favorite.objects.create(user=self)
@@ -54,10 +54,10 @@ class User(AbstractUser):
 
 
 class Favorite(models.Model):
-    user = models.OneToOneField(
+    user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        primary_key=True,
+        unique=False,
     )
     nutrient = models.ManyToManyField(
         Nutrient,
@@ -107,10 +107,13 @@ class History(models.Model):
 
 
 class TrackedNutrients(models.Model):
-    # One to One because a user can only have one tracked nutrient table
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # foreignkey because a user can only have one tracked nutrient table
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     # many to one because a user can have many nutrient_trackers
-    nutrient = models.ForeignKey(NutrientTracker, on_delete=models.CASCADE, null=True)
+    # try with many to many to see if it works and compresses
+    nutrient_tracker = models.ForeignKey(
+        NutrientTracker, on_delete=models.CASCADE, null=True
+    )
 
     class Meta:
         verbose_name = "Tracked Nutrient"
