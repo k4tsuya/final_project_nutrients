@@ -6,7 +6,7 @@ from django.utils import timezone
 
 
 class NutrientTracker(models.Model):
-    date = models.DateField(default=timezone.now())
+    date = models.DateField(default=timezone.now)
     user = models.ForeignKey("user_info.User", on_delete=models.CASCADE)
     nutrient = models.ForeignKey(Nutrient, on_delete=models.DO_NOTHING)
     min = models.DecimalField(default=0, decimal_places=2, max_digits=10)
