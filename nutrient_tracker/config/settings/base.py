@@ -41,6 +41,7 @@ DEFAULT_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
     "django_filters",
+    "drf_spectacular",
 ]
 
 CUSTOM_APPS = [
@@ -145,7 +146,7 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_FILTER_BACKENDS": [
-        "django_filters.rest_framework.DjangoFilterBackend",
+        "django_filters.rest_framework.DjangoFilterBackend"
     ],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 2,
@@ -157,4 +158,13 @@ REST_FRAMEWORK = {
         "anon": "3/min",
         "user": "10/min",
     },
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Your Project API",
+    "DESCRIPTION": "Your project description",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    # OTHER SETTINGS
 }

@@ -376,4 +376,3 @@ class IngredientDataSerializer(serializers.Serializer):
 class IngredientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ingredient
-        fields = "__all__"
