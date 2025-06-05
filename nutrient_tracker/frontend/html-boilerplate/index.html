@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitamin Dashboard</title>
+    <link rel="shortcut icon" type="image/x-icon" href="bitamin_icon_transparent.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo { grid-area: header; }
+.menu { grid-area: menu; }
+.chart1 { grid-area: left; }
+.chart2 { grid-area: main; }
+.chart3 { grid-area: right; }
+.links { grid-area: footer; }
+
+body {
+    font-family: "League Spartan", sans-serif;
+}
+
+
+.dark-mode .grid-container {
+    background-color: #19201c;
+}
+
+.dark-mode .logo {
+    color: #f2fcf6;
+}
+
+.dark-mode .menu a {
+    background-color: #3a4b41;
+    color: #f2fcf6;
+}
+
+.dark-mode .menu a:hover {
+    background-color: #546c5e;
+}
+
+.dark-mode .chart1,
+.dark-mode .chart2,
+.dark-mode .chart3 {
+    background-color: #2a3330;
+    color: #f2fcf6;
+}
+
+.dark-mode .links {
+    background-color: #3a4b41;
+    color: #f2fcf6;
+}
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: auto 30% 30% 30%; */
+    grid-template-areas:
+    'header header header header header header'
+    'menu left main right empty empty'
+    'footer footer footer footer footer footer';
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    gap: 8px;
+    background-color: #f2fcf6;
+    padding: 16px;
+}
+
+.grid-container > div {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.logo {
+    position: relative;
+    grid-area: header;
+    text-align: center;
+}
+
+.logo-top {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.dark-mode-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #444;
+}
+
+.dark-mode .dark-mode-btn {
+    color: #f2fcf6;
+}
+
+.logo > video {
+    border-radius: 16px;
+}
+
+
+.menu {
+    grid-area: menu;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #a5ada8;
+    color: #f2fcf6;
+    text-align: center;
+    }
+
+.menu a:hover {
+    background-color: #657c6a;
+}
+
+.chart1, .chart2, .chart3 {
+    grid-area: main;
+    border-radius: 8px;
+    background-color: #f2fcf6;
+    padding: 16px;
+}
+
+.chart1 {
+    grid-area: left;
+}
+
+.chart2 {
+    grid-area: main;
+}
+
+.chart3 {
+    grid-area: right;
+}
+
+.links {
+    grid-area: footer;
+    background-color: #657c6a;
+    color:#f2fcf6;
+    text-align: center;
+}
+
+button.icon-button {
+    background:none;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: context-menu;
+    transition: background-color 0.2s ease;
+    }
+
+    button.icon-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    button.icon-button img {
+        width: 50%;
+        height: 50%;
+    }
+
+    @media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+        'header'
+        'menu'
+        'left'
+        'main'
+        'right'
+        'footer';
+        grid-template-columns: 1fr;
+    }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="logo">
+        <video id="bitaminLogo" autoplay muted playsinline preload="auto" onloadstart="this.playbackRate = 0.75;">
+            <source src="bitamin_logo_lt.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+</div>
+
+
+
+    <nav class="menu">
+        <button class="icon-button" onclick="toggleMenu()">
+            <img src="bitamin_icon_transparent.png" alt="Toggle Menu" />
+        </button>
+        <ul id="menuList">
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+    </ul>
+    <button onclick="toggleDarkMode()" id="darkModeBtn" class="dark-mode-btn" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+</nav>
+
+<div class="chart1">
+    <h1>Vitamins</h1>
+    <canvas id="myChart"></canvas>
+</div>  
+
+<div class="chart2">
+    <h1>Minerals</h1>
+    <canvas id="myChart2"></canvas>
+</div>
+
+<div class="chart3">
+    <h1>Hydration</h1>
+    <canvas id="myChart3"></canvas>
+</div> 
+
+<div class="links"><p>***Links to socials? or something else??***</p></div>
+
+</div>
+
+<script>
+    // Chart.js initialization
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+        labels: ['Vitamin A', 'Vitamin B12', 'Vitamin C', 'Vitamnin D'],
+        datasets: [{
+            label: 'Example Dataset',
+            data: [12, 19, 3, 5],
+            backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a', '#79ADDC'],
+            borderWidth: 1
+        }]
+        },
+        options: {
+        responsive: true,
+        scales: {
+            y: {
+            beginAtZero: true
+            }
+        }
+        }
+    });
+
+    const ctx2 = document.getElementById('myChart2').getContext('2d');
+    new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['Calcium', 'Magnesium', 'Potassium', 'Iron'],
+            datasets: [{
+                label: 'Another Dataset',
+                data: [8, 14, 9, 6],
+                backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a', '#79ADDC'],
+                borderWidth: 1,
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    })
+
+    const ctx3 = document.getElementById('myChart3').getContext('2d');
+    new Chart(ctx3, {
+        type: 'pie',
+        data: {
+            labels: ['Consumed', 'Remaining'],
+            datasets: [{
+                data: [6,4],
+                backgroundColor: ['#79ADDC', '#bb3e00'],
+                borderWidth: 0,
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    })
+
+    // Toggle menu function for small screens
+    function toggleMenu() {
+        const menu = document.getElementById('menuList');
+        menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+    }
+
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    const video = document.getElementById("bitaminLogo");
+    const source = video.querySelector("source");
+    const isDarkMode = document.body.classList.contains("dark-mode");
+
+    source.src = isDarkMode ? "bitamin_logo_dk.mp4" : "bitamin_logo_lt.mp4";
+    video.load();
+    video.playbackRate = 0.75;
+    video.play();
+
+    // Toggle icon
+    const icon = document.getElementById("darkModeBtn").querySelector("i");
+    icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
+}
+
+</script>
+
+
+</body>
+</html>
