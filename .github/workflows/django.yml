@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  DJANGO_SETTINGS_MODULE: config.settings.test
+# env:
+#   DJANGO_SETTINGS_MODULE: config.settings.test
 
 jobs:
   verify_build:
@@ -16,15 +16,15 @@ jobs:
       matrix:
         python-version: ["3.11", "3.12"]
         
-    services:
-      postgres:
-        image: postgres:13
-        env:
-          POSTGRES_DB: nutrient
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-        ports:
-          - 5432:5432
+    # services:
+    #   postgres:
+    #     image: postgres:13
+    #     env:
+    #       POSTGRES_DB: nutrient
+    #       POSTGRES_USER: postgres
+    #       POSTGRES_PASSWORD: postgres
+    #     ports:
+    #       - 5432:5432
 
     steps:
     - uses: actions/checkout@v4
