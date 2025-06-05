@@ -31,25 +31,7 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 
-
-api_urls = [
-    path("food/", include("apps.food_data.urls")),
-    path("nutrient/", include("apps.nutrient_data.urls")),
-    path("tracker/", include("apps.tracker_data.urls")),
-    path("user/", include("apps.user_info.urls")),
-]
-urlpatterns = [
-    path("", HomeView.as_view(), name="home"),
-    path("admin/", admin.site.urls),
-    path("api/v1/", include(api_urls)),
-    path("register/", register_view, name="register"),
-    path("login/", login_view, name="login"),
-    path("logout/", logout_view, name="logout"),
-    path(
-        "tracker/",
-        NutrientTrackerListView.as_view(),
-        name="tracker_pagination",
-    ),
+doc_urls = [
     path("api/v1/schema/", SpectacularAPIView.as_view(), name="schema"),
     # Optional UI:
     path(
@@ -61,5 +43,26 @@ urlpatterns = [
         "api/v1/schema/redoc/",
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
+    ),
+]
+
+api_urls = [
+    path("food/", include("apps.food_data.urls")),
+    path("nutrient/", include("apps.nutrient_data.urls")),
+    path("tracker/", include("apps.tracker_data.urls")),
+    path("user/", include("apps.user_info.urls")),
+]
+urlpatterns = [
+    path("", HomeView.as_view(), name="home"),
+    path("", include(doc_urls)),
+    path("admin/", admin.site.urls),
+    path("api/v1/", include(api_urls)),
+    path("register/", register_view, name="register"),
+    path("login/", login_view, name="login"),
+    path("logout/", logout_view, name="logout"),
+    path(
+        "tracker/",
+        NutrientTrackerListView.as_view(),
+        name="tracker_pagination",
     ),
 ]

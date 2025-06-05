@@ -56,6 +56,8 @@ class IngredientNutrientValue(generics.ListAPIView):
 
     def get_queryset(self):
         query = self.request.query_params.get("search")
+        if getattr(self, "swagger_fake_view", False):
+            return Ingredient.objects.none()
         try:
             filter_by_nutrient = Ingredient.objects.order_by("-" + query)
             return filter_by_nutrient

@@ -10,16 +10,29 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from apps.tracker_data.models import NutrientTracker
+from rest_framework import filters, generics, status
 
 
-class IngredientView(APIView):
+class IngredientView(generics.ListAPIView):
+    serializer_class = NutrientTrackerSerializer
+
+    def get_queryset(self):
+        if getattr(self, "swagger_fake_view", False):
+            return NutrientTracker.objects.none()
+
     def get(self, request, format=None):
         ingredients = NutrientTracker.objects.all()
         serializer = NutrientTrackerSerializer(ingredients, many=True)
         return Response(serializer.data)
 
 
-class IngredientDetail(APIView):
+class IngredientDetail(generics.ListAPIView):
+    serializer_class = NutrientTrackerSerializer
+
+    def get_queryset(self):
+        if getattr(self, "swagger_fake_view", False):
+            return NutrientTracker.objects.none()
+
     def get_object(self, pk):
         try:
             return NutrientTracker.objects.get(pk=pk)
