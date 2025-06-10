@@ -21,3 +21,6 @@ dev-test:
 
 dev-loaddata:
 	python manage.py loaddata ${filename} --settings=config.settings.dev
+
+dev-shell:
+	python manage.py shell --settings=config.settings.dev

@@ -11,12 +11,19 @@ from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
 
 from apps.tracker_data.models import NutrientTracker
+from rest_framework import filters, generics, status
 
 
-class NutrientTrackerList(APIView):
+class NutrientTrackerList(generics.ListAPIView):
+    serializer_class = NutrientTrackerSerializer
+
     def get_permissions(self):
         self.permission_classes = [IsAuthenticated]
         return super().get_permissions()
+
+    def get_queryset(self):
+        if getattr(self, "swagger_fake_view", False):
+            return NutrientTracker.objects.none()
 
     def get(self, request, format=None):
         ingredients = NutrientTracker.objects.all()
@@ -24,10 +31,16 @@ class NutrientTrackerList(APIView):
         return Response(serializer.data)
 
 
-class NutrientTrackerDetail(APIView):
+class NutrientTrackerDetail(generics.ListAPIView):
+    serializer_class = NutrientTrackerSerializer
+
     def get_permissions(self):
         self.permission_classes = [IsAuthenticated]
         return super().get_permissions()
+
+    def get_queryset(self):
+        if getattr(self, "swagger_fake_view", False):
+            return NutrientTracker.objects.none()
 
     def get_object(self, pk):
         try:

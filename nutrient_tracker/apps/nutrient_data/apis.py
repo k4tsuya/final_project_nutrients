@@ -12,43 +12,25 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
 
 from apps.nutrient_data.models import Nutrient
 from apps.nutrient_data.serializers import NutrientSerializer
+from rest_framework import filters, generics, status
+from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
+from rest_framework.pagination import PageNumberPagination
 
 
-class NutrientList(APIView):
-    def get_permissions(self):
-        self.permission_classes = [AllowAny]
-        if self.request.method == "POST":
-            self.permission_classes = [IsAdminUser]
-        elif self.request.method == "PUT":
-            self.permission_classes = [IsAdminUser]
-        elif self.request.method == "DELETE":
-            self.permission_classes = [IsAdminUser]
-        elif self.request.method == "PATCH":
-            self.permission_classes = [IsAdminUser]
-        elif self.request.method == "UPDATE":
-            self.permission_classes = [IsAdminUser]
-        return super().get_permissions()
-
-    def get(self, request, format=None):
-        nutrients = Nutrient.objects.all()
-        serializer = NutrientSerializer(nutrients, many=True)
-        return Response(serializer.data)
+class NutrientList(generics.ListAPIView):
+    serializer_class = NutrientSerializer
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
+    pagination_class = PageNumberPagination
+    pagination_class.page_size = 10
+    queryset = Nutrient.objects.order_by("pk")
 
 
-class NutrientDetail(APIView):
-    def get_permissions(self):
-        self.permission_classes = [AllowAny]
-        if self.request.method == "POST":
-            self.permission_classes = [IsAdminUser]
-        elif self.request.method == "PUT":
-            self.permission_classes = [IsAdminUser]
-        elif self.request.method == "DELETE":
-            self.permission_classes = [IsAdminUser]
-        elif self.request.method == "PATCH":
-            self.permission_classes = [IsAdminUser]
-        elif self.request.method == "UPDATE":
-            self.permission_classes = [IsAdminUser]
-        return super().get_permissions()
+class NutrientDetail(generics.ListAPIView):
+    serializer_class = NutrientSerializer
+
+    def get_queryset(self):
+        if getattr(self, "swagger_fake_view", False):
+            return Nutrient.objects.none()
 
     def get_object(self, pk):
         try:
@@ -57,6 +39,6 @@ class NutrientDetail(APIView):
             raise Http404
 
     def get(self, request, pk, format=None):
-        nutrient = self.get_object(pk)
+        nutrient = self.get_object(pk=pk)
         serializer = NutrientSerializer(nutrient)
         return Response(serializer.data)

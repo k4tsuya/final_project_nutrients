@@ -20,7 +20,7 @@ try:
             empty_value = 0
             counter += 1
             new_dict = {
-                "model": "nutrient_data.nutrientdata",
+                "model": "food_data.ingredient",
                 "pk": counter,
                 "fields": values,
             }
