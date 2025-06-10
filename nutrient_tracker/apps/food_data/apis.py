@@ -26,7 +26,7 @@ class IngredientView(generics.ListAPIView):
 class IngredientSearchNameDetail(generics.ListAPIView):
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
 
-    queryset = Ingredient.objects.all()
+    queryset = Ingredient.objects.order_by("pk")
     serializer_class = IngredientDataSerializer
     filterset_class = IngredientFilter
     pagination_class = PageNumberPagination
@@ -36,7 +36,7 @@ class IngredientSearchNameDetail(generics.ListAPIView):
 class IngredientCategoryDetail(generics.ListAPIView):
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
 
-    queryset = Ingredient.objects.all()
+    queryset = Ingredient.objects.order_by("pk")
     serializer_class = IngredientDataSerializer
     filterset_class = CategoryFilter
     pagination_class = PageNumberPagination
