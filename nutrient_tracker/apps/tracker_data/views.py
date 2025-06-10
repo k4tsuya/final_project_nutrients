@@ -7,7 +7,7 @@ from rest_framework import generics
 
 
 # limit who can see the nutrient tracker
-class NutrientTrackerListView(generics):
+class NutrientTrackerListView(generics.ListAPIView):
     model = NutrientTracker
     template_name = "nutrient_tracker_list.html"
     context_object_name = "nutrient_trackers"
