@@ -20,6 +20,20 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
 class UserView(APIView):
     serializer_class = UserSerializer
 
+    def get_permissions(self):
+        self.permission_classes = [IsAdminUser]
+        if self.request.method == "POST":
+            self.permission_classes = [AllowAny]
+        if self.request.method == "PUT":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "DELETE":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "PATCH":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "UPDATE":
+            self.permission_classes = [IsAdminUser]
+        return super().get_permissions()
+
     # READ
     def get(self, request):
         users = User.objects.all()
@@ -55,12 +69,27 @@ class UserDetailView(APIView):
 
     def get_permissions(self):
         self.permission_classes = [IsAuthenticated]
+        if self.request.method == "PUT":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "DELETE":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "PATCH":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "UPDATE":
+            self.permission_classes = [IsAdminUser]
         return super().get_permissions()
 
     def get(self, request, pk):
+        request_user = request.user
         user = User.objects.get(pk=pk)
-        serializer = self.serializer_class(user)
-        return Response(serializer.data)
+        if request_user.is_superuser:
+            serializer = self.serializer_class(user)
+            return Response(serializer.data)
+        elif request_user != user:
+            return Response(status=status.HTTP_403_FORBIDDEN)
+        else:
+            serializer = self.serializer_class(user)
+            return Response(serializer.data)
 
     def put(self, request, pk):
         user = User.objects.get(pk=pk)

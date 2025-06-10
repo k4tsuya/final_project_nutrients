@@ -1,4 +1,3 @@
-
 # Commenting lines of code
 
 Longer comments go over the line it is talking about, unless its a minor reminder, then it can go behind the code.
@@ -31,3 +30,8 @@ Longer comments go over the line it is talking about, unless its a minor reminde
     * ```
       <a href="/login/">Login</a> should get the user to website_url/login
       ```
+
+### HTML-Views vs API-Accesspoints
+
+If classes in any `views.py` is inheriting from another parent class, make sure it does not inherit something with "API" in it's name
+Classes with API in their name are part of the DRF and will only be inherited by classes inside of an application's `apis.py`
