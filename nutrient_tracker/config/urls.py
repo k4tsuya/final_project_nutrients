@@ -24,6 +24,12 @@ from apps.user_info.views import (
     HomeView,
 )
 from apps.tracker_data.views import NutrientTrackerListView
+
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 from django.views.generic import TemplateView
 from drf_spectacular.views import (
     SpectacularAPIView,
@@ -52,6 +58,7 @@ api_urls = [
     path("tracker/", include("apps.tracker_data.urls")),
     path("user/", include("apps.user_info.urls")),
 ]
+
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
     path("", include(doc_urls)),
@@ -60,6 +67,9 @@ urlpatterns = [
     path("register/", register_view, name="register"),
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
+    path("tracker/", NutrientTrackerListView.as_view(), name="tracker_pagination"),
+    path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path(
         "tracker/",
         NutrientTrackerListView.as_view(),

@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from .models import Nutrient
-from apps.user_info.views import limit_m2m_field
+from scripts.utils import limit_m2m_field
 
 # Create your views here.
 

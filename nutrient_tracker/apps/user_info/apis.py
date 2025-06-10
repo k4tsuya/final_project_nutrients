@@ -14,10 +14,25 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
 
 
 class UserView(APIView):
     serializer_class = UserSerializer
+
+    def get_permissions(self):
+        self.permission_classes = [IsAdminUser]
+        if self.request.method == "POST":
+            self.permission_classes = [AllowAny]
+        if self.request.method == "PUT":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "DELETE":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "PATCH":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "UPDATE":
+            self.permission_classes = [IsAdminUser]
+        return super().get_permissions()
 
     # READ
     def get(self, request):
@@ -52,10 +67,29 @@ class UserView(APIView):
 class UserDetailView(APIView):
     serializer_class = UserSerializer
 
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        if self.request.method == "PUT":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "DELETE":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "PATCH":
+            self.permission_classes = [IsAdminUser]
+        elif self.request.method == "UPDATE":
+            self.permission_classes = [IsAdminUser]
+        return super().get_permissions()
+
     def get(self, request, pk):
+        request_user = request.user
         user = User.objects.get(pk=pk)
-        serializer = self.serializer_class(user)
-        return Response(serializer.data)
+        if request_user.is_superuser:
+            serializer = self.serializer_class(user)
+            return Response(serializer.data)
+        elif request_user != user:
+            return Response(status=status.HTTP_403_FORBIDDEN)
+        else:
+            serializer = self.serializer_class(user)
+            return Response(serializer.data)
 
     def put(self, request, pk):
         user = User.objects.get(pk=pk)
@@ -82,6 +116,10 @@ class UserDetailView(APIView):
 class UserHistoryView(APIView):
     serializer_class = HistorySerializer
 
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        return super().get_permissions()
+
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
         serializer = self.serializer_class(user.history)
@@ -91,6 +129,10 @@ class UserHistoryView(APIView):
 class UserFavoriteView(APIView):
     serializer_class = FavoriteSerializer
 
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        return super().get_permissions()
+
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
         serializer = self.serializer_class(user.favorite)
@@ -99,6 +141,10 @@ class UserFavoriteView(APIView):
 
 class TrackedNutrientsView(APIView):
     serializer_class = TrackedNutrientsSerializer
+
+    def get_permissions(self):
+        self.permission_classes = [IsAuthenticated]
+        return super().get_permissions()
 
     def get(self, request, pk):
         trackers = NutrientTracker.objects.filter(user_id=pk)

@@ -1,11 +1,13 @@
 from django.views.generic import ListView
 from apps.tracker_data.models import NutrientTracker
 from django.shortcuts import render
+from rest_framework import generics
 
 # Create your views here.
 
 
-class NutrientTrackerListView(ListView):
+# limit who can see the nutrient tracker
+class NutrientTrackerListView(generics):
     model = NutrientTracker
     template_name = "nutrient_tracker_list.html"
     context_object_name = "nutrient_trackers"
