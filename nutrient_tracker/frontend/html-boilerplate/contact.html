@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bitamin Dashboard</title>
+    <title>Contact us</title>
     <link rel="shortcut icon" type="image/x-icon" href="bitamin_icon_transparent.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 * {
     margin: 0;
@@ -18,9 +17,6 @@
 }
 .logo { grid-area: header; }
 .menu { grid-area: menu; }
-.chart1 { grid-area: left; }
-.chart2 { grid-area: main; }
-.chart3 { grid-area: right; }
 .links { grid-area: footer; }
 
 body {
@@ -43,13 +39,6 @@ body {
 
 .dark-mode .menu a:hover {
     background-color: #546c5e;
-}
-
-.dark-mode .chart1,
-.dark-mode .chart2,
-.dark-mode .chart3 {
-    background-color: #2a3330;
-    color: #f2fcf6;
 }
 
 .dark-mode .links {
@@ -132,23 +121,31 @@ body {
     background-color: #657c6a;
 }
 
-.chart1, .chart2, .chart3 {
+.main {
     grid-area: main;
-    border-radius: 8px;
-    background-color: #f2fcf6;
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
 }
 
-.chart1 {
-    grid-area: left;
+.main h1 {
+    margin-bottom: 16px;
 }
 
-.chart2 {
-    grid-area: main;
+.main h2 {
+    margin-bottom: 16px;
 }
 
-.chart3 {
-    grid-area: right;
+.main p {
+    margin-bottom: 16px;
+}
+
+.single-line {
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .links {
@@ -209,11 +206,12 @@ button.icon-button {
 
 <div class="grid-container">
     <div class="logo">
+    <a href="index.html">
         <video id="bitaminLogo" autoplay muted playsinline preload="auto" onloadstart="this.playbackRate = 0.75;">
             <source src="bitamin_logo_lt.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        
+    </a>
 </div>
 
 
@@ -235,20 +233,15 @@ button.icon-button {
     </button>
 </nav>
 
-<div class="chart1">
-    <h1>Vitamins</h1>
-    <canvas id="myChart"></canvas>
-</div>  
-
-<div class="chart2">
-    <h1>Minerals</h1>
-    <canvas id="myChart2"></canvas>
+<div class="main">
+    <h1 style="font-size: 48px;">Contact Us</h1>
+    <h2 class="single-line">
+        If you have any questions, suggestions, or just want to say hi — we'd love to hear from you!
+    </h2>
+    <p>Email: support@bitamin.com</p>
+    <p>Phone: +49 0800 5551234</p>
+    
 </div>
-
-<div class="chart3">
-    <h1>Hydration</h1>
-    <canvas id="myChart3"></canvas>
-</div> 
 
 <div class="links">
         <div class="footer-left">
@@ -256,7 +249,7 @@ button.icon-button {
             <p>AGB</p>
         </div>
 <div class="footer-center">
-    <h2>Follow Us!</h2>
+    <p style="font-size: 24px;">Follow us on social media for updates, wellness tips, and more.</p>
     <i class="fa-brands fa-facebook"></i>
     <i class="fa-brands fa-instagram"></i>
     <i class="fa-brands fa-youtube"></i>
@@ -266,114 +259,7 @@ button.icon-button {
 </div>
 
 <script>
-    // Chart.js initialization
-    const ctx = document.getElementById('myChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-        labels: ['Vitamin A', 'Vitamin B12', 'Vitamin C', 'Vitamnin D'],
-        datasets: [{
-            label: 'Example Dataset',
-            data: [12, 19, 3, 5],
-            backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a', '#79ADDC'],
-            borderWidth: 0
-        }]
-        },
-        options: {
-        responsive: true,
-        scales: {
-            y: {
-            beginAtZero: true
-            }
-        }
-        }
-    });
 
-    const ctx2 = document.getElementById('myChart2').getContext('2d');
-    new Chart(ctx2, {
-        type: 'doughnut',
-        data: {
-            labels: ['Calcium', 'Magnesium', 'Potassium', 'Iron'],
-            datasets: [{
-                label: 'Another Dataset',
-                data: [8, 14, 9, 6],
-                backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a', '#79ADDC'],
-                borderWidth: 0,
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    })
-
-    const consumed = 1800;
-const goal = 2000;
-const percentage = (consumed / goal) * 100;
-
-// Determine color based on percentage
-let progressColor = '#bb3e00'; // red
-if (percentage >= 90) {
-    progressColor = '#657c6a'; // green
-} else if (percentage >= 51) {
-    progressColor = '#f7ad45'; // yellow
-}
-
-// Chart 3 (Hydration) with local plugin for center text
-const ctx3 = document.getElementById('myChart3').getContext('2d');
-new Chart(ctx3, {
-    type: 'doughnut',
-    data: {
-        labels: ['Consumed', 'Remaining'],
-        datasets: [{
-            data: [consumed, goal - consumed],
-            backgroundColor: [progressColor, '#e0e0e0'],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        cutout: '50%',
-        plugins: {
-            legend: {
-                display: false
-            },
-            tooltip: {
-                callbacks: {
-                    label: function (context) {
-                        return `${context.label}: ${context.parsed}`;
-                    }
-                }
-            },
-            // ⬇️ Plugin defined only here
-            centerText: {
-                display: true
-            }
-        }
-    },
-    plugins: [{
-        id: 'centerText',
-        beforeDraw(chart) {
-            const { width, height } = chart;
-            const ctx = chart.ctx;
-            ctx.restore();
-            const fontSize = (height / 300).toFixed(2);
-            ctx.font = `${fontSize}em League Spartan`;
-            ctx.textBaseline = "middle";
-
-            const text = `${consumed}/${goal} mL`;
-            const textX = Math.round((width - ctx.measureText(text).width) / 2);
-            const textY = height / 2;
-
-            ctx.fillStyle = "#444";
-            ctx.fillText(text, textX, textY);
-            ctx.save();
-        }
-    }]
-});
 
     // Toggle menu function for small screens
     function toggleMenu() {
