@@ -1,12 +1,18 @@
-from django.forms import ModelForm
+"""Form for user registration."""
+
+from typing import ClassVar
+
 from apps.user_info.models import User
-from django.contrib.auth.forms import UserCreationForm
-from django import forms
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Row, Column, Field
+from crispy_forms.layout import Column, Field, Layout, Row
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.forms import ModelForm
 
 
 class UserRegisterForm(UserCreationForm):
+    """Base form for user registration."""
+
     password1 = forms.CharField(
         label="Password",
         widget=forms.PasswordInput(attrs={"autocomplete": "new-password"}),
@@ -17,10 +23,16 @@ class UserRegisterForm(UserCreationForm):
     )
 
     class Meta:
-        model = User
-        fields = ["username", "email", "password1", "password2"]
+        model: ClassVar[object] = User
+        fields: ClassVar[list] = [
+            "username",
+            "email",
+            "password1",
+            "password2",
+        ]
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args: tuple, **kwargs: dict) -> None:
+        """Initialize the form."""
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.layout = Layout(
@@ -40,9 +52,11 @@ class UserRegisterForm(UserCreationForm):
         )
 
     # Backend validation (password match)
-    def clean_password2(self):
+    def clean_password2(self) -> str:
+        """Validate that the two password entries match."""
         password1 = self.cleaned_data.get("password1")
         password2 = self.cleaned_data.get("password2")
         if password1 and password2 and password1 != password2:
-            raise forms.ValidationError("Passwords do not match!")
+            msg = "Passwords do not match!"
+            raise forms.ValidationError(msg)
         return password2
