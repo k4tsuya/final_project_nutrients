@@ -33,7 +33,7 @@ class User(AbstractUser):
         super().save(force_insert, force_update, *args, **kwargs)
 
         print("User primary key:", self.pk)
-        if not self.pk:
+        if self.pk:
             tracked_nutrients = TrackedNutrients.objects.create(
                 user=self, nutrient_tracker=None
             )
