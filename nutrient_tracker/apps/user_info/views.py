@@ -47,3 +47,8 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect("home")
+
+
+class ProfileView(View):
+    def get(self, request):
+        return render(request, "profile.html")
