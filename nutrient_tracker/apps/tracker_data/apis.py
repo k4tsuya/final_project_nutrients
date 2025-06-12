@@ -3,27 +3,31 @@ from pathlib import Path
 
 from apps.tracker_data.models import NutrientTracker
 from apps.tracker_data.serializers import NutrientTrackerSerializer
+from django.db import models
+from django.db.models import QuerySet
 from django.http import Http404, JsonResponse
-from rest_framework import status
+from rest_framework import filters, generics, status
 from rest_framework.decorators import api_view
+from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
-
-from apps.tracker_data.models import NutrientTracker
-from rest_framework import filters, generics, status
 
 
 class NutrientTrackerList(generics.ListAPIView):
+    """List all nutrient trackers."""
+
     serializer_class = NutrientTrackerSerializer
 
-    def get_permissions(self):
+    def get_permissions(self) -> list:
+        """Return the list of permissions that this view requires."""
         self.permission_classes = [IsAuthenticated]
         return super().get_permissions()
 
-    def get_queryset(self):
+    def get_queryset(self) -> QuerySet:
+        """Return the list of nutrient trackers."""
         if getattr(self, "swagger_fake_view", False):
             return NutrientTracker.objects.none()
+        return None
 
     def get(self, request, format=None):
         ingredients = NutrientTracker.objects.all()
@@ -32,6 +36,8 @@ class NutrientTrackerList(generics.ListAPIView):
 
 
 class NutrientTrackerDetail(generics.ListAPIView):
+    """Retrieve a single nutrient tracker."""
+
     serializer_class = NutrientTrackerSerializer
 
     def get_permissions(self):
