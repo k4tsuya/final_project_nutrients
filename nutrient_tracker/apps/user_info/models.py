@@ -79,10 +79,9 @@ class Favorite(models.Model):
 
 
 class History(models.Model):
-    user = models.OneToOneField(
+    user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        primary_key=True,
     )
     nutrient = models.ManyToManyField(
         Nutrient,
