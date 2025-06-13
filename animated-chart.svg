@@ -6,19 +6,19 @@
     <!-- Chart Circle Group -->
     <g transform="translate(200, 170) rotate(-90)">
         <!-- Background Circle -->
-        <circle r="90" cx="0" cy="0" fill="transparent" stroke="#D1E4C9" stroke-width="60"/>
+        <circle r="90" cx="0" cy="0" fill="transparent" stroke="#EAEAEA" stroke-width="60"/>
         
-        <!-- Segment 1: Protein (25%) -->
-        <circle r="90" cx="0" cy="0" fill="transparent" stroke="#8DBC7F" stroke-width="60" stroke-dasharray="141.3 424.1">
+        <!-- Segment 1: Protein (25%) - PALE RED -->
+        <circle r="90" cx="0" cy="0" fill="transparent" stroke="#F08080" stroke-width="60" stroke-dasharray="141.3 424.1">
             <animate attributeName="stroke-dashoffset" from="565.4" to="0" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
         </circle>
         
-        <!-- Segment 2: Vitamins (45%) - Rotated by 90deg (25%) -->
-        <circle r="90" cx="0" cy="0" fill="transparent" stroke="#6E8B3D" stroke-width="60" stroke-dasharray="254.4 311" transform="rotate(90)">
+        <!-- Segment 2: Vitamins (45%) - PALE YELLOW-ORANGE -->
+        <circle r="90" cx="0" cy="0" fill="transparent" stroke="#FFDAB9" stroke-width="60" stroke-dasharray="254.4 311" transform="rotate(90)">
              <animate attributeName="stroke-dashoffset" from="565.4" to="0" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" begin="0.2s"/>
         </circle>
         
-        <!-- Segment 3: Minerals (30%) - Rotated by 252deg (70%) -->
+        <!-- Segment 3: Minerals (30%) - PALE GREEN -->
         <circle r="90" cx="0" cy="0" fill="transparent" stroke="#A2C47E" stroke-width="60" stroke-dasharray="169.6 395.8" transform="rotate(252)">
             <animate attributeName="stroke-dashoffset" from="565.4" to="0" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" begin="0.4s"/>
         </circle>
@@ -26,12 +26,15 @@
 
     <!-- Legend -->
     <g transform="translate(450, 100)" font-family="'Segoe UI', sans-serif" font-size="16">
-        <rect x="0" y="0" width="16" height="16" fill="#8DBC7F" rx="4"/>
+        <!-- Protein Legend -->
+        <rect x="0" y="0" width="16" height="16" fill="#F08080" rx="4"/>
         <text x="25" y="13" fill="#555">Protein (25%)</text>
         
-        <rect x="0" y="40" width="16" height="16" fill="#6E8B3D" rx="4"/>
+        <!-- Vitamins Legend -->
+        <rect x="0" y="40" width="16" height="16" fill="#FFDAB9" rx="4"/>
         <text x="25" y="53" fill="#555">Vitamins (45%)</text>
         
+        <!-- Minerals Legend -->
         <rect x="0" y="80" width="16" height="16" fill="#A2C47E" rx="4"/>
         <text x="25" y="93" fill="#555">Minerals (30%)</text>
 
