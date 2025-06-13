@@ -5,6 +5,8 @@ from apps.user_info.enums import Gender, Role
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from PIL import Image
+
 
 class User(AbstractUser):
     role = models.CharField(
@@ -120,7 +122,7 @@ class TrackedNutrients(models.Model):
 
     def __str__(self):
         return f"{self.user.username}'s tracked nutrients"
-    
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -128,3 +130,13 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.user.username}'s profile"
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.image.path)
