@@ -1,0 +1,21 @@
+possible colors:
+
+#19201c background
+#a2b9a7 light green
+#657c6a dark green
+#f7ad45 amber
+#bb3e00 red
+
+Final colors:
+
+"white" #f2fcf6
+"black" #19201c
+"grey"  #a5ada8
+Accent  #657c6a
+
+Graph colors:
+
+"green" #657c6a
+"yellow" #f7ad45
+"red" #bb3e00
+"blue" #79ADDC
