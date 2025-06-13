@@ -250,10 +250,8 @@ button.icon-button {
 </nav>
 
 <div class="main">
-    <h1 style="font-size: 48px;">About Us</h1>
-    <h2 class="single-line">
-        We're fucking awesome!
-    </h2>
+    <h1>Food Database</h1>
+    <div id="dataContainer"></div>Loading data...</div>
 </div>
 
 <div class="links">
@@ -296,6 +294,30 @@ button.icon-button {
     const icon = document.getElementById("darkModeBtn").querySelector("i");
     icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
 }
+
+async function fetchData() {
+        const container = document.getElementById("dataContainer");
+        try {
+            const response = await fetch(""); 
+            if (!response.ok) throw new Error("Network response was not ok");
+
+            const data = await response.json();
+            container.innerHTML = '';
+
+            data.forEach(item => {
+                const itemDiv = document.createElement("div");
+                itemDiv.style.border = "1px solid #ccc";
+                itemDiv.style.padding = "8px";
+                itemDiv.style.margin = "8px 0";
+                itemDiv.innerHTML = `<strong>${item.name}</strong><br>${item.description}`;
+                container.appendChild(itemDiv);
+            });
+        } catch (error) {
+            container.innerHTML = "Error loading data: " + error.message;
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", fetchData);
 
 </script>
 

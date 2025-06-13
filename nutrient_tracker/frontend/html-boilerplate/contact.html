@@ -19,6 +19,13 @@
 .menu { grid-area: menu; }
 .links { grid-area: footer; }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: "League Spartan", sans-serif;
 }
@@ -47,8 +54,8 @@ body {
 }
 
 .grid-container {
+    flex: 1;
     display: grid;
-    /* grid-template-columns: auto 30% 30% 30%; */
     grid-template-areas:
     'header header header header header header'
     'menu left main right empty empty'
@@ -81,7 +88,8 @@ body {
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #444;
+    position: absolute;
+    color: #19201c;
 }
 
 .dark-mode .dark-mode-btn {
@@ -112,13 +120,13 @@ body {
     display: block;
     padding: 8px;
     border-radius: 8px;
-    background-color: #a5ada8;
+    background-color: #657c6a;
     color: #f2fcf6;
     text-align: center;
     }
 
 .menu a:hover {
-    background-color: #657c6a;
+    background-color: #a2b9a7;
 }
 
 .main {
@@ -143,6 +151,10 @@ body {
     margin-bottom: 16px;
 }
 
+.dark-mode .main {
+    color: #f2fcf6;
+}
+
 .single-line {
     white-space: nowrap;
     overflow: hidden;
@@ -158,6 +170,7 @@ body {
     align-items: center;
     padding: 16px;
     flex-wrap: wrap;
+    margin-top: auto;
 }
 
 .footer-left {
@@ -204,6 +217,10 @@ button.icon-button {
 </head>
 <body>
 
+<button onclick="toggleDarkMode()" id="darkModeBtn" class="dark-mode-btn" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
 <div class="grid-container">
     <div class="logo">
     <a href="index.html">
@@ -223,14 +240,13 @@ button.icon-button {
         <ul id="menuList">
             <li><a href="register.html">Register</a></li>
             <li><a href="login.html">Login</a></li>
-            <li><a href="#">Ingredient List</a></li>
-            <li><a href="#">Recipes</a></li>
+            <li><a href="ingredients.html">Ingredient List</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Logout</a></li>
     </ul>
-    <button onclick="toggleDarkMode()" id="darkModeBtn" class="dark-mode-btn" title="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
+    
 </nav>
 
 <div class="main">
