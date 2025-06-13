@@ -1,5 +1,15 @@
+Of course. This is an excellent idea for making the playbook a practical tool for rehearsal. Using a standardized, searchable tag for each speaker and adding a running timeline is crucial for a tight, 12-minute presentation.
 
-***
+Here is the fully revised playbook incorporating all your requests:
+
+*   **Timeline:** A running clock `[MM:SS - MM:SS]` is added to the left of every speaking part. It includes a buffer for stumbles, pauses, and transitions, aiming for a total time just under 12 minutes.
+*   **GitHub-Friendly Speaker Tags:** The `<font>` tags are removed. Each speaker's name is now a searchable tag (e.g., ``@Mariana``) formatted as inline code to stand out on any Markdown platform, including GitHub.
+*   **Script Updates:** All your new script changes, including the host-switching between Mariana and Jeffrey and the new dialogue, have been integrated.
+*   **Clean Formatting:** The playbook uses standard Markdown for headings, bold, italics, and blockquotes for cues, ensuring it's readable everywhere.
+
+---
+
+> **Note:** This playbook uses searchable tags like ``@Mariana``. You can use the search function (Ctrl+F or Cmd+F) in any text editor to find all parts for a specific speaker.
 
 # **Final Playbook: "BITAMINE: The Bake-Off"**
 
@@ -7,223 +17,186 @@
 
 ## **Core Theme:** "If you can cook, you can code."
 
----
+***
 
 ## **Preamble: Setting the Stage**
+*(Total Time: ~3 minutes, 40 seconds)*
 
-<font color="grey"><i>**Host's Cue for Cognitive Dissonance:** Your goal is to immediately break the pattern of a typical tech presentation. The dissonance comes from the **unexpected intimacy and humor**. Use a warm, conversational tone. You're not a lecturer; you're the guide of a human story. Make the audience feel like they're leaning in to hear a secret, not sitting through a class.</i></font>
+> <font color="slategray">_**Host's Cue:** Break the pattern of a typical tech presentation with unexpected intimacy and humor. You're the guide of a human story, not a lecturer._</font>
 
-**Mariana (as Host):**
-(Step forward with a warm, confident smile.)
-Good morning. Let's start with a simple fact: we are officially software developers. Which is a strange thing to say out loud.
+`[00:00 - 00:20]` ``@Mariana`` **(as Host):**
+*(Step forward with a warm, confident smile.)*
+Good morning. Let's start with a simple fact: we are officially software developers. Which is a strange thing to say out loud. *(Turn to Dennis with a friendly, direct look.)* Dennis, you're a very logical and analytical thinker. How does it actually *feel* to be here today, having built a complete, working application from scratch?
 
-(Turn to Dennis with a friendly, direct look.)
-Dennis, you're a very logical and analytical thinker. How does it actually *feel* to be here today, having built a complete, working application from scratch?
+`[00:20 - 01:00]` ``@Dennis``
+> _[40-second cue, including buffer. Talk about the shift from theory to a tangible result, maybe comparing it to finally solving a complex puzzle.]_
 
-<font color="blue">**Dennis:**</font>
-> <font color="blue"><i>[30-second cue for a thoughtful, perhaps dry-humored response. He can talk about the shift from theory to a tangible result, maybe comparing it to finally solving a complex puzzle.]</i></font>
-
-**Mariana (as Host):**
+`[01:00 - 01:15]` ``@Mariana`` **(as Host):**
 And Jeffrey, you have a great eye for design and aesthetics. What was your honest, first reaction when you found out our project was a *nutrition tracker*? Be honest.
 
-<font color="green">**Jeffrey:**</font>
-> <font color="green"><i>[30-second cue for a cool, laid-back response. He might humorously admit he wasn't thrilled at first, but then saw the creative potential to make it visually appealing and user-friendly.]</i></font>
+`[01:15 - 01:55]` ``@Jeffrey``
+> _[40-second cue, including buffer. Humorously admit you weren't thrilled at first, but then saw the creative potential to make it visually appealing and user-friendly.]_
 
-**Mariana (as Host):**
+`[01:55 - 02:05]` ``@Mariana`` **(as Host):**
 And Liang... after this whole journey... do you feel like a pro?
 
-<font color="orange">**Liang:**</font>
-> <font color="orange"><i>[Smiles, plays along with his characteristic charm. 30-second cue for a diplomatic and intelligent response about the steep learning curve and the feeling of accomplishment.]</i></font>
+`[02:05 - 02:45]` ``@Liang``
+> _[40-second cue, including buffer. Smile, play along with characteristic charm. Talk about the steep learning curve and the feeling of accomplishment.]_
 
-**Mariana (as Host):**
+`[02:45 - 03:00]` ``@Mariana`` **(as Host):**
 Well, before we get too ahead of ourselves, we have a confession. We know that explaining code can be... a little dry. So we found a better way to tell our story. Liang, you came up with the philosophy that became our guide. Could you share it with everyone?
 
-<font color="orange">**Liang:**</font>
-> <font color="orange">I stumbled upon a simple idea: 'If you can cook, you can code.' And it just clicked. Suddenly, the intimidating world of algorithms felt as familiar as a family recipe. It gave us a shared language to tackle the project.</font>
+`[03:00 - 03:15]` ``@Liang``
+> I stumbled upon a simple idea: 'If you can cook, you can code.' And it just clicked. Suddenly, the intimidating world of algorithms felt as familiar as a family recipe. It gave us a shared language to tackle the project.
 
-**Mariana (as Host):**
-A perfect analogy. And speaking of the project, Liang, tell us about the app itself. What makes BITAMINE different from the thousands of other health apps out there?
+`[03:15 - 03:25]` ``@Mariana`` **(as Host):**
+A perfect analogy. And speaking of the project, Liang, tell us about the app itself. What makes **BITAMINE** different?
 
-<font color="orange">**Liang:**</font>
-> <font color="orange">Most apps focus only on weight loss and counting calories. But health is more personal than that. What if your goal is to gain muscle, sleep better, or have more energy? Everyone is unique. We're past the era of one-size-fits-all diets that often lead to being skinny but malnourished. BITAMINE's goal is to give you a simple, visual way to know if you're on the right path with your personal goals—eating well and staying hydrated.</font>
+`[03:25 - 03:55]` ``@Liang``
+> Most apps focus only on weight loss. But health is more personal than that. What if your goal is to gain muscle, sleep better, or have more energy? **BITAMINE**'s goal is to give you a simple, visual way to know if you're on the right path with your personal goals—eating well and staying hydrated.
 
-**Mariana (as Host):**
-And Jeffrey will show us exactly how that works in a later chapter. Until then, stick around. We're about to show you how to cook an app. Welcome to our Bake-Off.
+`[03:55 - 04:30]` ``@Mariana`` **(as Host):**
+And Jeffrey will show us exactly how that works later. Until then, stick around. Welcome to our Bake-Off. *(Tone becomes more focused.)* Now, most student projects are safe. But Liang, you decided we needed a real-world challenge. You found us a client who wanted a **three-floor, lemon and vanilla masterpiece** in just **four weeks.** That was impossible. So, we did what any good kitchen does: we created a smaller, 'test cake' for today. But we learned it's not just about baking. It's the **logistics, finances, legal terms, client communication...** all of it matters.
 
-(Tone becomes more focused, like a storyteller setting a scene.)
-Now, most student projects are like baking from a pre-written recipe. Safe. Predictable. But our team had an innovator. Liang, you decided we needed a real-world challenge. Tell us about that.
+***
 
-<font color="orange">**Liang:**</font>
-> <font color="orange"><i>[30-second cue explaining his initiative to find a real client, seeking a genuine challenge.]</i></font>
+### **Chapter 1: The Engine Room - The Unseen Grind**
+*(Total Time: ~1 minute)*
 
-**Mariana (as Host):**
-A real client. A brilliant move. And what did this client request for our very first project? A **spongy, fluffy, three-floor lemon and vanilla masterpiece.** A cake that would challenge even a seasoned pastry chef. Oh, and they wanted it in **four weeks.** We quickly realized that to do it right, that timeline was impossible. So, we did what any good kitchen does: we created a smaller, 'test cake'—a fully functional version for our friends and family to taste and test here today.
+> _**Host's Cue:** Act as a 'behind-the-scenes' reporter. Show the 'ugly' code and frame it with a simple kitchen analogy. Emphasize the "chaos" to contrast with the calm exterior people expect from tech._
 
-But we also learned that a project like this isn't just about baking and decorating. It's the **logistics**, the **finances**, the **legal terms**, the **client communication**, the **website**, **production**, and **delivery**. All of it matters.
+`[04:30 - 04:35]` **--- SWITCH TO JEFFREY AS HOST ---**
 
----
-
-### **Chapter 1: The Engine Room - The Unseen Grind** 
-Switch to Jeffrey 
-
-<font color="grey"><i>**Host's Cue for Cognitive Dissonance:** Shift your tone to that of a 'behind-the-scenes' reporter. Your job is to pull back the curtain. The dissonance is created by showing something complex and 'ugly' (the code, the plain admin panel) and framing it with a simple, familiar analogy (a kitchen). Emphasize the "chaos" and "struggle" to contrast with the calm exterior people expect from tech.</i></font>
-
-**Switch to Jeffrey (as Host):**
+`[04:35 - 05:05]` ``@Jeffrey`` **(as Host):**
 Before we step into our digital kitchen, let's quickly define the terms.
-*   The **Backend** is the kitchen itself—the engine room where all the mixing and baking happens. @Liang, Dennis as chefs in the kitchen, planing the cake
-*   The **Frontend** is the beautiful storefront where the finished cake is displayed. '@Jeffrey planing and decorating the cake
-*   The **Database** is the pantry, storing all our raw ingredients, or data. '@linag selecting the ingredients and making them ready to be used'
-*   The **Django Framework** is our set of professional-grade appliances—the ovens and mixers that give us structure and speed. '''@Liang and Denis preparing the setting'''
-*   The **API** is the waiter, carrying orders from the frontend to the backend and back again. @Liang tood care about it , he can cook and also be the waiter, was exhausting
-*   And the **Pipeline** is the automated conveyor belt for quality control and delivery. @Mariana was taking care that the logistic went well and the cake could be delivered
+*   The **Backend** is the kitchen itself, where ``@Liang`` and ``@Dennis`` planned the cake.
+*   The **Frontend** is the beautiful storefront, where I planned the decoration. ``@Jeffrey``
+*   The **Database** is the pantry, where ``@Liang`` selected the ingredients.
+*   The **Django Framework** is our professional appliances, prepared by ``@Liang`` and ``@Dennis``.
+*   The **API** is the waiter, a job ``@Liang`` took on, which was exhausting.
+*   And the **Pipeline** is the conveyor belt for delivery, which ``@Mariana`` managed.
 
-Now that you know the lingo, let's go live to our 'Kitchen Architects,' Dennis and Liang.
+`[05:05 - 05:15]` ``@Jeffrey`` **(as Host):**
+Now that you know the lingo, let's go live to our 'Kitchen Architects.' *(Transition: Screen Share VS Code)*. Dennis, what exactly are we seeing here?
 
-**(Transition: Dynamic Screen Share - VS Code Live Share. Show 'models.py'.)**
+`[05:15 - 05:35]` ``@Dennis``
+> _[20-second cue. Explain VS Code as their 'shared kitchen' and Live Share as their 'co-op mode' for working together in real-time.]_
 
-**Switch to Jeffrey  (as Host):**
-Okay guys, we're looking at your screen. Dennis, what exactly are we seeing here? It doesn't look like a typical app.
-
-<font color="blue">**Dennis:**</font>
-> <font color="blue"><i>[Points to the VS Code interface. 30-second cue for a clear, direct explanation of VS Code as their 'shared kitchen' and Live Share as their way of working together in real-time, like a 'co-op mode.']</i></font>
-
-**(Continue with the rest of Chapter 1...)**
-
----
+***
 
 ### **Chapter 2: The Pâtissier's Palette - The Art of Illusion**
-switch to Mariana
+*(Total Time: ~1 minute, 35 seconds)*
 
-<font color="grey"><i>**Host's Cue for Cognitive Dissonance:** Your tone should be one of admiration for Jeffrey's artistry, but also empathy for his struggle. The dissonance comes from revealing the **personal cost of the beautiful visuals**. Frame it as a solo journey. Ask about the "fear" and "pressure" to make the audience understand that the polished frontend wasn't a simple task, but an act of personal resilience.</i></font>
+> _**Host's Cue:** Admire Jeffrey's artistry, but also empathize with his struggle. Reveal the personal cost of the beautiful visuals. Frame it as a solo journey and ask about the "fear" and "pressure."_
 
-**Mariana (as Host):**
-Let's be direct. Jeffrey, you've always been clear that you're not a backend guy. You're not a fan of the hot, messy kitchen; you're an artist at heart, a *pâtissier*. But here’s the twist: front-end design wasn't a huge part of our course. So how did you become our master decorator, essentially overnight?
+`[05:35 - 05:40]` **--- SWITCH TO MARIANA AS HOST ---**
 
-<font color="green">**Jeffrey:**</font>
-> <font color="green"><i>[Takes over, sharing his screen. 30-second cue for a cool, confident, and honest explanation of his passion for design and the challenge of teaching himself the necessary skills against the clock.]</i></font>
+`[05:40 - 06:00]` ``@Mariana`` **(as Host):**
+Let's be direct. Jeffrey, you're an artist at heart, a *pâtissier*. But front-end design wasn't a huge part of our course. So how did you become our master decorator, essentially overnight?
 
-**Mariana (as Host):**
-Every artist faces a blank canvas. In the 'confessional booth,' what was the biggest challenge you faced, knowing you had to teach yourself this craft while the team was counting on you to make their work look beautiful?
+`[06:00 - 06:40]` ``@Jeffrey``
+> _[40-second cue. Take over screen share. Explain your passion for design and the challenge of teaching yourself the necessary skills against the clock.]_
 
-<font color="green">**Jeffrey:**</font>
-> <font color="green"><i>[30-second cue for an honest, resilient reflection on the pressure of not wanting to let the team down and his drive to create something he was proud of.]</i></font>
+`[06:40 - 06:55]` ``@Mariana`` **(as Host):**
+Every artist faces a blank canvas. What was the biggest challenge you faced, knowing you had to teach yourself this craft while the team was counting on you?
 
-**(Jeffrey demos the logo and charts.)**
+`[06:55 - 07:15]` ``@Jeffrey``
+> _[20-second cue. Give an honest, resilient reflection on the pressure of not wanting to let the team down and your drive to create something you were proud of. Demo the logo/charts.]_
 
----
+***
 
-### **Chapter 3: The Secret Sauce (and a Clever Name) - The Invisible Bridge**
-switch to Jeffrey
+### **Chapter 3: The Secret Sauce (and a Clever Name)**
+*(Total Time: ~1 minute, 10 seconds)*
 
-<font color="grey"><i>**Host's Cue for Cognitive Dissonance:** Here, you act as the bridge between two very different ideas. First, present the API as a mysterious, vital 'secret sauce.' Then, pivot sharply to the name. The dissonance is the **whiplash between the serious, invisible tech and the goofy, human story of the name**. It shows the team's personality and reminds the audience that real people, not machines, built this.</i></font>
+> _**Host's Cue:** Bridge two different ideas. Present the API as a mysterious 'secret sauce,' then pivot sharply to the human story of the name. Create whiplash between serious tech and a fun, personal detail._
 
-**Jeffrey (as Host):**
-We've seen the raw power of the engine room and the artistic finesse of the pâtissier's studio. But how do they talk to each other? How does the cake know what frosting to wear? This is where the 'secret sauce' comes in. Dennis, explain the API—the waiter in our digital restaurant.
+`[07:15 - 07:20]` **--- SWITCH TO JEFFREY AS HOST ---**
 
-<font color="blue">**Dennis:**</font>
-> <font color="blue"><i>[Explains API. 30-second cue for a precise, dry-humored explanation of the API as the 'waiter' – taking orders from the 'customer' (frontend) to the 'kitchen' (backend). He can show a clean snippet of code.]</i></font>
+`[07:20 - 07:35]` ``@Jeffrey`` **(as Host):**
+We have a functional cake and a beautiful design. But how do they talk to each other? This is where the 'secret sauce' comes in. Dennis, explain the API—the waiter in our digital restaurant.
 
-**Jeffrey (as Host):**
-So, it's the invisible bridge that makes everything work. But speaking of how things get their identity... let's talk about the name. **'BITAMINE.'** Liang, there's a clever story there, isn't there?
+`[07:35 - 08:00]` ``@Dennis``
+> _[25-second cue. Explain the API as the 'waiter' connecting frontend and backend. Can show a clean code snippet.]_
 
-<font color="orange">**Liang:**</font>
-> <font color="orange">It started as a simple mashup of 'Bits' for technology and 'Vitamins' for health. But then we realized 'amine' is the root of **'amino acids'**—the fundamental building blocks of nutrition. So **BITAMINE** is literally about providing the digital building blocks for a healthy life. It started as a fun name, but it ended up being perfect.</font>
+`[08:00 - 08:10]` ``@Jeffrey`` **(as Host):**
+So, it's the invisible bridge. Speaking of identity... let's talk about the name. **'BITAMINE.'** Liang, there's a clever story there, isn't there?
 
-<font color="grey"><i>**Cognitive Dissonance End:** (The audience is left with the contrast between the complex, invisible 'secret sauce' (API) that makes the app function, and the clever, human-centric name that gives it identity.)</i></font>
-The invisible bridge is built, and the cake has a name. But does it pass the ultimate taste test? The one that truly matters?
+`[08:10 - 08:30]` ``@Liang``
+> It started as a mashup of 'Bits' and 'Vitamins.' But then we realized 'amine' is the root of **'amino acids'**—the building blocks of nutrition. So **BITAMINE** is literally the digital building blocks for a healthy life.
 
----
+***
 
 ### **Chapter 4: The Grandma Test - The Ultimate Validation**
-switch to Mariana
+*(Total Time: ~2 minutes, 05 seconds)*
 
-<font color="grey"><i>**Host's Cue for Cognitive Dissonance:** Your role is to be the voice of the user—specifically, a non-technical one. The dissonance is created by constantly reinforcing how **simple and easy everything looks on screen**, while the audience now knows (from Chapters 1-3) the immense work that went into **hiding that complexity**. Every time a feature is shown, your reaction should be "Wow, that's it? So simple!"</i></font>
+> _**Host's Cue:** Be the voice of a non-technical user. Reinforce how simple everything looks, while the audience knows the complexity underneath. Your reaction should be "Wow, that's it? So simple!"_
 
-**Mariana (as Host):**
-Now for the most important test. The one that separates a good app from a great one. The Grandma Test. Can someone who knows nothing about code navigate this digital kitchen? I need you all to pretend you are my lovely, tech-confused grandma. Because if she can use it, anyone can.
+`[08:30 - 08:35]` **--- SWITCH TO MARIANA AS HOST ---**
 
-**(Transition: Dynamic Screen Share - Jeffrey shares the app's front end.)**
+`[08:35 - 08:50]` ``@Mariana`` **(as Host):**
+Now for the most important test: The Grandma Test. If my grandma can use it, anyone can. *(Transition: Jeffrey shares app front end)*. Okay team, let's go. Jeffrey, how does Grandma create an account?
 
-**Mariana (as Host):**
-Okay team, you're on. Grandma wants to create an account. Jeffrey, show us how simple this is.
+`[08:50 - 09:20]` ``@Jeffrey``
+> _[30-second cue. Click 'Sign Up' and walk through the simple form, explaining the user-friendly design choices.]_
 
-<font color="green">**Jeffrey:**</font>
-> <font color="green"><i>[Clicks 'Sign Up' and walks through the form. 30-second cue for a smooth explanation of the user-friendly design, emphasizing clarity and simplicity.]</i></font>
-
-**Mariana (as Host):**
+`[09:20 - 09:30]` ``@Mariana`` **(as Host):**
 Easy enough! Okay Grandma, you're in. Now, add your lunch. Liang, how do we do that?
 
-<font color="orange">**Liang:**</font>
-> <font color="orange"><i>[Explains adding a food item. 30-second cue for a clear explanation, using an analogy like 'adding an ingredient to a bowl.']</i></font>
+`[09:30 - 09:55]` ``@Liang``
+> _[25-second cue. Explain how to add a food item simply, using an analogy like 'adding an ingredient to a bowl.']_
 
-**Mariana (as Host):**
-It's in! So simple. Dennis, what does Grandma see now? How do we translate all that complex data into something she can understand instantly?
+`[09:55 - 10:05]` ``@Mariana`` **(as Host):**
+It's in! So simple. Dennis, what does Grandma see now? How do you make complex data easy to understand?
 
-<font color="blue">**Dennis:**</font>
-> <font color="blue"><i>[Explains the simple, color-coded charts. 30-second cue for a direct explanation, emphasizing immediate visual feedback. He can use a subtle analogy like a 'health bar' and then translate it to 'green means good.']</i></font>
+`[10:05 - 10:25]` ``@Dennis``
+> _[20-second cue. Explain the simple, color-coded charts, emphasizing immediate visual feedback like a 'health bar' where 'green means good.']_
 
-**Mariana (as Host):**
-But what if Grandma is a pro and wants the details?
+`[10:25 - 10:35]` ``@Mariana`` **(as Host):**
+But what if Grandma wants the details?
 
-<font color="blue">**Dennis:**</font>
-> <font color="blue">One click. `[Jeffrey reveals the detailed nutrient breakdown]`. She can see all the micro and macronutrients. It's like having the full ingredient list on the back of the package, instantly available.</font>
+`[10:35 - 10:45]` ``@Dennis``
+> One click. *[Jeffrey reveals the detailed nutrient breakdown]*. She can see all the micro and macronutrients instantly.
 
-**Mariana (as Host):**
-And the full pantry? How do we show all the foods without overwhelming her?
+`[10:45 - 11:00]` ``@Mariana`` **(as Host):**
+And the full pantry? How do you show all the foods without being overwhelming?
 
-<font color="blue">**Dennis:**</font>
-> <font color="blue"><i>[Jeffrey shows the food list. 30-second cue explaining pagination as 'turning the page in a cookbook.']</i></font>
+`[11:00 - 11:15]` ``@Dennis``
+> _[15-second cue. Jeffrey shows the food list. Explain pagination as 'turning the page in a cookbook.']_
 
-<font color="grey"><i>**Cognitive Dissonance End:** (The audience has witnessed the app's profound user-friendliness, leaving them to appreciate the immense technical complexity deliberately hidden beneath such a simple interface.)</i></font>
-The Grandma Test: Passed. The cake is not just beautiful and structurally sound; it's delicious and easy to eat. But after all this... how does the team feel?
+***
 
----
+## **Grand Finale: The Taste of Triumph**
+*(Total Time: ~1 minute, 45 seconds to end)*
 
-### **Grand Finale: The Taste of Triumph**
-switch to Jeffrey
+> _**Host's Cue:** Shift from celebratory to reflective. Contrast the external success (the app) with the team's internal journey. Make it about human growth._
 
-<font color="grey"><i>**Host's Cue for Cognitive Dissonance:** Your tone shifts from celebratory to reflective. The audience expects a victory lap. Instead, you will probe their internal journey. The dissonance is the contrast between their **external success (the finished app)** and their **internal state (are they *really* developers now?)**. This makes the finale about human growth, not just technical achievement.</i></font>
+`[11:15 - 11:20]` **--- SWITCH TO JEFFREY AS HOST ---**
 
-**(Slide shows a final, beautiful screenshot of the app.)**
+`[11:20 - 11:35]` ``@Jeffrey`` **(as Host):**
+So, after all the drama, the stress... we built it. We turned an idea into a masterpiece. Which brings me to my final question for the team. *(Point to Dennis)*. Dennis, after all this... do you finally *feel* like a software developer?
 
-**Jeffrey (as Host):**
-So, after all the drama, the stress, the near-collapses... we built it. We turned an idea into a masterpiece. Which brings me to my final question for the team.
+`[11:35 - 12:10]` ``@Dennis``
+> _[35-second cue. Give a thoughtful, self-aware answer about the transition from theory to practice and the satisfaction of building something real.]_
 
-(Point to Dennis, a direct, thoughtful gaze.)
-Dennis, after all this... do you finally *feel* like a software developer?
+`[12:10 - 12:20]` ``@Jeffrey`` **(as Host):**
+And Mariana, are you a developer now? Or a project manager who just happens to be brilliant at code?
 
-<font color="blue">**Dennis:**</font>
-> <font color="blue"><i>[30-second cue for a thoughtful, self-aware answer about the transition from theory to practice and the satisfaction of building something real.]</i></font>
+`[12:20 - 12:55]` ``@Mariana``
+> _[35-second cue. Give a confident, maybe witty, answer about how the roles blurred and how this experience proved you're a builder and problem-solver at heart, which is what a developer is.]_
 
-**Jeffrey (as Host):**
-Mariana, are you a developer now? Or a junior who just happens to be brilliant at code?
+`[12:55 - 13:05]` ``@Jeffrey`` **(as Host):**
+And Liang, the man who started it all... do you believe it now? Do you truly feel like a master chef in this digital kitchen?
 
-<font color="green">**Jeffrey:**</font>
-> <font color="green"><i>[30-second cue for a cool, confident answer, reflecting on how coding is another form of creative problem-solving and that he's proud to be both.]</i></font>
+`[13:05 - 13:40]` ``@Liang``
+> _[35-second cue. Give a humble yet confident answer, reflecting on the journey and your excitement to keep learning in a real 'kitchen.']_
 
-**Jeffrey (as Host):**
-And Liang, the man who started it all with the 'cook and code' philosophy... do you believe it now? Do you truly feel like a master chef in this digital kitchen?
-
-<font color="orange">**Liang:**</font>
-> <font color="orange"><i>[30-second cue for a humble yet confident answer, reflecting on the journey and his excitement to keep learning in a real 'kitchen.']</i></font>
-
-**Jeffrey (as Host):**
+`[13:40 - 14:00]` ``@Jeffrey`` **(as Host):**
 Well, I'm incredibly proud to have been in the kitchen with these amazing chefs.
 
-**(PAUSE FOR APPLAUSE)**
+**`[14:00 - 14:15]` (PAUSE FOR APPLAUSE)**
 
-**(Tone becomes heartfelt and sincere after the applause dies down.)**
-Before we close, on a serious note, we need to say thank you. This journey was a chaotic, beautiful miracle, and we didn't do it alone.
+`[14:15 - 14:50]` ``@Jeffrey`` **(as Host):**
+*(Tone becomes heartfelt)*. Before we close, on a serious note, we need to say thank you. This journey was a chaotic, beautiful miracle, and we didn't do it alone. Thank you to our fantastic teachers, Federica and Christopher. Thank you to our mentor, Mason, our class manager, Anna, our job consultant, Bianca, and the entire DCI team. And finally, to our classmates. This was an amazing journey together.
 
-In the name of all of us, thank you to our fantastic teachers, Federica and Christopher. You made us believe in ourselves. You saw us through our personal dramas, you rescued us from every emotional tsunami, and you got us here.
-
-Thank you to our mentor, Mason, our class manager, Anna, our job consultant, Bianca, and the entire DCI team who works behind the scenes.
-
-And finally, to our classmates. This was an amazing journey together. We became friends, we supported each other, and we would love to keep working together... but it's time to go out into the real world.
-
-I'll now open the mic, and open the floor for questions.
-
-**(Stage for Jeffrey.)**
-
-<font color="green">**Jeffrey:**</font>
-> <font color="green">Thank you. We'd now love to open the floor to any questions you might have—about the app, our project, or our personal and group journey to become 'developers'... which, honestly, we still can't quite believe yet.</font>
+`[14:50 - 15:00]` ``@Jeffrey`` **(as Host):**
+And with that, we'd love to open the floor to any questions you might have. Thank you.
