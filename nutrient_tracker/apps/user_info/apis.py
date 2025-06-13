@@ -33,7 +33,7 @@ class UserView(APIView):
         return super().get_permissions()
 
     # READ
-    @extend_schema(operation_id="get_users", summary="Retrieve all users")
+    @extend_schema(operation_id="get_users")
     def get(self, request: Request) -> Response:
         """Retrieve a list of all users."""
         users = User.objects.all()
@@ -122,7 +122,6 @@ class UserDetailView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# TODO Test the API views below.
 class UserHistoryView(APIView):
     """View to handle history operations for a specific user."""
 
@@ -141,6 +140,8 @@ class UserHistoryView(APIView):
 
 
 class UserFavoriteView(APIView):
+    """View to handle favorite operations for a specific user."""
+
     serializer_class = FavoriteSerializer
 
     def get_permissions(self) -> list:
