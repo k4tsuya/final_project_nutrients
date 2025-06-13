@@ -4,14 +4,15 @@
       This SVG has a transparent background. It will automatically adapt to GitHub's light or dark mode.
     -->
 
-    <!-- Main Title - Centered over the entire graphic for overall balance -->
-    <text x="400" y="40" font-family="'Segoe UI', sans-serif" font-size="28" font-weight="600" text-anchor="middle" fill="#333">Macronutrient Distribution</text>
+    <!-- Chart Title -->
+    <text x="400" y="40" font-family="'Segoe UI', sans-serif" font-size="28" font-weight="600" text-anchor="right" fill="#333">Macronutrient Distribution</text>
 
-    <!-- Chart Circle Group -->
+    <!-- Chart Circle Group - Increased radius and stroke-width for a larger appearance -->
     <g transform="translate(220, 220) rotate(-90)">
         
         <!-- Segment 1: Protein (25%) - MORE RED -->
-        <circle r="120" cx="0" cy="0" fill="transparent" stroke="#E57373" stroke-width="80" stroke-dasharray="188.5 565.5">
+        <!-- Radius is now 120px, Stroke is 80px -->
+        <circle r="120" cx="0" cy="0" fill="transparent" stroke="#E57373" stroke-width="80" stroke-dasharray="188.5 565.5"> <!-- Circumference = 754 -->
             <animate attributeName="stroke-dashoffset" from="754" to="0" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
         </circle>
         
@@ -26,27 +27,19 @@
         </circle>
     </g>
 
-    <!-- Legend Group - Now includes its own dedicated title for alignment and clarity -->
-    <g transform="translate(500, 110)" font-family="'Segoe UI', sans-serif" font-size="18">
-        <!-- NEW: Dedicated Legend Title -->
-        <text x="0" y="0" font-weight="bold" font-size="20" fill="#444">Legend</text>
-        
+    <!-- Legend - Repositioned for the larger chart -->
+    <g transform="translate(500, 130)" font-family="'Segoe UI', sans-serif" font-size="18">
         <!-- Protein Legend -->
-        <rect x="0" y="30" width="20" height="20" fill="#E57373" rx="5"/>
-        <text x="30" y="46" fill="#555">Protein (25%)</text>
+        <rect x="0" y="0" width="20" height="20" fill="#E57373" rx="5"/>
+        <text x="30" y="16" fill="#555">Protein (25%)</text>
         
         <!-- Vitamins Legend -->
-        <rect x="0" y="80" width="20" height="20" fill="#FFDE7D" rx="5"/>
-        <text x="30" y="96" fill="#555">Vitamins (45%)</text>
+        <rect x="0" y="50" width="20" height="20" fill="#FFDE7D" rx="5"/>
+        <text x="30" y="66" fill="#555">Vitamins (45%)</text>
         
         <!-- Minerals Legend -->
-        <rect x="0" y="130" width="20" height="20" fill="#A2C47E" rx="5"/>
-        <text x="30" y="146" fill="#555">Minerals (30%)</text>
+        <rect x="0" y="100" width="20" height="20" fill="#A2C47E" rx="5"/>
+        <text x="30" y="116" fill="#555">Minerals (30%)</text>
 
-        <text x="0" y="200" font-size="16" fill="#777" font-style="italic">Hover over segments for details in the app!</text>
-    </g>
-</svg>
-
-        <text x="0" y="170" font-size="16" fill="#777" font-style="italic">Hover over segments for details in the app!</text>
     </g>
 </svg>
