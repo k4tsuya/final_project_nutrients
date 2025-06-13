@@ -22,7 +22,7 @@
 | ----------------------- | ------------------------------------------------------------------------------------------------------- | ----------- |
 |  **Deep Nutrient Insights** | Access data on 147+ essential nutrients, compare foods with our powerful engine, and see bioavailability estimates. | ✅ Complete |
 |  **Personalized Tracking**  | Log meals in under 30 seconds, get dynamic daily targets based on your goals, and receive smart deficiency alerts. | ✅ Complete |
-| ⚡ **Smart Pattern Analysis**  | Discover insights from your meal timing, find nutrient synergies, and generate automated health reports.        | 🚧 In Progress |
+|  **Smart Pattern Analysis**  | Discover insights from your meal timing, find nutrient synergies, and generate automated health reports.        | 🚧 In Progress |
 |  **Recipe Optimizer**      | Automatically adjust recipes to meet your specific nutrient targets without sacrificing taste.                | 📅 Planned   |
 
 ---
