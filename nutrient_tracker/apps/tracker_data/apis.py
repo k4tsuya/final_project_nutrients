@@ -11,6 +11,7 @@ from rest_framework.decorators import api_view
 from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from drf_spectacular.utils import extend_schema
 
 
 class NutrientTrackerList(generics.ListAPIView):
@@ -54,6 +55,10 @@ class NutrientTrackerDetail(generics.ListAPIView):
         except NutrientTracker.DoesNotExist:
             raise Http404
 
+    @extend_schema(
+        operation_id="get_nutrient_tracker",
+        summary="Retrieve a single nutrient tracker",
+    )
     def get(self, request, pk, format=None):
         nutrient_tracker = self.get_object(pk)
         serializer = NutrientTrackerSerializer(nutrient_tracker)

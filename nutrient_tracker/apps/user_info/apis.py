@@ -15,6 +15,7 @@ from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticated
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from drf_spectacular.utils import extend_schema
 
 
 class UserView(APIView):
@@ -32,6 +33,7 @@ class UserView(APIView):
         return super().get_permissions()
 
     # READ
+    @extend_schema(operation_id="get_users", summary="Retrieve all users")
     def get(self, request: Request) -> Response:
         """Retrieve a list of all users."""
         users = User.objects.all()
@@ -58,6 +60,7 @@ class UserView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     # DELETE
+    @extend_schema(operation_id="delete_user")
     def delete(self, request: Request, pk) -> Response:
         """Delete a specific user."""
         user = User.objects.get(pk=pk)
