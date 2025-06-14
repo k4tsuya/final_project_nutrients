@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About us</title>
+    <title>Ingredients</title>
     <link rel="shortcut icon" type="image/x-icon" href="bitamin_icon_transparent.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -58,7 +58,7 @@ body {
     display: grid;
     grid-template-areas:
     'header header header header header header'
-    'menu left main right empty empty'
+    'menu left main main right empty'
     'footer footer footer footer footer footer';
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
     gap: 8px;
@@ -200,6 +200,48 @@ button.icon-button {
         height: 50%;
     }
 
+    #searchBox {
+  width: 100%;
+  max-width: 400px;
+  max-height: 32px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  flex: 1 1 calc(25% - 16px);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
     @media (max-width: 768px) {
     .grid-container {
         grid-template-areas:
@@ -249,10 +291,8 @@ button.icon-button {
     
 </nav>
 
-<div class="main">
-    <h1>Food Database</h1>
-    <div id="dataContainer"></div>Loading data...</div>
-</div>
+<input type="text" id="searchBox" placeholder="Search for a food..." />
+<div id="ingredientContainer" class="card-container"></div>
 
 <div class="links">
         <div class="footer-left">
@@ -271,6 +311,7 @@ button.icon-button {
 
 <script>
 
+    let allIngredients = [];
 
     // Toggle menu function for small screens
     function toggleMenu() {
@@ -295,29 +336,69 @@ button.icon-button {
     icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function fetchData() {
-        const container = document.getElementById("dataContainer");
-        try {
-            const response = await fetch(""); 
-            if (!response.ok) throw new Error("Network response was not ok");
+    const container = document.getElementById("ingredientContainer");
+    const searchBox = document.getElementById("searchBox");
+    const baseUrl = "http://127.0.0.1:8000/api/v1/food/ingredient/";
 
-            const data = await response.json();
-            container.innerHTML = '';
+    let nextUrl = baseUrl;
+    let allResults = [];
 
-            data.forEach(item => {
-                const itemDiv = document.createElement("div");
-                itemDiv.style.border = "1px solid #ccc";
-                itemDiv.style.padding = "8px";
-                itemDiv.style.margin = "8px 0";
-                itemDiv.innerHTML = `<strong>${item.name}</strong><br>${item.description}`;
-                container.appendChild(itemDiv);
-            });
-        } catch (error) {
-            container.innerHTML = "Error loading data: " + error.message;
-        }
+    try {
+        while (nextUrl) {
+    const response = await fetch(nextUrl);
+    if (!response.ok) throw new Error("Network response was not ok");
+
+    const data = await response.json();
+    allResults = allResults.concat(data.results || data);
+    nextUrl = data.next;
+
+    await sleep(500); // wait 500ms between requests
+}
+
+        allIngredients = allResults;
+
+        searchBox.addEventListener("input", () => {
+            const query = searchBox.value.trim().toLowerCase();
+            if (query === "") {
+                container.innerHTML = "";
+                return;
+            }
+
+            const filtered = allIngredients.filter(item =>
+                (item.food_name || "").toLowerCase().includes(query)
+            );
+
+            renderCards(filtered);
+        });
+
+    } catch (error) {
+        container.innerHTML = "Error loading data: " + error.message;
     }
+}
 
-    document.addEventListener("DOMContentLoaded", fetchData);
+fetchData();
+
+function renderCards(ingredients) {
+        const container = document.getElementById("ingredientContainer");
+        container.innerHTML = ""; // Clear previous results
+
+        ingredients.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                <h3>${item.food_name}</h3>
+                <p><strong>Group:</strong> ${item.food_group || "N/A"}</p>
+                <p><strong>Quantity:</strong> ${item.quantity || "N/A"}</p>
+                <p><strong>Unit:</strong> ${item.unit || "N/A"}</p>
+            `;
+            container.appendChild(card);
+        });
+    }
 
 </script>
 

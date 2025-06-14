@@ -45,6 +45,7 @@ DEFAULT_APPS = [
     "drf_spectacular",
     "crispy_forms",
     "crispy_bootstrap5",
+    "corsheaders",
 ]
 
 CUSTOM_APPS = [
@@ -57,6 +58,8 @@ CUSTOM_APPS = [
 INSTALLED_APPS = [*DEFAULT_APPS, *CUSTOM_APPS]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -159,10 +162,13 @@ REST_FRAMEWORK = {
         "rest_framework.throttling.UserRateThrottle",
     ],
     "DEFAULT_THROTTLE_RATES": {
-        "anon": "3/min",
+        "anon": "10/min",
         "user": "10/min",
     },
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ],
 }
 
 SPECTACULAR_SETTINGS = {
@@ -175,3 +181,7 @@ SPECTACULAR_SETTINGS = {
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = ["http://localhost:5500"]
