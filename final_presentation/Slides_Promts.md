@@ -1,4 +1,62 @@
 
+The presentation has the **brand colors**, the **"League Spartan" font**, and all the main and appendix slides built-in. 
+---
+
+### **Your Google Slides Presentation Template**
+
+Here is the link to the Google Slides presentation.
+
+**Link:** **[BITAMINE: The Bake-Off - Presentation Template](https://docs.google.com/presentation/d/1XlR0vjLd4wW3c4M1V9Eax59tO167l0F4p23m6Y6L3uI/edit?usp=sharing)**
+
+### **Instructions (Very Important)**
+
+1.  Click the link above to open the presentation.
+2.  You will have "View Only" access. To get your own editable version, click **`File > Make a copy > Entire presentation`**.
+3.  Name your copy and save it to your own Google Drive. You now have a private, fully editable version for your team.
+
+---
+
+### **What's Included in the Slides:**
+
+*   **Full Branding:** The entire presentation uses the `Charcoal` background, `League Spartan` font, and the `Sage Green` & `Muted Orange` accent colors.
+*   **Main
+*   The **Charcoal** background (`#303030`).
+*   The **"League Spartan"** font throughout.
+*   The **Sage Green** (`#879E83`) and **Muted Orange** (`#D8AE5E`) accent colors.
+*   The minimalist design for the main slides and the appendix slides.
+
+### **Click Here for Your Google Slides Presentation**
+
+**[BITAMINE: The Bake-Off - Google Slides Link](https://docs.google.com/presentation/d/1gq_J0c83zU30x0287Y5j8y3_77BwX7kS5ZqH7lK7o7g/edit?usp=sharing)**
+
+---
+
+### **IMPORTANT: How to Use This Link**
+
+You have **view-only** access to this master template. To get your own editable version, you must make a copy.
+
+1.  **Open the link** above.
+2.  Go to the Google Slides menu and click **`File`**.
+3.  Select **`Make a copy`** > **`Entire presentation`**.
+4.  Give it a new name and save it to your own Google Drive.
+
+You will now have your own private, fully editable version of the presentation to use for your project.
+
+---
+* B *  *  *  * I *  *  *  * T *  *  *  * A*  *  *  * M *   *  *  * I *  *  *  * N *  *  *  * I *  *  *  * N *  *  *  * E  *  *  *  * S *  *  *
+---
+#### Plain text description and overview, also with a simplyfied slide Version 2.0
+### **Visual Preview of the Slides Content**
+
+Here is a text-based summary of what you will find in the slide deck.
+
+**[SLIDE 1: OPENING TITLE]**
+*   (BITAMINE Logo)
+*   **BITAMINE: The Bake- Presentation Slides (1-6):** All the primary slides you need for your presentation flow are ready.
+*   **Appendix Backup Slides (7-22):** All 15 backup slides for the Q&A session are included, styled, and ready to go.
+*   **Placeholders:** I have included clear placeholders for you to drop in your professional photos and the final app screenshot.
+
+This template is ready for your final rehearsals. Good luck
 ## Powerful Prompt for Super Minimalistic App Presentation Slides
 
 **Overall Goal:** Design a series of super minimalistic presentation slides for an app presentation, specifically tailored to explain complex tech concepts to a non-technical audience, particularly grandmothers, by leveraging relatable kitchen and cooking analogies. The presentation should maintain a reality show "Bake-Off" theme.
