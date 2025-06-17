@@ -1,5 +1,5 @@
-from apps.food_data.models import Ingredient, Recipe
 from apps.nutrient_data.models import Nutrient
+from apps.food_data.models import Ingredient, Recipe
 from apps.tracker_data.models import NutrientTracker
 from apps.user_info.enums import Gender, Role
 from django.contrib.auth.models import AbstractUser
@@ -61,14 +61,15 @@ class Favorite(models.Model):
         on_delete=models.CASCADE,
         unique=False,
     )
-    nutrient = models.ManyToManyField(
-        Nutrient,
-    )
+    nutrient = models.ManyToManyField(to=Nutrient)
+    # nutrient = models.ManyToManyField(to=
+    #     Nutrient,
+    # )
     ingredient = models.ManyToManyField(
-        Ingredient,
+        to=Ingredient
     )
     recipe = models.ManyToManyField(
-        Recipe,
+        to=Recipe
     )
 
     class Meta:
