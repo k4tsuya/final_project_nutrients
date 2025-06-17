@@ -1,10 +1,18 @@
 from django.shortcuts import render, get_object_or_404
 from apps.food_data.models import Ingredient, Recipe
 from scripts.utils import limit_m2m_field
+from rest_framework import generics, filters
+from .models import Ingredient
+from .serializers import IngredientSerializer
 
 
 # Create your views here.
 
+# class IngredientListView(generics.ListAPIView):
+#     queryset = Ingredient.objects.all()
+#     serializer_class = IngredientSerializer
+#     filter_backends = [filters.SearchFilter]
+#     search_fields = ['food_name', 'food_group']
 
 
 def recipe_list(request):
