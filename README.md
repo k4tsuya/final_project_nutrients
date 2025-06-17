@@ -1,4 +1,8 @@
+<<<<<<< jefhaf-patch-3
+# <img src="bitamin_icon_transparent.png" width="32" height="32" alt="logo"> BITAMINE
+=======
 # <img src="bitamin_icon_transparent.png" width="auto" alt="logo"> BITAMINE
+>>>>>>> main
 ### *Nutrient intelligence, simplified.*
 > Track over 147 nutrients, optimize your meals, and build smarter dietary habits with data-driven insights.
 >
