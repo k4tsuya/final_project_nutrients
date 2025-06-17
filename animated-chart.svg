@@ -1,0 +1,45 @@
+<!-- Filename: animated-chart.svg -->
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- 
+      This SVG has a transparent background. It will automatically adapt to GitHub's light or dark mode.
+    -->
+
+    <!-- Chart Title -->
+    <text x="400" y="40" font-family="'Segoe UI', sans-serif" font-size="28" font-weight="600" text-anchor="right" fill="#333">Macronutrient Distribution</text>
+
+    <!-- Chart Circle Group - Increased radius and stroke-width for a larger appearance -->
+    <g transform="translate(220, 220) rotate(-90)">
+        
+        <!-- Segment 1: Protein (25%) - MORE RED -->
+        <!-- Radius is now 120px, Stroke is 80px -->
+        <circle r="120" cx="0" cy="0" fill="transparent" stroke="#E57373" stroke-width="80" stroke-dasharray="188.5 565.5"> <!-- Circumference = 754 -->
+            <animate attributeName="stroke-dashoffset" from="754" to="0" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+        </circle>
+        
+        <!-- Segment 2: Vitamins (45%) - MORE YELLOW -->
+        <circle r="120" cx="0" cy="0" fill="transparent" stroke="#FFDE7D" stroke-width="80" stroke-dasharray="339.3 414.7" transform="rotate(90)">
+             <animate attributeName="stroke-dashoffset" from="754" to="0" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" begin="0.2s"/>
+        </circle>
+        
+        <!-- Segment 3: Minerals (30%) - PALE GREEN -->
+        <circle r="120" cx="0" cy="0" fill="transparent" stroke="#A2C47E" stroke-width="80" stroke-dasharray="226.2 527.8" transform="rotate(252)">
+            <animate attributeName="stroke-dashoffset" from="754" to="0" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" begin="0.4s"/>
+        </circle>
+    </g>
+
+    <!-- Legend - Repositioned for the larger chart -->
+    <g transform="translate(500, 130)" font-family="'Segoe UI', sans-serif" font-size="18">
+        <!-- Protein Legend -->
+        <rect x="0" y="0" width="20" height="20" fill="#E57373" rx="5"/>
+        <text x="30" y="16" fill="#555">Protein (25%)</text>
+        
+        <!-- Vitamins Legend -->
+        <rect x="0" y="50" width="20" height="20" fill="#FFDE7D" rx="5"/>
+        <text x="30" y="66" fill="#555">Vitamins (45%)</text>
+        
+        <!-- Minerals Legend -->
+        <rect x="0" y="100" width="20" height="20" fill="#A2C47E" rx="5"/>
+        <text x="30" y="116" fill="#555">Minerals (30%)</text>
+
+    </g>
+</svg>
