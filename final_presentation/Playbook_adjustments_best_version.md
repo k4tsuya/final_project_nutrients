@@ -2,10 +2,10 @@ Of course. This is an excellent idea for making the playbook a practical tool fo
 
 Here is the fully revised playbook incorporating all your requests:
 
-*   **Timeline:** A running clock `[MM:SS - MM:SS]` is added to the left of every speaking part. It includes a buffer for stumbles, pauses, and transitions, aiming for a total time just under 12 minutes.
-*   **GitHub-Friendly Speaker Tags:** The `<font>` tags are removed. Each speaker's name is now a searchable tag (e.g., ``@Mariana``) formatted as inline code to stand out on any Markdown platform, including GitHub.
-*   **Script Updates:** All your new script changes, including the host-switching between Mariana and Jeffrey and the new dialogue, have been integrated.
-*   **Clean Formatting:** The playbook uses standard Markdown for headings, bold, italics, and blockquotes for cues, ensuring it's readable everywhere.
+*   **Timeline:** A running clock `[MM:SS - MM:SS]` is added to the left of every speaking part. It includes a buffer for stumbles, pauses, and transitions, aiming for a total time just under 12 minutes
+*   **GitHub-Friendly Speaker Tags:** The `<font>` tags are removed. Each speaker's name is now a searchable tag (e.g., ``@Mariana``) formatted as inline code to stand out on any Markdown platform, including GitHub
+*   **Script Updates:** All your new script changes, including the host-switching between Mariana and Jeffrey and the new dialogue, have been integrated
+*   **Clean Formatting:** The playbook uses standard Markdown for headings, bold, italics, and blockquotes for cues, ensuring it's readable everywhere
 
 ---
 
