@@ -1,4 +1,4 @@
-# <img src="logo.png" width="28" height="28" alt="logo"> BITAMINES  
+# <img src="bitamin_icon_transparent.png" width="28" height="28" alt="logo"> BITAMINES  
 <span style="color:#7A8778">Track 147 nutrients across your meals</span>  
 
 ---
