@@ -58,7 +58,7 @@ This chart provides a real-time overview of your macronutrient balance. It anima
 <br>
 
 <p align="center">
-  Made with ❤️ by the Bitamines Team
+  Made with ❤️ by the Bitamine Team
 </p>
 
 
