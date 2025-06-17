@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/user-attachments/assets/dd3a5fdf-3d44-469b-9a99-4c07d3b07044" width="32" height="32" alt="logo"> BITAMINE
+# <img src="bitamin_icon_transparent.png" width="32" height="32" alt="logo"> BITAMINE
 ### *Nutrient intelligence, simplified.*
 > Track over 147 nutrients, optimize your meals, and build smarter dietary habits with data-driven insights.
 >
