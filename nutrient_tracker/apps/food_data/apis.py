@@ -20,6 +20,7 @@ from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from rest_framework.views import APIView
 
 from .filters import CategoryFilter, IngredientFilter
+from drf_spectacular.utils import extend_schema
 
 
 class IngredientView(generics.ListAPIView):

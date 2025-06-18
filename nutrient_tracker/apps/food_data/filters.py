@@ -4,7 +4,9 @@ from django_filters import rest_framework as filter
 
 
 class IngredientFilter(django_filters.FilterSet):
-    food_name = django_filters.CharFilter(lookup_expr="icontains")
+    search = django_filters.CharFilter(
+        field_name="food_name", lookup_expr="icontains"
+    )
 
     class Meta:
         model = Ingredient
