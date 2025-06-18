@@ -290,6 +290,9 @@ button.icon-button {
     </ul>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 </nav>
 
 <input type="text" id="searchBox" placeholder="Search for a food..." />
@@ -341,6 +344,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+<<<<<<< HEAD
 function debounce(func, delay) {
     let timeout;
     return function (...args) {
@@ -349,6 +353,20 @@ function debounce(func, delay) {
     };
 }
 
+=======
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function debounce(func, delay) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+
+>>>>>>> main
 async function fetchAllResults(query) {
     const baseUrl = "http://127.0.0.1:8000/api/v1/food/ingredient/";
     let nextUrl = `${baseUrl}?search=${encodeURIComponent(query)}`;
@@ -415,6 +433,7 @@ function renderCards(ingredients) {
             <p><strong>Group:</strong> ${item.food_group || "N/A"}</p>
             <p><strong>Quantity:</strong> ${item.quantity || "N/A"}</p>
             <p><strong>Unit:</strong> ${item.unit || "N/A"}</p>
+<<<<<<< HEAD
         `;
         container.appendChild(card);
     });
@@ -847,6 +866,8 @@ function renderCards(ingredients) {
             <p><strong>Group:</strong> ${item.food_group || "N/A"}</p>
             <p><strong>Quantity:</strong> ${item.quantity || "N/A"}</p>
             <p><strong>Unit:</strong> ${item.unit || "N/A"}</p>
+=======
+>>>>>>> main
             <p><strong>Energy:</strong> ${item.enercj || "N/A"}</P>
             <p><strong>VitaminA:</strong> ${item.vita_rae || "N/A"}</P>
             <p><strong>Iron:</strong> ${item.fe || "N/A"}</P>
