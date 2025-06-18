@@ -24,4 +24,4 @@ def create_nutrient_tracker(sender, instance, created, **kwargs):
             ]
         )
         # instance.save()
-    print("tried to create some nutrient trackers")
+    print(f"Created nutrient tracker for user {instance.username}")

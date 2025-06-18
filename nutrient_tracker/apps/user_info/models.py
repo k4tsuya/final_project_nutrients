@@ -34,7 +34,7 @@ class User(AbstractUser):
     def save(self, force_insert=False, force_update=False, *args, **kwargs):
         super().save(force_insert, force_update, *args, **kwargs)
 
-        print("User primary key:", self.pk)
+        print("User primary key of created user:", self.pk)
         if self.pk:
             tracked_nutrients = TrackedNutrients.objects.create(
                 user=self, nutrient_tracker=None
