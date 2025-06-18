@@ -22,7 +22,10 @@ from apps.user_info.views import (
     login_view,
     logout_view,
     HomeView,
+    ProfileView,
 )
+from django.conf import settings
+from django.conf.urls.static import static
 from apps.tracker_data.views import NutrientTrackerListView
 
 from rest_framework_simplejwt.views import (
@@ -67,6 +70,7 @@ urlpatterns = [
     path("register/", register_view, name="register"),
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
+    path("profile/", ProfileView.as_view(), name="profile"),
     path("tracker/", NutrientTrackerListView.as_view(), name="tracker_pagination"),
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
@@ -76,3 +80,6 @@ urlpatterns = [
         name="tracker_pagination",
     ),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

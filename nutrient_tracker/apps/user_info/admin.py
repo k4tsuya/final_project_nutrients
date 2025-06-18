@@ -2,7 +2,7 @@ from typing import ClassVar
 
 from django.contrib import admin
 
-from .models import Favorite, History, User, TrackedNutrients
+from .models import Favorite, History, User, TrackedNutrients, Profile
 
 # Register your models here.
 
@@ -97,6 +97,5 @@ class CustomHistoryAdmin(admin.ModelAdmin):
 admin.site.register(User, CustomUserAdmin)
 admin.site.register(Favorite, CustomFavoriteAdmin)
 admin.site.register(History, CustomHistoryAdmin)
-admin.site.register(
-    TrackedNutrients,
-)
+admin.site.register(TrackedNutrients)
+admin.site.register(Profile)
