@@ -291,7 +291,7 @@ button.icon-button {
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="login.html">Logout</a></li>
     </ul>
-    
+
 </nav>
 
 <input type="text" id="searchBox" placeholder="Search for a food..." />
@@ -337,6 +337,10 @@ button.icon-button {
     // Toggle icon
     const icon = document.getElementById("darkModeBtn").querySelector("i");
     icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function sleep(ms) {
@@ -420,7 +424,7 @@ function renderCards(ingredients) {
             <p><strong>Energy:</strong> ${item.enercj || "N/A"}</P>
             <p><strong>VitaminA:</strong> ${item.vita_rae || "N/A"}</P>
             <p><strong>Iron:</strong> ${item.fe || "N/A"}</P>
-            
+
         `;
         container.appendChild(card);
     });

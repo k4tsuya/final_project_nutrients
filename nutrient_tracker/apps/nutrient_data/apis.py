@@ -15,6 +15,7 @@ from apps.nutrient_data.serializers import NutrientSerializer
 from rest_framework import filters, generics, status
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from rest_framework.pagination import PageNumberPagination
+from drf_spectacular.utils import extend_schema
 
 
 class NutrientList(generics.ListAPIView):
@@ -38,6 +39,7 @@ class NutrientDetail(generics.ListAPIView):
         except Nutrient.DoesNotExist:
             raise Http404
 
+    @extend_schema(operation_id="get_nutrient_detail")
     def get(self, request, pk, format=None):
         nutrient = self.get_object(pk=pk)
         serializer = NutrientSerializer(nutrient)
