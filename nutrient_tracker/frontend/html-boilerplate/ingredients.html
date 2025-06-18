@@ -340,10 +340,6 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 function debounce(func, delay) {
     let timeout;
     return function (...args) {
@@ -419,7 +415,7 @@ function renderCards(ingredients) {
             <p><strong>Quantity:</strong> ${item.quantity || "N/A"}</p>
             <p><strong>Unit:</strong> ${item.unit || "N/A"}</p>
             <p><strong>Energy:</strong> ${item.enercj || "N/A"}</P>
-            <p><strong>VitaminA:</strong> ${item.vita_rae || "N/A"}</P>
+            <p><strong>Vitamin A:</strong> ${item.vita_rae || "N/A"}</P>
             <p><strong>Iron:</strong> ${item.fe || "N/A"}</P>
 
         `;
