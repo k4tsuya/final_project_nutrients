@@ -7,14 +7,6 @@ class TestModels(TestCase):
     @classmethod
     def setUpTestData(cls):
         """Creates a setup for the tests that is faster than using setUp"""
-        model1 = User
-        model2 = Profile
-        model3 = Favorite
-        model4 = History
-        model5 = TrackedNutrients
-        model = [model1, model2, model3, model4, model5]
-        with connection.schema_editor() as editor:
-            editor.create_model(model)
         cls.user = User.objects.create_user(
             username="testuser", password="testpassword"
         )

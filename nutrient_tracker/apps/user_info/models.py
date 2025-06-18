@@ -65,12 +65,8 @@ class Favorite(models.Model):
     # nutrient = models.ManyToManyField(to=
     #     Nutrient,
     # )
-    ingredient = models.ManyToManyField(
-        to=Ingredient
-    )
-    recipe = models.ManyToManyField(
-        to=Recipe
-    )
+    ingredient = models.ManyToManyField(to=Ingredient)
+    recipe = models.ManyToManyField(to=Recipe)
 
     class Meta:
         verbose_name = "Favorite"
@@ -132,8 +128,8 @@ class Profile(models.Model):
     def __str__(self):
         return f"{self.user.username}'s profile"
 
-    def save(self):
-        super().save()
+    def save(self, force_insert=False, force_update=False, *args, **kwargs):
+        super().save(force_insert, force_update, *args, **kwargs)
 
         img = Image.open(self.image.path)
 
