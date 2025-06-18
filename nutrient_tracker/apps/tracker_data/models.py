@@ -20,7 +20,7 @@ class NutrientTracker(models.Model):
         verbose_name_plural = "Nutrient Trackers"
 
     def __str__(self):
-        return f"{self.date} - {self.user.username}'s Nutrient Tracker"
+        return f"{self.date} - {self.user.username}'s {self.nutrient.nutrient_name} Nutrient Tracker"
 
 
 # compare nutrient ranges

@@ -35,16 +35,6 @@ class User(AbstractUser):
         super().save(force_insert, force_update, *args, **kwargs)
 
         print("User primary key of created user:", self.pk)
-        if self.pk:
-            tracked_nutrients = TrackedNutrients.objects.create(
-                user=self, nutrient_tracker=None
-            )
-            tracked_nutrients.save()
-            favourites = Favorite.objects.create(user=self)
-            favourites.save()
-            history = History.objects.create(user=self)
-            history.save()
-        super().save(force_insert, force_update, *args, **kwargs)
 
     def __str__(self) -> str:
         """Return the string representation of the user."""
@@ -56,11 +46,8 @@ class User(AbstractUser):
 
 
 class Favorite(models.Model):
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        unique=False,
-    )
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
     nutrient = models.ManyToManyField(to=Nutrient)
     # nutrient = models.ManyToManyField(to=
     #     Nutrient,
@@ -78,10 +65,8 @@ class Favorite(models.Model):
 
 
 class History(models.Model):
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-    )
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
     nutrient = models.ManyToManyField(
         Nutrient,
         max_length=10,
@@ -106,7 +91,7 @@ class History(models.Model):
 
 class TrackedNutrients(models.Model):
     # foreignkey because a user can only have one tracked nutrient table
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     # many to one because a user can have many nutrient_trackers
     # try with many to many to see if it works and compresses
     nutrient_tracker = models.ForeignKey(
