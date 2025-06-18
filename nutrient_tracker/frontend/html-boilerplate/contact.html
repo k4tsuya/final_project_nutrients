@@ -60,7 +60,7 @@ body {
     'header header header header header header'
     'menu left main right empty empty'
     'footer footer footer footer footer footer';
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 200px 2fr 2fr 2fr 2fr;
     gap: 8px;
     background-color: #f2fcf6;
     padding: 16px;
@@ -103,6 +103,9 @@ body {
 
 .menu {
     grid-area: menu;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
 }
 
 .menu ul {
