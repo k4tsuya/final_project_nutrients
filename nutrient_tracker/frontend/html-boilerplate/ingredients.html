@@ -288,7 +288,7 @@ button.icon-button {
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="login.html">Logout</a></li>
     </ul>
-    
+
 </nav>
 
 <input type="text" id="searchBox" placeholder="Search for a food..." />
@@ -340,65 +340,92 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function fetchData() {
-    const container = document.getElementById("ingredientContainer");
-    const searchBox = document.getElementById("searchBox");
-    const baseUrl = "http://127.0.0.1:8000/api/v1/food/ingredient/";
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-    let nextUrl = baseUrl;
+function debounce(func, delay) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+
+async function fetchAllResults(query) {
+    const baseUrl = "http://127.0.0.1:8000/api/v1/food/ingredient/";
+    let nextUrl = `${baseUrl}?search=${encodeURIComponent(query)}`;
     let allResults = [];
 
+    const MAX_PAGES = 2;  // Limit to 2 pages (you can lower to 1 if needed)
+    let pageCount = 0;
+
     try {
-        while (nextUrl) {
-    const response = await fetch(nextUrl);
-    if (!response.ok) throw new Error("Network response was not ok");
+        while (nextUrl && pageCount < MAX_PAGES) {
+            const response = await fetch(nextUrl);
+            if (!response.ok) throw new Error("Network error");
 
-    const data = await response.json();
-    allResults = allResults.concat(data.results || data);
-    nextUrl = data.next;
+            const data = await response.json();
+            allResults = allResults.concat(data.results || []);
+            nextUrl = data.next;
+            pageCount++;
 
-    await sleep(500); // wait 500ms between requests
+            await sleep(100); // prevent hammering server
+        }
+    } catch (err) {
+        console.error("Error fetching data:", err);
+    }
+
+    return allResults;
 }
 
-        allIngredients = allResults;
+async function handleSearch() {
+    const query = document.getElementById("searchBox").value.trim().toLowerCase();
+    const container = document.getElementById("ingredientContainer");
 
-        searchBox.addEventListener("input", () => {
-            const query = searchBox.value.trim().toLowerCase();
-            if (query === "") {
-                container.innerHTML = "";
-                return;
-            }
+    container.innerHTML = "";
 
-            const filtered = allIngredients.filter(item =>
-                (item.food_name || "").toLowerCase().includes(query)
-            );
+    // don't query too early
+    if (query.length < 2) return;
 
-            renderCards(filtered);
-        });
+    const allResults = await fetchAllResults(query);
 
-    } catch (error) {
-        container.innerHTML = "Error loading data: " + error.message;
+    const filtered = allResults.filter(item =>
+        item.food_name && item.food_name.toLowerCase().includes(query)
+    );
+
+    if (filtered.length === 0) {
+        container.innerHTML = "<p>No matches found.</p>";
+    } else {
+        renderCards(filtered);
     }
 }
 
-fetchData();
+
+document.getElementById("searchBox").addEventListener("input", debounce(handleSearch, 500));
+
+handleSearch();
 
 function renderCards(ingredients) {
-        const container = document.getElementById("ingredientContainer");
-        container.innerHTML = ""; // Clear previous results
+    const container = document.getElementById("ingredientContainer");
+    container.innerHTML = "";
 
-        ingredients.forEach(item => {
-            const card = document.createElement("div");
-            card.className = "card";
-            card.innerHTML = `
-                <h3>${item.food_name}</h3>
-                <p><strong>Group:</strong> ${item.food_group || "N/A"}</p>
-                <p><strong>Quantity:</strong> ${item.quantity || "N/A"}</p>
-                <p><strong>Unit:</strong> ${item.unit || "N/A"}</p>
-            `;
-            container.appendChild(card);
-        });
-    }
+    ingredients.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h3>${item.food_name}</h3>
+            <p><strong>Group:</strong> ${item.food_group || "N/A"}</p>
+            <p><strong>Quantity:</strong> ${item.quantity || "N/A"}</p>
+            <p><strong>Unit:</strong> ${item.unit || "N/A"}</p>
+            <p><strong>Energy:</strong> ${item.enercj || "N/A"}</P>
+            <p><strong>VitaminA:</strong> ${item.vita_rae || "N/A"}</P>
+            <p><strong>Iron:</strong> ${item.fe || "N/A"}</P>
+
+        `;
+        container.appendChild(card);
+    });
+}
 
 </script>
 
