@@ -68,7 +68,7 @@ And now, Liang will talk about our challenges and what's next for the bakery."
 
 `[09:45 - 10:10]` ``@Mariana``
 *(Dennis advances to Slide 4: FINAL THANKS)*
-"And we couldn't have done any of this without our amazing support system. On behalf of all of us, thank you to our teachers, Christopher and Federica, and to all our colleagues who supported us on this journey."
+"Guys, i guess that we are now software developers , lol. And we couldn't have done any of this without our amazing teachers. On behalf of all of us, thank you to our Christopher and Federica, and to all our colleagues who supported us on this journey and to the DCI TEAM. Thank you !"
 
 `[10:10 - 10:45]` ``@Jeffrey``
 *(Dennis advances to Slide 5: Q&A)*
