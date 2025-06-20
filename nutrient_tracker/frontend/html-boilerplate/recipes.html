@@ -58,9 +58,9 @@ body {
     display: grid;
     grid-template-areas:
     'header header header header header header'
-    'menu left main right empty empty'
+    'menu menu left main right right'
     'footer footer footer footer footer footer';
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr ;
     gap: 8px;
     background-color: #f2fcf6;
     padding: 16px;
@@ -246,15 +246,57 @@ button.icon-button {
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="login.html">Logout</a></li>
     </ul>
-    
+
 </nav>
 
-<div class="main">
-    <h1 style="font-size: 48px;">Some Recipe</h1>
-    <h2 class="single-line">
-        We're fucking awesome!
-    </h2>
+<div class="left">
+    <img src="salmon_bowl.png" alt="Grilled Salmon Bowl" style="width: auto; border-radius: 16px;" />
 </div>
+
+<div class="main">
+    <h1 class="single-line" style="font-size: 48px;">Grilled Salmon Bowl</h1>
+    <h2 class="single-line" style="margin-bottom: 16px;">Healthy, balanced & nutrient-packed!</h2>
+
+    <div style="margin-bottom: 8px; font-size: 16px;">
+        <p><strong>Prep Time:</strong> 10 minutes</p>
+        <p><strong>Cooking Time:</strong> 20 minutes</p>
+        <p><strong>Total Time:</strong> 30 minutes</p>
+        <p><strong>Serves:</strong> 2</p>
+      </div>
+
+    <div style="max-width: 700px; text-align: left; margin-top: 32px;">
+      <h3>Ingredients</h3>
+      <ul>
+        <li>2 wild-caught salmon fillets (approx. 150-180g each)</li>
+        <li>185g cooked quinoa (approx. 1 cup)</li>
+        <li>100g broccoli florets</li>
+        <li>1 red bell pepper, sliced</li>
+        <li>1 zucchini, sliced</li>
+        <li>2 tablespoons (30ml) olive oil</li>
+        <li>1 teaspoon (3g) garlic powder</li>
+        <li>Juice of 1 lemon (approx. 2 tablespoons / 30ml)</li>
+        <li>Salt and pepper to taste</li>
+        <li>Fresh parsley for garnish</li>
+      </ul>
+
+      <h3 style="margin-top: 24px;">Instructions</h3>
+      <ol>
+        <li>Preheat oven to 200°C. Toss the broccoli, bell pepper, and zucchini with 1 tbsp (15ml) olive oil, garlic powder, salt, and pepper. Roast for 20 minutes.</li>
+        <li>Meanwhile, season the salmon with salt, pepper, and lemon juice. Grill or pan-sear for 3-4 minutes per side, or until cooked through.</li>
+        <li>To serve, layer the quinoa in a bowl, top with the roasted vegetables and grilled salmon. Drizzle with remaining olive oil and garnish with parsley.</li>
+      </ol>
+
+      <div style="margin-top: 24px; padding: 16px; border-radius: 8px; background-color: #edf2f7;">
+        <h3>Nutrition Highlights</h3>
+        <ul>
+          <li>Rich in Omega-3 fatty acids (from salmon)</li>
+          <li>High in fiber, iron, and magnesium (from quinoa)</li>
+          <li>Excellent source of vitamins A, C, and K (from vegetables)</li>
+          <li>Balanced macronutrients: lean protein, healthy fats, and complex carbohydrates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 <div class="links">
         <div class="footer-left">
