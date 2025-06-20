@@ -2,28 +2,26 @@
 
 # **Final Playbook: "BITAMINE" Tracking (Final Version)**
 
----
+
+
+
 
 ### **Part 1: The Intro (~1 minute, 30 seconds)**
 
 `[00:00 - 01:30]` ``@Mariana``
 *(Slide 1: GOAL OF THE APP is showing. It could be the logo with the tagline "Your Personal Recipe for Wellness")*
 
-"Good morning. If you can cook, you can code.
+"Good morning. What if your nutrition app was for more than just weight loss?
 
-We're here today to present something different. This is **not** one more calorie tracking app. This is a revolutionary nutrition tracking app designed to support the **individuality** of your health goals.
+What if *you* wanted to sleep better, have more energy, or gain muscle?
 
-Because not everyone is healthy just by losing weight. Maybe *you're* looking to improve your sleep, for anti-aging, to gain muscle, or even get longer, brighter hair.
+This is **Bitamine**. We track the macro and micro nutrients that matter for **your individual goals**, all in one simple, visual app.
 
-We believe health begins in the gut. That's why our app tracks the daily, weekly, monthly, and even yearly consumption of both macro and micro nutrients, all in one place.
+We built this based on a simple philosophy—'if you can cook, you can code'—for a **real customer** who needed a smarter solution.
 
-This app was created by the **Bitamine** team. The name comes from **Bit**—the smallest unit of data—and **Amine**, an essential nutritional unit related to amino acids.
+We are the Bitamine team: Liang, Denis, Jeffrey, and myself, Mariana.
 
-And this project wasn't just our own idea. Liang took the initiative and found us a **real customer** from the Netherlands who gave us the guidelines for this app.
-
-So, who is the Bitamine team? We are Liang, Denis, Jeffrey, and myself, Mariana.
-
-And now, to show you what we've baked, I'll hand it over to Jeffrey."
+And now, I'll hand you over to Jeffrey to show you exactly how it works."
 
 ---
 
