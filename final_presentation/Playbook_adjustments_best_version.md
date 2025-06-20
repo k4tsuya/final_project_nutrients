@@ -58,13 +58,16 @@ Now, we want to explain how we built this app. But to not make it complicated fo
 *(Dennis shows Slide 2: THE BAKERY TEAM / TECHNOLOGIES)*
 "Thanks, Jeffrey. As he said, to create this app, our bakery had three main working spaces.
 First, in the **kitchen**, our bakers—Liang and I—planned the app's structure. For this, we used powerful 'appliances' like **Django** and **PostgreSQL**.
+
 Second, in the **pâtisserie**, our decorator Jeffrey made the cake look beautiful using **HTML, CSS, and Bootstrap**.
+
 And third, at the **store**, Mariana managed the entire operation—logistics, customer care, and the delivery pipeline—using systems like **Jira, GitHub Projects, and a CI/CD Pipeline**.
-And now, Liang will talk about our challenges and what's next for the bakery."
+
+And now, Liang will talk about our challenges and what's coming next for the app... look at it."
 
 `[09:15 - 09:45]` ``@Liang``
 *(Dennis advances to Slide 3: CHALLENGES & FUTURE)*
-"Thanks, Denis. Our biggest challenge was hiding all the complexity. Making something feel this simple took a lot of late nights to pass our 'Grandma Test.' But those challenges prepared us for the future. Our next steps are to build a custom recipe creator, use AI for personalized meal plans, and launch on the app stores."
+"Thanks, Denis. Our biggest challenge was hiding all the complexity. Making something feel this simple took a lot of late nights to pass our 'Grandma Test.' But those challenges prepared us for the future. Our next steps are to build a custom recipe creator, use AI for personalized meal plans, based on your individual nutritions goals, also tracking of your eating behavour short, middle, long term. We give you a compass to be full in control of your meals and to achieve your personal goals and launch on the app stores and google play."
 
 `[09:45 - 10:10]` ``@Mariana``
 *(Dennis advances to Slide 4: FINAL THANKS)*
