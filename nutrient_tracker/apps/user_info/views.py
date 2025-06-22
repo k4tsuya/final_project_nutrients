@@ -2,11 +2,15 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
-from apps.user_info.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from apps.user_info.forms import (
+    UserRegisterForm,
+    UserUpdateForm,
+    ProfileUpdateForm,
+)
 from django.contrib import messages
 
 from django.contrib.auth import authenticate, login, logout
-
+from .forms import ContactForm
 # Create your views here.
 
 
@@ -76,3 +80,8 @@ class ProfileView(View):
                 p_form.save()
                 messages.success(request, f"Your account has been updated!")
                 return redirect("profile")
+
+
+def contact_view(request):
+    form = ContactForm()
+    return render(request, "contact.html", {"form": form})

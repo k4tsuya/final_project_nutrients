@@ -39,6 +39,7 @@ from drf_spectacular.views import (
     SpectacularRedocView,
     SpectacularSwaggerView,
 )
+from apps.user_info.views import contact_view
 
 doc_urls = [
     path("api/v1/schema/", SpectacularAPIView.as_view(), name="schema"),
@@ -71,15 +72,26 @@ urlpatterns = [
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
     path("profile/", ProfileView.as_view(), name="profile"),
-    path("tracker/", NutrientTrackerListView.as_view(), name="tracker_pagination"),
-    path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
-    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path(
         "tracker/",
         NutrientTrackerListView.as_view(),
         name="tracker_pagination",
     ),
+    path(
+        "api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"
+    ),
+    path(
+        "api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"
+    ),
+    path(
+        "tracker/",
+        NutrientTrackerListView.as_view(),
+        name="tracker_pagination",
+    ),
+    path("contact/", contact_view, name="contact"),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )

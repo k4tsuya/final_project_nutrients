@@ -174,3 +174,7 @@ button.icon-button {
         grid-template-columns: 1fr;
     }
     }
+
+.asteriskField {
+    display: none;
+}
