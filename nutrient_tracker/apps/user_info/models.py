@@ -1,9 +1,11 @@
-from apps.food_data.models import Ingredient, Recipe
 from apps.nutrient_data.models import Nutrient
+from apps.food_data.models import Ingredient, Recipe
 from apps.tracker_data.models import NutrientTracker
 from apps.user_info.enums import Gender, Role
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+
+from PIL import Image
 
 
 class User(AbstractUser):
@@ -32,7 +34,7 @@ class User(AbstractUser):
     def save(self, force_insert=False, force_update=False, *args, **kwargs):
         super().save(force_insert, force_update, *args, **kwargs)
 
-        print("User primary key:", self.pk)
+        print("User primary key of created user:", self.pk)
         if self.pk:
             tracked_nutrients = TrackedNutrients.objects.create(
                 user=self, nutrient_tracker=None
@@ -59,15 +61,12 @@ class Favorite(models.Model):
         on_delete=models.CASCADE,
         unique=False,
     )
-    nutrient = models.ManyToManyField(
-        Nutrient,
-    )
-    ingredient = models.ManyToManyField(
-        Ingredient,
-    )
-    recipe = models.ManyToManyField(
-        Recipe,
-    )
+    nutrient = models.ManyToManyField(to=Nutrient)
+    # nutrient = models.ManyToManyField(to=
+    #     Nutrient,
+    # )
+    ingredient = models.ManyToManyField(to=Ingredient)
+    recipe = models.ManyToManyField(to=Recipe)
 
     class Meta:
         verbose_name = "Favorite"
@@ -120,3 +119,21 @@ class TrackedNutrients(models.Model):
 
     def __str__(self):
         return f"{self.user.username}'s tracked nutrients"
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = models.ImageField(default="default.jpg", upload_to="profile_pics")
+
+    def __str__(self):
+        return f"{self.user.username}'s profile"
+
+    def save(self, force_insert=False, force_update=False, *args, **kwargs):
+        super().save(force_insert, force_update, *args, **kwargs)
+
+        img = Image.open(self.image.path)
+
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.image.path)
