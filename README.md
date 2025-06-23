@@ -1,4 +1,4 @@
-# <img src="bitamin_icon_transparent.png" width="auto" alt="logo"> BITAMINE
+# <img src="bitamin_icon_transparent.png" width="auto" alt="logo"> BITAMIN
 ### *Nutrient intelligence, simplified.*
 > Track over 147 nutrients, optimize your meals, and build smarter dietary habits with data-driven insights.
 >
@@ -58,7 +58,7 @@ This chart provides a real-time overview of your macronutrient balance. It anima
 <br>
 
 <p align="center">
-  Made with ❤️ by the Bitamine Team
+  Made with ❤️ by the Bitamin Team
 </p>
 
 
