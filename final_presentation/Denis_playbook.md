@@ -1,6 +1,12 @@
 # **Denis's Personal Playbook & Worksheet (`denis_playbook.md`)**
 
-**Your Role:**
+**Your Role:** You are the **Backend Architect** and the **Slide Master**. Your job is to make the technical explanation simple and confident, and to ensure the presentation's visual flow is perfect.
+
+---
+
+### **Full Presentation Timeline**
+
+
 *This is the flow of the entire presentation. Your part is highlighted.*
 
 *   `[00:00]` Mariana: The Intro
@@ -16,20 +22,7 @@
 
 *   **Time Allotted:** 45 seconds
 *   **Your Cue:** Listen for Jeffrey's hand-off: "...To explain how it all came together, I'll hand you over to Denis."
-*   **Action:** You will resume sharing your screen and display Slide #2: THE BAKERY TEAM / TECHNOLOGIES.
 
-**Your Script:**
-> "Thanks, Jeffrey. As he said, to create this app, our bakery had three main working spaces.
->
-> First, in the **kitchen**, our bakers—Liang and I—planned the app's structure. For this, we used powerful 'appliances' like **Django** and **PostgreSQL**.
->
-> Second, in the **pâtisserie**, our decorator Jeffrey made the cake look beautiful using **HTML, CSS, and Bootstrap**.
->
-> And third, at the **store**, Mariana managed the entire operation—logistics, customer care, and the delivery pipeline—using systems like **Jira, GitHub Projects, and a CI/CD Pipeline**.
->
-> **And now, Liang will talk about our challenges and what's next for the bakery.**"
-
----
 ---
 
 ## **Your Personal Worksheet**
@@ -48,10 +41,7 @@
 
 #### **2. Technical Preparation (Crucial for you)**
 
-*   **Question:** As the **"Slide Master,"** what is your plan for the screen-share handoff with Jeffrey? Have you rehearsed it? (You stop sharing, he starts, then he stops, and you resume).
-
-    ________________________________________________________________
-    ________________________________________________________________
+*   **Question:** As the **"Slide Master,"** what is your plan for the screen-share handoff with Jeffrey? Have you rehearsed it? (You stop sharing, he starts, then he stops, and you  ________________________________________________________________
 
 *   **Question:** Do you have the Q&A appendix slides ready? Practice jumping to a specific backup slide (like the PostgreSQL logo) quickly and confidently.
 
