@@ -93,3 +93,11 @@ def about_view(request):
 
 def ingredients_view(request):
     return render(request, "ingredients.html")
+
+
+def nutrients_view(request):
+    return render(request, "nutrients.html")
+
+
+def recipes_view(request):
+    return render(request, "recipes.html")

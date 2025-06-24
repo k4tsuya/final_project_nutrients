@@ -25,6 +25,8 @@ from apps.user_info.views import (
     logout_view,
     register_view,
     ingredients_view,
+    nutrients_view,
+    recipes_view,
 )
 from django.conf import settings
 from django.conf.urls.static import static
@@ -92,6 +94,8 @@ urlpatterns = [
     path("contact/", contact_view, name="contact"),
     path("about/", about_view, name="about"),
     path("ingredients/", ingredients_view, name="ingredients"),
+    path("nutrients/", nutrients_view, name="nutrients"),
+    path("recipes/", recipes_view, name="recipes"),
 ]
 
 if settings.DEBUG:
