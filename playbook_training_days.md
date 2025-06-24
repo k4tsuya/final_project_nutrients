@@ -145,16 +145,55 @@
 ### **Feedback from Day 1**
 
 *   **Federica suggested that:**
+*   Mariana: 
+    In the introduction add the role, without analogy.
+    Pictures from ourselve for the roles.
+    - some few words about the big picture of the application, before transition to
+    Jeffrey
 
-    ________________________________________________________________
-    ________________________________________________________________
-    ________________________________________________________________
+    Jeffrey:
+    - simulate a log in
+    - stay on every functionality a bit
+      CORE: 
+    - explain that you can join as a guest vs register : why? advantages: history,
+      favorite recipes saving (which else for the future? ´@backend
+      GOAL:
+      *stay on nutrients charts*
+      *mencioned later this by @liang with the chart open*
+    - why are nutrients useful?
+    - interaction of searching about something for filtering @mariana @jeffreey
+    - show final recipe
+    - show contact slide
+    - change of color
+ 
+    Denis:
+    FOCUS:
+    - keep it simple
+    - analogy of the kitchen
 
+
+    Liang:
+    FOCUS:
+    - on the future features, but simple with slides for it
+    - on the new skills we learned by ourselves
+    - challeges working as a group
+    
+    
 *   **Christopher suggested that:**
+Key points:
+- flow in changing speaker
+- give the croud the feeling what is coming next, give a short description about 
+  what the next speaker will talk about
+- more practice
+- work on smooth dynamics
+- introduction more catchy
+- show more about our application
 
-    ________________________________________________________________
-    ________________________________________________________________
-    ________________________________________________________________
+
+
+
+
+
 
 ### **Feedback from Day 2**
 
