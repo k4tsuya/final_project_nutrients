@@ -127,18 +127,57 @@
 
 **Your Role:** You are the **Backend Baker** and the **Visionary**. Your job is to talk about the team's resilience and the exciting future of the project.
 
-#### **Performance #1: Challenges & Future**
-*   **Time Allotted:** 30 seconds
-*   **Your Cue:** Listen for Denis's hand-off: "...Liang will talk about our challenges..."
-*   **Action:** Dennis will advance to Slide #3.
 
-> **Your Script:**
-> "Thanks, Denis. Our biggest challenge was hiding all the complexity. Making something feel this simple took a lot of late nights to pass our 'Grandma Test.'
->
-> But those challenges prepared us for the future. Our next steps are to build a custom recipe creator, use AI for personalized meal plans, and launch on the app stores."
+### **Performance #1: Challenges & Future**
+
+*   **Time Allotted:** 2min
+*   **Your Cue:** Listen for Denis's hand-off: Of course. This version simplifies the language, uses rhetorical questions to create more dynamic energy, and aims for a more conversational, "catchy" tone. It's structured to be delivered naturally and confidently within two minutes.
 
 ---
+
+### **Liang's Presentation Script (Dynamic & Catchy Version)**
+
+**(Instructions for Liang: Practice this to feel the rhythm. The questions are for you to ask the audience. Click the checkbox after each point to keep your place.)**
+
+#### **Introduction (Transition from Denis)**
+
+-   [ ] Thank you, Denis. That bakery analogy was perfect.
+-   [ ] So, with the cake now built, I want to answer two simple questions for you all: **What’s next for our app?** And more importantly, **how did this project change *us*?**
+
 ---
+
+#### **Part 1: So, Where Do We Go From Here?**
+
+-   [ ] Let's start with what's next. You might be wondering, what's the next big feature?
+-   [ ] Well, we want to make our traffic light system even smarter. Soon, it won't just tell you if you're getting enough of the good stuff—it will also warn you about too much of a good thing, like an overload of certain vitamins.
+-   [ ] And of course, we want to bring people together. We’re already designing features for sharing your favorite recipes and creating truly personal meal plans.
+
+---
+
+#### **Part 2: So, How Did We Actually Pull This Off?**
+
+-   [ ] That's the *what*. But the *how* is even more interesting. This project was a massive challenge, and every single one of us had to level up.
+-   [ ] **Mariana?** She was the glue that held our team together. She became our project manager, our pipeline builder, and our lead researcher, guiding us through the tough spots.
+-   [ ] **Jeffrey** became our artist. He taught himself the languages of the web—HTML, CSS, JavaScript—to create the beautiful, simple design you saw.
+-   [ ] **Denis** became the tamer of the beast that is Django. He wrestled with the code, completely rebuilt our database, and made our app run lightning-fast.
+-   [ ] And **me?** I was the engineer in the engine room, finding new ways to make our server stable and fast, no matter what we threw at it.
+
+---
+
+#### **Part 3: So, Was It a Smooth Ride?**
+
+-   [ ] **Absolutely not.** And that’s the most important part of our story.
+-   [ ] We were so excited at the start that we jumped into coding without a perfect plan. We felt nervous, we felt inexperienced.
+-   [ ] I definitely felt the pressure. It made me realize, *"The more I know, the more I realize I know nothing."*
+-   [ ] **But here’s the secret:** Our biggest success wasn't the code. It was the culture we built.
+-   [ ] We created a **"culture of doing mistakes,"** where everyone had a voice. As Mariana said, she **"lost her fears and gained self-confidence"** here.
+-   [ ] That's what happens when you have a team with an **"open mind to talk about everything."** *That* was our real magic ingredient.
+
+---
+
+#### **Final Transition to Mariana**
+
+-   [ ] And speaking of the person who was so central in talking about our vulnerabilities and strenghts, I’ll hand it back to Mariana for the final words of this presentation:
 
 ## **Team Rehearsal Feedback**
 
@@ -211,97 +250,6 @@
 -   [ ] **Practice:** Rehearse the entire presentation multiple times to improve group dynamics.
 -   [ ] **Introduction:** Work together to make the opening more catchy and engaging.
 -   [ ] **Content:** Review the presentation to find more opportunities to show off the application's features.
-
-*   **Federica suggested that:**
-*   Mariana: 
-    In the introduction add the role, without analogy.
-    Pictures from ourselves for the roles. <--- filtered ones
-    - some few words about the big picture of the application, before transition to
-    Jeffrey
-    1. introduce the team with the roles and responsabilites
-    2. how the idea was develope, about the product owner
-    3. talk about the main functionality in a big picture all the W-Questions (Feaures: micro / macro explain - ingridients's nutrients 
-       information, what is inside of 
-       an ingredient, look ingredients based on a nutrient, light system to handle it easier, plus hydration)
-    4. now Jeffrey will demostrate how this works:
-    - add about us text for @jeffrey
-
-    Jeffrey: *write on scrip
-    - simulate a log in --> this will be a slide /static *maybe Django adjustments
-    - stay on every functionality a bit longer
-      CORE: 
-    - explain that you can join as a guest vs register : why? advantages: history,
-      favorite recipes saving (which else for the future? ´@backend : comparison between selected ingredients, recipes indiviual configuration, sharing with other users and in social media, feed section)
-      GOAL:
-      *stay on nutrients charts*
-      - mencioned that in the future tracking of safty and dangerous overload of vitamines. Simple visuals 
-      with light traffic system
-      *mencioned later this by @liang with the chart open* --> static about charts
-    - why are nutrients tracking useful?
-    - interaction of searching about something filtering @mariana @jeffrey. Ex: tacos, beans...
-    - show final recipe
-    - show contact slide --> show the working one and is clickable /static
-    - change of color light to dark mode
- 
-    Denis:
-    FOCUS:
-    - keep it simple
-    - analogy of the kitchen
-    - add java script / delete bootstrap
-
-
-    Liang:
-    FOCUS:
-    - on the future features, but with simple slides for it * check notes above @jeffrey
-    - on the new skills we learned by ourselves (Jeffrey: html, css, java, Liang: different libraries to
-      improve the server stability, Denis: Django causes weird issues, find round
-      about ways to solve it. Database structure, when adding a new feature
-      it was not suficcient. Fetching json storing excesive data (pagination, cache)
-      Denis: models - Django is difficult when interacting. Primary keys are asign
-      automatically and when writing own, behaviour will fail.
-      Following the documentation not really worked as expected.
-      all: fix new bugs, unknow texts
-      
-    - challeges working as a groups:
-      * we were to exciting in coding, rather having a plan and how to put everything together
-      * biggest problem was to have a project owner and never talked about the key functions from the 
-        beggining
-      * lack of communication about how the app should look, what we wanted to track, ways to track
-      * ways to visualize, lack of communication about it
-      * we designed the users epics and stories, but we forgot to plan the app architecture in detail, 
-        dividing it in 4 big chunks, functionality: backend, frontend, api's endpoints, pipline
-      * next step write skelletons and pseudocodes for each section.
-
-            Why this happened to us?
-        - nervousity
-        - unexperience
-        - helpless
-        - clueless
-        - struggle with approach for the data
-        - lack of control
-        - lack of clarity and the vision got lost, lead to re-iterations on the flight
-       
-          how do we continue the process?
-        - ups and downs
-        - struggling learning technologies by self-learning
-        - time pressure, too many holidays (for Jeffrey, family time)
-        - mondays, language lessons took more time from us. Better no language course the last month or soft 
-          skills . Stresses a lot, makes us tired and we need the time and energy for coding. 4.0 was the 
-          biggest shit
-        - taking the role of the team leader (liang), felt not making good progress, helping everyone where
-          it was needed. Lack of satisfaction. About own expectations, where high. Overestimation of own 
-          performance. Thought "i am not good engough" "The more i know, the more i realise i know nothing" 
-          Socrates.
-        - pressure in holidays to learn more tutorials
-        - previous personal experiences of others expecting more about you. We think about @liang as an 
-          expert
-        - Denis: frustration, code breaks continously, impredictable bevaviour from Django. Fix and Fix and 
-          try again.
-        - Support and open mind to talk about everything
-        - Mariana: i lost my fears. Gain Selfconfidence. Being an assitence was great, little steps. No 
-          judgment, no pressure for tech topics. The culture of doing mistakes. Motivation. Many breaks
-          Emotional understanding, non-violent, funny. Supportive. Watching the backend fix bugs, was a 
-          great teaching
     
 *   **Christopher suggested that:**
 Key points:

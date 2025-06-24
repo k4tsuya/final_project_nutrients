@@ -20,62 +20,51 @@
 
 ### **Performance #1: Challenges & Future**
 
-*   **Time Allotted:** 30 seconds
-*   **Your Cue:** Listen for Denis's hand-off: "...And now, Liang will talk about our challenges and what's next for the bakery."
-*   **Action:** Denis will advance the slide to "Challenges & Future."
-
-**Your Script:**
-> "Thanks, Denis. Our biggest challenge was hiding all the complexity. Making something feel this simple took a lot of late nights to pass our 'Grandma Test.'
->
-> But those challenges prepared us for the future. Our next steps are to build a custom recipe creator, use AI for personalized meal plans, and launch on the app stores."
+*   **Time Allotted:** 2min
+*   **Your Cue:** Listen for Denis's hand-off: Of course. This version simplifies the language, uses rhetorical questions to create more dynamic energy, and aims for a more conversational, "catchy" tone. It's structured to be delivered naturally and confidently within two minutes.
 
 ---
+
+### **Liang's Presentation Script (Dynamic & Catchy Version)**
+
+**(Instructions for Liang: Practice this to feel the rhythm. The questions are for you to ask the audience. Click the checkbox after each point to keep your place.)**
+
+#### **Introduction (Transition from Denis)**
+
+-   [ ] Thank you, Denis. That bakery analogy was perfect.
+-   [ ] So, with the cake now built, I want to answer two simple questions for you all: **What’s next for our app?** And more importantly, **how did this project change *us*?**
+
 ---
 
-## **Your Personal Worksheet**
+#### **Part 1: So, Where Do We Go From Here?**
 
-#### **1. Performance & Reflection**
+-   [ ] Let's start with what's next. You might be wondering, what's the next big feature?
+-   [ ] Well, we want to make our traffic light system even smarter. Soon, it won't just tell you if you're getting enough of the good stuff—it will also warn you about too much of a good thing, like an overload of certain vitamins.
+-   [ ] And of course, we want to bring people together. We’re already designing features for sharing your favorite recipes and creating truly personal meal plans.
 
-*   **Question:** Your part has a tone shift, from reflective ("challenges") to optimistic ("future"). How will you use your voice to make that shift clear and impactful?
+---
 
-    ________________________________________________________________
-    ________________________________________________________________
+#### **Part 2: So, How Did We Actually Pull This Off?**
 
-*   **Question:** The "Grandma Test" is a key theme. How can you deliver that line with a sense of pride and accomplishment to tie the story together?
+-   [ ] That's the *what*. But the *how* is even more interesting. This project was a massive challenge, and every single one of us had to level up.
+-   [ ] **Mariana?** She was the glue that held our team together. She became our project manager, our pipeline builder, and our lead researcher, guiding us through the tough spots.
+-   [ ] **Jeffrey** became our artist. He taught himself the languages of the web—HTML, CSS, JavaScript—to create the beautiful, simple design you saw.
+-   [ ] **Denis** became the tamer of the beast that is Django. He wrestled with the code, completely rebuilt our database, and made our app run lightning-fast.
+-   [ ] And **me?** I was the engineer in the engine room, finding new ways to make our server stable and fast, no matter what we threw at it.
 
-    ________________________________________________________________
-    ________________________________________________________________
+---
 
-#### **2. Technical Preparation**
+#### **Part 3: So, Was It a Smooth Ride?**
 
-*   **Question:** As the one who found the real client, what is your prepared, one-sentence answer if someone asks, "What did the client think of the project so far?"
+-   [ ] **Absolutely not.** And that’s the most important part of our story.
+-   [ ] We were so excited at the start that we jumped into coding without a perfect plan. We felt nervous, we felt inexperienced.
+-   [ ] I definitely felt the pressure. It made me realize, *"The more I know, the more I realize I know nothing."*
+-   [ ] **But here’s the secret:** Our biggest success wasn't the code. It was the culture we built.
+-   [ ] We created a **"culture of doing mistakes,"** where everyone had a voice. As Mariana said, she **"lost her fears and gained self-confidence"** here.
+-   [ ] That's what happens when you have a team with an **"open mind to talk about everything."** *That* was our real magic ingredient.
 
-    ________________________________________________________________
-    ________________________________________________________________
+---
 
-*   **Question:** You are a key backend expert for the Q&A. Look at the `cheat_sheet.md`. Which technical question (about the API, database, etc.) are you most confident in answering simply?
+#### **Final Transition to Mariana**
 
-    ________________________________________________________________
-    ________________________________________________________________
-
-#### **3. My Needs for the Team**
-
-*(This is for you to fill out and share with the team)*
-
-*   **I wish from `@Mariana`:**
-    ________________________________________________________________
-    ________________________________________________________________
-
-*   **I wish from `@Dennis`:**
-    ________________________________________________________________
-    ________________________________________________________________
-
-*   **I wish from `@Jeffrey`:**
-    ________________________________________________________________
-    ________________________________________________________________
-
-#### **4. My Suggestions for the Team**
-
-*   **I suggest these changes to the overall flow:**
-    ________________________________________________________________
-    ________________________________________________________________
+-   [ ] And speaking of the person who was so central in talking about our vulnerabilities and strenghts, I’ll hand it back to Mariana for the final words of this presentation:
