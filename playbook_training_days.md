@@ -18,9 +18,9 @@
 6.  `[10:10]` **Jeffrey:** Q&A Moderation
 
 ---
----
 
-## **Mariana's Playbook & Worksheet**
+
+## **Mariana's Playbook**
 
 **Your Role:** You are the **Project Manager** and the **Storyteller**. Your job is to set the stage with a powerful intro and bring the presentation home with a heartfelt thank you.
 
@@ -51,9 +51,9 @@
 > "And we couldn't have done any of this without our amazing support system. On behalf of all of us, thank you to our teachers, Christopher and Federica, and to all our colleagues who supported us on this journey."
 
 ---
----
+>
 
-## **Jeffrey's Playbook & Worksheet**
+## **Jeffrey's Playbook**
 
 **Your Role:** You are the **Pâtissier / Decorator** and the **User's Guide**. Your job is to own the live demo and moderate the Q&A.
 
@@ -61,46 +61,23 @@
 *   **Time Allotted:** 7 minutes
 *   **Your Cue:** Listen for Mariana's hand-off: "...I'll hand you over to Jeffrey."
 *   **Action:** Start your screen share.
-
+---
 > **Your Script:**
-> Thank you, Mariana. For today, you will imagine that I'm talking to a Grandma as our official app tester. So, please imagine that I am presenting this just for her, she must be able to spread the word to her friends.
->
-> *(Shifts tone to be warmer, more personal)*
->
-> Hey Grandma, this app will make your life much easier. Think of it as a smart recipe book that knows you personally.
->
-> This is an intelligent cookbook and a nutrition consultant with a tracking function: First, you create a profile. *(Shows the sign-up form)*. This just means you give us your basic data, like your name and age, and the app will remember you every time you visit. It's like having your own personalized kitchen files.
->
-> Once you're in, the magic happens. Every time you tell the app what you ate—let's say an avocado for lunch—it will be saved. At the end of the day, you can look at your dashboard *(this is the dashboard .... )* and see if your meals were good, healthy, or if they could be improved.
->
-> And how do you know? We made a very simple light system, just like the traffic lights you know so well. *(Points to the charts on the screen)*
-> * Green stands for a good decision—you're getting enough of the good stuff!
-> * Yellow is for precaution—you're on your way, but could use a little more.
-> * Red is a red flag—a gentle hint that you might be having too much of something.
->
-> No judgment, just simple guidance.
->
-> So, in this first version of the app, you can do four amazing things:
-> 1. You can track the quality of your meals. You can see your history for the day, the week, the month, and even the whole year to see how you're improving.
-> 2. You can actively search our database or lets call it dictionary. Curious what's in a potato? Just type it in. Or, if you need more Magnesium, you can search for 'Magnesium' and see all the foods that contain it.
-> 3. Grandma, you must drink enough water! This app helps you track your hydration. With every glass, you just click this button... *(Clicks the water icon and the chart animates)* ...and the chart fills up. It's that easy.
->
-> And coming soon, we will have automated recipes based on your unique nutritional needs to help you achieve your goals even faster.
->
-> Now, we want to explain how we built this app. But to not make it complicated for you, Grandma, we will talk in your language. Instead of being software developers, for today, we are in a bakery. The app is our cake. I was the 'decorator,' making the app look good for you. But a beautiful cake needs a great team of bakers and a well-run store. To explain how it all came together, I'll hand you over to Denis.
-
+---
+> (placeholder)
+---
 #### **Performance #2: Q&A Moderation**
 *   **Time Allotted:** 35 seconds
 *   **Your Cue:** Listen for Mariana to finish her final thank you.
 *   **Action:** Dennis will switch to the Q&A slide.
 
-> **Your Script:**
-> "And now, we'd love to open the floor for any questions. To make sure we have time for everyone, we'll take one question per person, and we have five minutes total for this block. We also kindly ask that you keep questions simple, so that friends and family can follow along. We promise to answer in the same simple language. **Thank you, and who has the first question?**"
-
 ---
+   **Your Script:**
 ---
-
-## **Denis's Playbook & Worksheet**
+> (placeholder)
+---
+>
+## **Denis's Playbook **
 
 **Your Role:** You are the **Backend Architect** and the **Slide Master**. Your job is to make the technical explanation simple and ensure the visual flow is perfect.
 
@@ -110,20 +87,30 @@
 *   **Action:** Resume screen sharing and display Slide #2.
 
 > **Your Script:**
-> "Thanks, Jeffrey. As he said, to create this app, our bakery had three main working spaces.
->
-> First, in the **kitchen**, our bakers—Liang and I—planned the app's structure. For this, we used powerful 'appliances' like **Django** and **PostgreSQL**.
->
-> Second, in the **pâtisserie**, our decorator Jeffrey made the cake look beautiful using **HTML, CSS, and Bootstrap**.
->
-> And third, at the **store**, Mariana managed the entire operation—logistics, customer care, and the delivery pipeline—using systems like **Jira, GitHub Projects, and a CI/CD Pipeline**.
->
-> **And now, Liang will talk about our challenges and what's next for the bakery.**"
+
+### **Denis's Presentation Script (The Precise Bakery Analogy - 90 Sec)**
+
+#####  **Introduction (Fading in from Jeffrey)**
+
+-   [ ] Thank you, Jeffrey. What you just saw looks so clean and easy to use, doesn't it?
+-   [ ] But now for the big question: **How does it all actually work?**
+-   [ ] I could throw a bunch of tech terms at you, but that’s no fun. To make sure everyone understands our journey, I'm going to explain our team's work by taking you on a tour of our high-tech **bakery**.
+> ...
+-   [ ] Imagine you are the customer. You walk up to our bakery. You see the beautiful **storefront** and the delicious-looking **cake** in the window. That's our app's design. The master **Decorator** who made it all so inviting for you? That was **Jeffrey**.
+-   [ ] Now, a bakery needs to be a real business, right? It needs the lights on, the licenses paid, and a perfect system for quality control. Our **Bakery Operations Manager**, who handled all the administration and even built our automated delivery pipeline, was **Mariana**. She made sure the entire operation ran flawlessly.
+-   [ ] So, where does the cake itself come from? That's the **kitchen**, my world. As **Head Baker**, my job was to manage our entire 'pantry'—the **database** where all the ingredients and recipes are stored. I also built the 'doors' to the kitchen—the **endpoints**—so orders could come in.
+-   [ ] But how do you get a complex order from the storefront to the kitchen and back again instantly? That required a genius. **Liang** was the inventor of our magic ordering system. He built the **APIs**—our 'waiters'—and more importantly, he created the 'universal translator'—the **serializers**—that turns a complex baked good into a simple ticket everyone can understand.
+
+
+> ##### **Final Transition (Fading out to Liang)**
+
+-   [ ] So, the simple, beautiful cake you see is only possible because a decorator, a manager, a baker, and an inventor all worked in perfect harmony.
+-   [ ] But the most important story isn't just *what* each of us built, but *how* we grew as a team through that process.
+-   [ ] To share that journey with you, I'll hand you over to the inventor of our magic ordering system, Liang.
 
 ---
----
-
-## **Liang's Playbook & Worksheet**
+>
+## **Liang's Playbook**
 
 **Your Role:** You are the **Backend Baker** and the **Visionary**. Your job is to talk about the team's resilience and the exciting future of the project.
 
@@ -131,13 +118,11 @@
 ### **Performance #1: Challenges & Future**
 
 *   **Time Allotted:** 2min
-*   **Your Cue:** Listen for Denis's hand-off: Of course. This version simplifies the language, uses rhetorical questions to create more dynamic energy, and aims for a more conversational, "catchy" tone. It's structured to be delivered naturally and confidently within two minutes.
-
+*   **Your Cue:** Listen for Denis's hand-off
 ---
 
 ### **Liang's Presentation Script (Dynamic & Catchy Version)**
 
-**(Instructions for Liang: Practice this to feel the rhythm. The questions are for you to ask the audience. Click the checkbox after each point to keep your place.)**
 
 #### **Introduction (Transition from Denis)**
 
@@ -146,7 +131,7 @@
 
 ---
 
-#### **Part 1: So, Where Do We Go From Here?**
+> #### **Where Do We Go From Here?**
 
 -   [ ] Let's start with what's next. You might be wondering, what's the next big feature?
 -   [ ] Well, we want to make our traffic light system even smarter. Soon, it won't just tell you if you're getting enough of the good stuff—it will also warn you about too much of a good thing, like an overload of certain vitamins.
@@ -154,7 +139,7 @@
 
 ---
 
-#### **Part 2: So, How Did We Actually Pull This Off?**
+> #### **How Did We Actually Pull This Off?**
 
 -   [ ] That's the *what*. But the *how* is even more interesting. This project was a massive challenge, and every single one of us had to level up.
 -   [ ] **Mariana?** She was the glue that held our team together. She became our project manager, our pipeline builder, and our lead researcher, guiding us through the tough spots.
@@ -164,7 +149,7 @@
 
 ---
 
-#### **Part 3: So, Was It a Smooth Ride?**
+> #### So, Was It a Smooth Ride?**
 
 -   [ ] **Absolutely not.** And that’s the most important part of our story.
 -   [ ] We were so excited at the start that we jumped into coding without a perfect plan. We felt nervous, we felt inexperienced.
@@ -174,16 +159,12 @@
 -   [ ] That's what happens when you have a team with an **"open mind to talk about everything."** *That* was our real magic ingredient.
 
 ---
-
-#### **Final Transition to Mariana**
-
+> ...
 -   [ ] And speaking of the person who was so central in talking about our vulnerabilities and strenghts, I’ll hand it back to Mariana for the final words of this presentation:
 
+---
+
 ## **Team Rehearsal Feedback**
-
-### **Feedback from Day 1**
-
-## **Team Rehearsal Task List (Version 2)**
 
 ### **Feedback from Day 1 (Federica)**
 
