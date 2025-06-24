@@ -24,15 +24,31 @@
 *   **Your Cue:** Listen for Mariana's hand-off: "...And now, to show you what we've baked, I'll hand it over to Jeffrey."
 *   **Action:** Start your screen share.
 
-**Your Script:**
-> "Thank you, Mariana. For today, you will imagine that I've invited my Grandma to be our official app tester. So, please imagine that I am presenting this just for her.
+> Thank you, Mariana. For today, you will imagine that I'm talking to a Grandma as our official app tester. So, please imagine that I am presenting this just for her, she must be able to spread the word to her friends.
 >
-> *(Shift tone to be warmer, more personal)*
+> *(Shifts tone to be warmer, more personal)*
 >
-> Hey Grandma, this is a nutrition tracker for all your macro and micro nutrients—like Magnesium, amino acids, proteins, calcium, and all kinds of vitamins... *(...continue with the full demo script as practiced...)* ...See? The chart fills up to show your progress. It's that easy.
+> Hey Grandma, this app will make your life much easier. Think of it as a smart recipe book that knows you personally.
 >
-> Now, we want to explain how we built this app. But to not make it complicated for you, Grandma, we will talk in your language. Instead of being software developers, for today, we are a **bakery**. The app is our cake. I was the 'decorator,' making the app look good for you. But a beautiful cake needs a great team of bakers and a well-run store. **To explain how it all came together, I'll hand you over to Denis.**"
-
+> This is an intelligent cookbook and a nutrition consultant with a tracking function: First, you create a profile. *(Shows the sign-up form)*. This just means you give us your basic data, like your name and age, and the app will remember you every time you visit. It's like having your own personalized kitchen files.
+>
+> Once you're in, the magic happens. Every time you tell the app what you ate—let's say an avocado for lunch—it will be saved. At the end of the day, you can look at your dashboard *(this is the dashboard .... )* and see if your meals were good, healthy, or if they could be improved.
+>
+> And how do you know? We made a very simple light system, just like the traffic lights you know so well. *(Points to the charts on the screen)*
+> * Green stands for a good decision—you're getting enough of the good stuff!
+> * Yellow is for precaution—you're on your way, but could use a little more.
+> * Red is a red flag—a gentle hint that you might be having too much of something.
+>
+> No judgment, just simple guidance.
+>
+> So, in this first version of the app, you can do four amazing things:
+> 1. You can track the quality of your meals. You can see your history for the day, the week, the month, and even the whole year to see how you're improving.
+> 2. You can actively search our database or lets call it dictionary. Curious what's in a potato? Just type it in. Or, if you need more Magnesium, you can search for 'Magnesium' and see all the foods that contain it.
+> 3. Grandma, you must drink enough water! This app helps you track your hydration. With every glass, you just click this button... *(Clicks the water icon and the chart animates)* ...and the chart fills up. It's that easy.
+>
+> And coming soon, we will have automated recipes based on your unique nutritional needs to help you achieve your goals even faster.
+>
+> Now, we want to explain how we built this app. But to not make it complicated for you, Grandma, we will talk in your language. Instead of being software developers, for today, we are in a bakery. The app is our cake. I was the 'decorator,' making the app look good for you. But a beautiful cake needs a great team of bakers and a well-run store. To explain how it all came together, I'll hand you over to Denis.
 ---
 
 ### **Performance #2: Q&A Moderation**
