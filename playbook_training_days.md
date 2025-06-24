@@ -30,17 +30,51 @@
 *   **Action:** Dennis will have Slide #1 displayed.
 
 > **Your Script:**
-> "Good morning. What if your nutrition app was for more than just weight loss?
->
-> What if *you* wanted to sleep better, have more energy, or gain muscle?
->
-> This is **Bitamine**. We track the macro and micro nutrients that matter for **your individual goals**, all in one simple, visual app.
->
-> We built this based on a simple philosophy—'if you can cook, you can code'—for a **real customer** who needed a smarter solution.
->
-> We are the Bitamine team: Liang, Denis, Jeffrey, and myself, Mariana.
->
-> **And now, I'll hand you over to Jeffrey** to show you exactly how it works."
+
+### **Mariana's Introduction Script (The Final Version - 2 Min)**
+
+> **(Instructions for Mariana: This is it. Deliver with the passion of a founder who is proud of both the product and the team behind it. Click the checkbox after each point.)**
+
+> ##### **Part 1: The Pitch & The "Bitamin" Philosophy**
+
+-   [ ] Good morning. Are you ever overwhelmed by the flood of nutrition advice on social media? Your Instagram says one thing, your TikTok says the complete opposite, and you're left wondering what's actually right for *you*.
+-   [ ] And let's be honest about the problem with almost every nutrition app out there. They ask you to do one thing: count calories. And they push one goal above all others: losing weight.
+-   [ ] They scream the tired, old message that being 'healthy' just means getting smaller. We think that’s not just wrong; **it’s lazy**.
+-   [ ] That’s why we created **Bitamin**.
+-   [ ] The name is our entire philosophy: a fusion of **Bit**—the smallest unit of data, and **Amin**—from amino acids, the fundamental building blocks of life. Because improving your health isn't about dieting; it's about understanding the tiny building blocks your body needs to thrive.
+
+---
+
+> ##### **Part 2: Why Bitamin is Different & Who We Are**
+
+-   [ ] Bitamin is not another calorie counter. It is a **quality** tracker for **your** individual nutrition.
+-   [ ] It gives you a live signal on a chart using the simple traffic light system we all understand: green, yellow, and red. This is for everyone.
+-   [ ] Because *your* goals are unique. Maybe you want to improve your gut health, manage an allergy, or sleep deeper. Bitamin is designed to help you track the habits that serve **your body**, so you can finally make informed decisions everywhere.
+-   [ ] So, who is the team behind Bitamin?
+-   [ ] Our backend and app functionality creators are **Liang** and **Denis**.
+-   [ ] Our frontend artist, who created a fusion of minimalistic American and retro art, is **Jeffrey**, taking care that the design stays clean and simple.
+-   [ ] And for the logistics, administration of processes, and tracking everything possible—that’s me, **Mariana**.
+
+---
+
+> ##### **Part 3: The Story of Our Project**
+
+-   [ ] Now that you know the team, you might be thinking, "Where did this incredible idea come from?"
+-   [ ] This isn't just a student project. This journey began when our visionary, **Liang**, connected with a real entrepreneur who needed a team to build this exact app. He didn't give us a homework assignment; he gave us a **job**.
+-   [ ] This project is now set to become our internship, and after that, we plan to continue as part-time business partners.
+
+---
+
+> ##### **Part 4: The Roadmap & Transition**
+
+-   [ ] So, are you curious to see how we make personalized nutrition this simple?
+-   [ ] Over the next few minutes, my team and I will take you on the full journey.
+-   [ ] First, **Jeffrey** will show you what Bitamin **looks and feels like**.
+-   [ ] Then, **Denis** will reveal **how we built its powerful engine**.
+-   [ ] And finally, **Liang** will share the story of **how our team grew through the process**.
+-   [ ] So, to kick things off with the grand tour, I’ll hand you over to Jeffrey.
+
+---
 
 #### **Performance #2: The Final Thanks**
 *   **Time Allotted:** 25 seconds
