@@ -2,15 +2,27 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 .logo { grid-area: header; }
 .menu { grid-area: menu; }
-.chart1 { grid-area: left; }
-.chart2 { grid-area: main; }
-.chart3 { grid-area: right; }
+.vitamins { grid-area: left; }
+.minerals { grid-area: main; }
+.macro { grid-area: middle;}
+.hydration { grid-area: right; }
 .links { grid-area: footer; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     font-family: "League Spartan", sans-serif;
+    background-color: #f2fcf6;
+    padding: 32px;
+    color: #19201c;
 }
 
 
@@ -23,17 +35,18 @@ body {
 }
 
 .dark-mode .menu a {
-    background-color: #3a4b41;
+    background-color: #657c6a;
     color: #f2fcf6;
 }
 
 .dark-mode .menu a:hover {
-    background-color: #546c5e;
+    background-color: #a2b9a7;
 }
 
-.dark-mode .chart1,
-.dark-mode .chart2,
-.dark-mode .chart3 {
+.dark-mode .vitamins,
+.dark-mode .minerals,
+.dark-mode .macro,
+.dark-mode .hydration {
     background-color: #2a3330;
     color: #f2fcf6;
 }
@@ -44,13 +57,13 @@ body {
 }
 
 .grid-container {
+    flex: 1;
     display: grid;
-    /* grid-template-columns: auto 30% 30% 30%; */
     grid-template-areas:
     'header header header header header header'
-    'menu left main right empty empty'
+    'menu left main middle right empty'
     'footer footer footer footer footer footer';
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 200px 2fr 2fr 2fr 2fr 1fr;
     gap: 8px;
     background-color: #f2fcf6;
     padding: 16px;
@@ -59,6 +72,15 @@ body {
 .grid-container > div {
     padding: 8px;
     font-size: 16px;
+}
+
+.grid-container > .vitamins,
+.grid-container > .minerals,
+.grid-container > .macro,
+.grid-container > .hydration
+
+{
+    margin-left: 32px;
 }
 
 .logo {
@@ -78,7 +100,8 @@ body {
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #444;
+    position: absolute;
+    color: #19201c;
 }
 
 .dark-mode .dark-mode-btn {
@@ -89,9 +112,80 @@ body {
     border-radius: 16px;
 }
 
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #a5ada8;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  .form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: none;
+  }
+
+  .form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #657c6a;
+    color: #f2fcf6;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-container button:hover {
+    background-color: #546c5e;
+  }
+
+  .toggle-link {
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .toggle-link a {
+    color: #19201c;
+    text-decoration: underline;
+  }
+
+  .dark-mode .form-container {
+    background-color: #2a3330;
+  }
+
+  .dark-mode .form-container button {
+    background-color: #3a4b41;
+  }
+
+  .dark-mode .form-container button:hover {
+    background-color: #546c5e;
+  }
+
+  .dark-mode .toggle-link a {
+    color: #f2fcf6;
+  }
 
 .menu {
     grid-area: menu;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
 }
 
 .menu ul {
@@ -109,39 +203,103 @@ body {
     display: block;
     padding: 8px;
     border-radius: 8px;
-    background-color: #a5ada8;
+    background-color: #657c6a;
     color: #f2fcf6;
     text-align: center;
     }
 
 .menu a:hover {
-    background-color: #657c6a;
+    background-color: #a2b9a7;
 }
 
-.chart1, .chart2, .chart3 {
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.main h1 {
+    margin-bottom: 16px;
+}
+
+.main h2 {
+    margin-bottom: 16px;
+}
+
+.main p {
+    margin-bottom: 16px;
+}
+
+.dark-mode .main {
+    color: #f2fcf6;
+}
+
+.single-line {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.links {
+    grid-area: footer;
+    border-radius: 8px;
+    background-color: #657c6a;
+    color:#f2fcf6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.vitamins, .minerals, .macro, .hydration {
     grid-area: main;
     border-radius: 8px;
     background-color: #f2fcf6;
     padding: 16px;
 }
 
-.chart1 {
+.vitamins {
     grid-area: left;
 }
 
-.chart2 {
+.minerals {
     grid-area: main;
 }
 
-.chart3 {
+.macro {
+    grid-area: middle;
+}
+
+.hydration {
     grid-area: right;
+
 }
 
 .links {
     grid-area: footer;
+    border-radius: 8px;
     background-color: #657c6a;
     color:#f2fcf6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
     text-align: center;
+    flex: 1;
 }
 
 button.icon-button {
@@ -153,14 +311,56 @@ button.icon-button {
     transition: background-color 0.2s ease;
     }
 
-    button.icon-button:hover {
+button.icon-button:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    }
+}
 
-    button.icon-button img {
+button.icon-button img {
         width: 50%;
         height: 50%;
-    }
+}
+
+#searchBox {
+    width: 100%;
+    max-width: 400px;
+    max-height: 32px;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .card {
+    flex: 1 1 calc(25% - 16px);
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    background-color: #fff;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+
+  .card h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .card p {
+    margin: 4px 0;
+    font-size: 14px;
+  }
 
     @media (max-width: 768px) {
     .grid-container {
@@ -174,6 +374,7 @@ button.icon-button {
         grid-template-columns: 1fr;
     }
     }
+
 
 .asteriskField {
     display: none;

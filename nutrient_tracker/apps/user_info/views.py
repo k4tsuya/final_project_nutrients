@@ -19,7 +19,7 @@ class HomeView(View):
 
     def get(self, request):
         """Handle GET requests to the home page."""
-        return render(request, "home.html")
+        return render(request, "index.html")
 
 
 def register_view(request):
@@ -85,3 +85,11 @@ class ProfileView(View):
 def contact_view(request):
     form = ContactForm()
     return render(request, "contact.html", {"form": form})
+
+
+def about_view(request):
+    return render(request, "about.html")
+
+
+def ingredients_view(request):
+    return render(request, "ingredients.html")
