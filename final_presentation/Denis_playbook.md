@@ -20,11 +20,39 @@
 
 ### **Performance #1: The Technical Explanation**
 
-*   **Time Allotted:** 45 seconds
+*   **Time Allotted:** 1 1/2 min
 *   **Your Cue:** Listen for Jeffrey's hand-off: "...To explain how it all came together, I'll hand you over to Denis."
 
 ---
 
+### **Denis's Presentation Script (The Precise Bakery Analogy - 90 Sec)**
+
+**(Instructions for Denis: Your role is the friendly, expert guide. Deliver this with clarity and warmth, making sure to credit each team member for their specific part. Click the checkbox after each point.)**
+
+#### **Introduction (Fading in from Jeffrey)**
+
+-   [ ] Thank you, Jeffrey. What you just saw looks so clean and easy to use, doesn't it?
+-   [ ] But now for the big question: **How does it all actually work?**
+-   [ ] I could throw a bunch of tech terms at you, but that’s no fun. To make sure everyone understands our journey, I'm going to explain our team's work by taking you on a tour of our high-tech **bakery**.
+
+---
+
+#### **The Customer's Journey & Our Expert Team**
+
+-   [ ] Imagine you are the customer. You walk up to our bakery. You see the beautiful **storefront** and the delicious-looking **cake** in the window. That's our app's design. The master **Decorator** who made it all so inviting for you? That was **Jeffrey**.
+-   [ ] Now, a bakery needs to be a real business, right? It needs the lights on, the licenses paid, and a perfect system for quality control. Our **Bakery Operations Manager**, who handled all the administration and even built our automated delivery pipeline, was **Mariana**. She made sure the entire operation ran flawlessly.
+-   [ ] So, where does the cake itself come from? That's the **kitchen**, my world. As **Head Baker**, my job was to manage our entire 'pantry'—the **database** where all the ingredients and recipes are stored. I also built the 'doors' to the kitchen—the **endpoints**—so orders could come in.
+-   [ ] But how do you get a complex order from the storefront to the kitchen and back again instantly? That required a genius. **Liang** was the inventor of our magic ordering system. He built the **APIs**—our 'waiters'—and more importantly, he created the 'universal translator'—the **serializers**—that turns a complex baked good into a simple ticket everyone can understand.
+
+---
+
+#### **Final Transition (Fading out to Liang)**
+
+-   [ ] So, the simple, beautiful cake you see is only possible because a decorator, a manager, a baker, and an inventor all worked in perfect harmony.
+-   [ ] But the most important story isn't just *what* each of us built, but *how* we grew as a team through that process.
+-   [ ] To share that journey with you, I'll hand you over to the inventor of our magic ordering system, Liang.
+
+---
 ## **Your Personal Worksheet**
 
 #### **1. Performance & Reflection**
