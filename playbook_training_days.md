@@ -144,6 +144,74 @@
 
 ### **Feedback from Day 1**
 
+## **Team Rehearsal Task List (Version 2)**
+
+### **Feedback from Day 1 (Federica)**
+
+#### **Tasks for Mariana (@Mariana)**
+-   [ ] **Intro:** In the introduction, state your specific role clearly, without using the analogy yet.
+-   [ ] **Intro:** Add filtered profile pictures for each team member to the "roles" or "about us" section.
+-   [ ] **Intro:** Add a brief overview of the application's "big picture" before transitioning to Jeffrey.
+-   [ ] **Presentation Flow:** Refine the introduction sequence to cover:
+    -   [ ] 1. Introduce the team with their roles and responsibilities.
+    -   [ ] 2. Explain how the idea was developed and mention the product owner's role.
+    -   [ ] 3. Give a high-level overview of the main features (nutrient info, ingredient search, light system, hydration tracking).
+    -   [ ] 4. Create a smooth and clear transition for Jeffrey to begin the demo.
+
+#### **Tasks for Jeffrey (@jeffrey)**
+-   [ ] **Content:** Write the script/text for your "About Us" section.
+-   [ ] **Demo:** Create a static slide to simulate the user login process.
+-   [ ] **Demo Pacing:** During the live demo, slow down and spend more time on each core functionality to ensure the audience understands it.
+-   [ ] **Core Feature Demo:**
+    -   [ ] Explain the difference between joining as a "Guest" vs. a "Registered" user.
+    -   [ ] Clearly state the advantages of registering (e.g., viewing history, saving favorite recipes).
+    -   [ ] When showing the nutrient charts, pause and emphasize their importance.
+    -   [ ] Articulate *why* nutrient tracking is a useful and beneficial feature for the user.
+    -   [ ] Demonstrate the search functionality with a clear example (e.g., searching for "tacos" or "beans").
+    -   [ ] Show a final, complete recipe card as the outcome of a search.
+    -   [ ] Show the "Contact Us" slide and confirm that the links are clickable and working.
+    -   [ ] Demonstrate the light/dark mode color change feature.
+-   [ ] **Co-ordination:**
+    -   [ ] Plan and rehearse the search interaction part of the demo with @Mariana.
+
+#### **Tasks for Denis (@Denis)**
+-   [ ] **Presentation:** Keep your technical explanation simple and focused on the "bakery/kitchen" analogy.
+
+#### **Tasks for Liang (@Liang)**
+-   [ ] **Presentation:** Prepare simple, clear slides for the "Future Features" section.
+-   [ ] **Future Features:** During your section, mention the plan to track vitamin safety/overload using the traffic light system visual.
+-   [ ] **Team Learnings:** Prepare to talk about the new skills the team learned individually. Be sure to highlight:
+    -   `Mariana`: Learned about Agile systems, writing pipelines, using advanced GitHub/GitLab features, coordinating sprints, and writing presentation pitches/playbooks. Also served a key role in research to support bug fixing.
+    -   `Jeffrey`: Learned new languages and frameworks including HTML, CSS, and Java.
+    -   `Liang`: Researched and implemented different libraries to improve server stability.
+    -   `Denis`: Mastered Django's complexities, finding workarounds for its unpredictable behavior. He successfully restructured the database when new features required it and learned to optimize data fetching (e.g., using pagination and caching).
+-   [ ] **Team Lead/Retrospective:** Lead a discussion and prepare to talk about the team's challenges and growth.
+    -   **Key Themes and Quotes to Include:**
+        -   **Initial Challenges:** "We were too exciting in coding, rather than having a plan," "biggest problem was to have a project owner and never talked about the key functions from the beginning," and a general "lack of communication about how the app should look."
+        -   **Emotional Journey:** Talk about the initial feelings of being "nervous," "inexperienced," and "clueless," which led to struggles with the data approach and a "lack of clarity."
+        -   **Individual Struggles & Growth:**
+            -   Mention Denis's frustration with the "fix and fix and try again" cycle of debugging.
+            -   Share your own feeling of pressure as team lead, the overestimation of performance, and the realization: *"The more I know, the more I realize I know nothing."*
+        -   **Positive Outcomes & Key Learnings:**
+            -   Highlight Mariana's journey: "I lost my fears. Gained self-confidence."
+            -   Emphasize the importance of the team environment: **"Support and an open mind to talk about everything,"** **"The culture of doing mistakes,"** and having a **"non-violent, funny, supportive"** atmosphere was crucial for success.
+
+#### **Tasks for Backend Team (@Backend_Team)**
+-   [ ] **Future Features:** Plan the backend architecture for future registered-user features:
+    -   [ ] Comparison between selected ingredients.
+    -   [ ] Individual recipe configuration.
+    -   [ ] Sharing features (with other users, on social media).
+    -   [ ] A user "feed" section.
+
+### **Feedback from Christopher**
+
+#### **Tasks for Everyone (@All)**
+-   [ ] **Transitions:** Improve the flow and smoothness when changing speakers.
+-   [ ] **Signposting:** Clearly state what the next speaker will be talking about to guide the audience.
+-   [ ] **Practice:** Rehearse the entire presentation multiple times to improve group dynamics.
+-   [ ] **Introduction:** Work together to make the opening more catchy and engaging.
+-   [ ] **Content:** Review the presentation to find more opportunities to show off the application's features.
+
 *   **Federica suggested that:**
 *   Mariana: 
     In the introduction add the role, without analogy.
