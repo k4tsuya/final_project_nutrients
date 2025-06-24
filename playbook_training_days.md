@@ -212,6 +212,110 @@
 -   [ ] **Introduction:** Work together to make the opening more catchy and engaging.
 -   [ ] **Content:** Review the presentation to find more opportunities to show off the application's features.
 
+*   **Federica suggested that:**
+*   Mariana: 
+    In the introduction add the role, without analogy.
+    Pictures from ourselves for the roles. <--- filtered ones
+    - some few words about the big picture of the application, before transition to
+    Jeffrey
+    1. introduce the team with the roles and responsabilites
+    2. how the idea was develope, about the product owner
+    3. talk about the main functionality in a big picture all the W-Questions (Feaures: micro / macro explain - ingridients's nutrients 
+       information, what is inside of 
+       an ingredient, look ingredients based on a nutrient, light system to handle it easier, plus hydration)
+    4. now Jeffrey will demostrate how this works:
+    - add about us text for @jeffrey
+
+    Jeffrey: *write on scrip
+    - simulate a log in --> this will be a slide /static *maybe Django adjustments
+    - stay on every functionality a bit longer
+      CORE: 
+    - explain that you can join as a guest vs register : why? advantages: history,
+      favorite recipes saving (which else for the future? ´@backend : comparison between selected ingredients, recipes indiviual configuration, sharing with other users and in social media, feed section)
+      GOAL:
+      *stay on nutrients charts*
+      - mencioned that in the future tracking of safty and dangerous overload of vitamines. Simple visuals 
+      with light traffic system
+      *mencioned later this by @liang with the chart open* --> static about charts
+    - why are nutrients tracking useful?
+    - interaction of searching about something filtering @mariana @jeffrey. Ex: tacos, beans...
+    - show final recipe
+    - show contact slide --> show the working one and is clickable /static
+    - change of color light to dark mode
+ 
+    Denis:
+    FOCUS:
+    - keep it simple
+    - analogy of the kitchen
+    - add java script / delete bootstrap
+
+
+    Liang:
+    FOCUS:
+    - on the future features, but with simple slides for it * check notes above @jeffrey
+    - on the new skills we learned by ourselves (Jeffrey: html, css, java, Liang: different libraries to
+      improve the server stability, Denis: Django causes weird issues, find round
+      about ways to solve it. Database structure, when adding a new feature
+      it was not suficcient. Fetching json storing excesive data (pagination, cache)
+      Denis: models - Django is difficult when interacting. Primary keys are asign
+      automatically and when writing own, behaviour will fail.
+      Following the documentation not really worked as expected.
+      all: fix new bugs, unknow texts
+      
+    - challeges working as a groups:
+      * we were to exciting in coding, rather having a plan and how to put everything together
+      * biggest problem was to have a project owner and never talked about the key functions from the 
+        beggining
+      * lack of communication about how the app should look, what we wanted to track, ways to track
+      * ways to visualize, lack of communication about it
+      * we designed the users epics and stories, but we forgot to plan the app architecture in detail, 
+        dividing it in 4 big chunks, functionality: backend, frontend, api's endpoints, pipline
+      * next step write skelletons and pseudocodes for each section.
+
+            Why this happened to us?
+        - nervousity
+        - unexperience
+        - helpless
+        - clueless
+        - struggle with approach for the data
+        - lack of control
+        - lack of clarity and the vision got lost, lead to re-iterations on the flight
+       
+          how do we continue the process?
+        - ups and downs
+        - struggling learning technologies by self-learning
+        - time pressure, too many holidays (for Jeffrey, family time)
+        - mondays, language lessons took more time from us. Better no language course the last month or soft 
+          skills . Stresses a lot, makes us tired and we need the time and energy for coding. 4.0 was the 
+          biggest shit
+        - taking the role of the team leader (liang), felt not making good progress, helping everyone where
+          it was needed. Lack of satisfaction. About own expectations, where high. Overestimation of own 
+          performance. Thought "i am not good engough" "The more i know, the more i realise i know nothing" 
+          Socrates.
+        - pressure in holidays to learn more tutorials
+        - previous personal experiences of others expecting more about you. We think about @liang as an 
+          expert
+        - Denis: frustration, code breaks continously, impredictable bevaviour from Django. Fix and Fix and 
+          try again.
+        - Support and open mind to talk about everything
+        - Mariana: i lost my fears. Gain Selfconfidence. Being an assitence was great, little steps. No 
+          judgment, no pressure for tech topics. The culture of doing mistakes. Motivation. Many breaks
+          Emotional understanding, non-violent, funny. Supportive. Watching the backend fix bugs, was a 
+          great teaching
+    
+*   **Christopher suggested that:**
+Key points:
+- flow in changing speaker
+- give the croud the feeling what is coming next, give a short description about 
+  what the next speaker will talk about
+- more practice
+- work on smooth dynamics
+- introduction more catchy
+- show more about our application
+
+
+
+
 
 
 
