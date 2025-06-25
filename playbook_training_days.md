@@ -285,13 +285,20 @@ Key points:
 ### **Feedback from Day 2**
 
 *   **Federica suggested that:**
-
+     timing ... intro too long. Get a flow when reading. Do not worry if we
+    forget to talk something.
+    Not a long handover with roadmap, also a transition faster, just for
+    Jeffrey part a transition. 
+    Jeffrey cut not on what showing, cut technical things, like requests.
+    At the end just hand out to Jeffrey without saying a long time
+    Linag shouls not repeat the analogy of the roles, Denis did already.
     ________________________________________________________________
     ________________________________________________________________
     ________________________________________________________________
 
 *   **Christopher suggested that:**
-
+    don´t cut important parts of the intro. Keep all the functions.
+    Liang and Denis don´t cut parts. Training on the speed of talking
     ________________________________________________________________
     ________________________________________________________________
     ________________________________________________________________
