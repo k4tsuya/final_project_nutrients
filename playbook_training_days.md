@@ -145,61 +145,45 @@
 >
 ## **Liang's Playbook**
 
-**Your Role:** You are the **Backend Baker** and the **Visionary**. Your job is to talk about the team's resilience and the exciting future of the project.
+> **Your Role:** You are the **Backend Baker** and the **Visionary**. Your job is to talk about the team's resilience and the exciting future of the project.
 
 
-### **Performance #1: Challenges & Future**
+> ###### **Performance #1: Challenges & Future**
 
 *   **Time Allotted:** 2min
 *   **Your Cue:** Listen for Denis's hand-off
----
-
-### **Liang's Presentation Script (Dynamic & Catchy Version)**
 
 
-#### **Introduction (Transition from Denis)**
+> ##### **Introduction (Transition from Denis)**
 
 -   [ ] Thank you, Denis. That bakery analogy was perfect.
--   [ ] So, with the cake now built, I want to answer two simple questions for you all: **What’s next for our app?** And more importantly, **how did this project change *us*?**
+-   [ ] So, I want to answer two simple questions for you all: **What’s next for our app?** And more importantly, 
+        **how did this project change *us*?**
 
----
 
-> #### **Where Do We Go From Here?**
+> ##### let's start: 
 
--   [ ] Let's start with what's next. You might be wondering, what's the next big feature?
--   [ ] Well, we want to make our traffic light system even smarter. Soon, it won't just tell you if you're getting enough of the good stuff—it will also warn you about too much of a good thing, like an overload of certain vitamins.
--   [ ] And of course, we want to bring people together. We’re already designing features for sharing your favorite recipes and creating truly personal meal plans.
+-   [ ] You might be wondering, what's the next feature?
+-   [ ] Well, we want to make our traffic light system even smarter. Soon, it won't just tell you if you're getting enough of the good stuff—it will also **WARN** you about **too much of a good thing, like an overload of certain vitamins.**
+-   [ ] On the other hand: We’re already **designing features for sharing your favorite nutrition plans with others**
 
----
 
-> #### **How Did We Actually Pull This Off?**
+> ##### So, Was It a Smooth Ride?
 
--   [ ] That's the *what*. But the *how* is even more interesting. This project was a massive challenge, and every single one of us had to level up.
--   [ ] **Mariana?** She was the glue that held our team together. She became our project manager, our pipeline builder, and our lead researcher, guiding us through the tough spots.
--   [ ] **Jeffrey** became our artist. He taught himself the languages of the web—HTML, CSS, JavaScript—to create the beautiful, simple design you saw.
--   [ ] **Denis** became the tamer of the beast that is Django. He wrestled with the code, completely rebuilt our database, and made our app run lightning-fast.
--   [ ] And **me?** I was the engineer in the engine room, finding new ways to make our server stable and fast, no matter what we threw at it.
-
----
-
-> #### So, Was It a Smooth Ride?**
-
--   [ ] **Absolutely not.** And that’s the most important part of our story.
--   [ ] We were so excited at the start that we jumped into coding without a perfect plan. We felt nervous, we felt inexperienced.
--   [ ] I definitely felt the pressure. It made me realize, *"The more I know, the more I realize I know nothing."*
--   [ ] **But here’s the secret:** Our biggest success wasn't the code. It was the culture we built.
--   [ ] We created a **"culture of doing mistakes,"** where everyone had a voice. As Mariana said, she **"lost her fears and gained self-confidence"** here.
--   [ ] That's what happens when you have a team with an **"open mind to talk about everything."** *That* was our real magic ingredient.
-
----
+-   [ ] **Absolutely not.** 
+-   [ ] We were so excited, nervous and inexperienced at the start that we jumped into coding without a perfect plan. 
+-   [ ] **I definitely felt the pressure.** It made me realize, *"The more I know, the more I realize I know nothing."*
+-   [ ] **But here’s the secret:** Our *biggest success was the culture we built.*
+-   [ ] We created a **"culture of doing mistakes,"**. As Mariana said, she **"lost her fears and gained self-confidence"** here.
+-   [ ] That's what happens when you have a team with an **"open mind to talk about everything."** *That* was our **real magic ingredient.**
 > ...
--   [ ] And speaking of the person who was so central in talking about our vulnerabilities and strenghts, I’ll hand it back to Mariana for the final words of this presentation:
+-   [ ] And speaking of the person who was so **central in talking about our vulnerabilities and strenghts,** I’ll hand it back to **Mariana** for the final words of this presentation:
 
 ---
 
-## **Team Rehearsal Feedback**
+> ## **Team Rehearsal Feedback**
 
-### **Feedback from Day 1 (Federica)**
+``` ### **Feedback from Day 1 (Federica)**
 
 #### **Tasks for Mariana (@Mariana)**
 -   [ ] **Intro:** In the introduction, state your specific role clearly, without using the analogy yet.
@@ -266,19 +250,6 @@
 -   [ ] **Content:** Review the presentation to find more opportunities to show off the application's features.
     
 *   **Christopher suggested that:**
-Key points:
-- flow in changing speaker
-- give the croud the feeling what is coming next, give a short description about 
-  what the next speaker will talk about
-- more practice
-- work on smooth dynamics
-- introduction more catchy
-- show more about our application
-
-
-
-
-
 
 
 ### **Feedback from Day 2**
