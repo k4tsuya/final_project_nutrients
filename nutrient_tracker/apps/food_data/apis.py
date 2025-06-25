@@ -97,8 +97,7 @@ class IngredientNutrientValue(generics.ListAPIView):
         if getattr(self, "swagger_fake_view", False):
             return Ingredient.objects.none()
         try:
-            return Ingredient.objects.order_by(
-                "-" + query,
-            )  # try to filter by nutrient.
-        except ValueError as e:
-            raise Http404 from e
+            filter_by_nutrient = Ingredient.objects.order_by("-" + query)
+            return filter_by_nutrient
+        except:
+            raise Http404

@@ -17,7 +17,7 @@ dev-superuser:
 	python manage.py createsuperuser  --settings=config.settings.dev
 
 dev-test:
-	python manage.py test --settings=config.settings.dev
+	python manage.py test --verbosity=2 --settings=config.settings.dev
 
 dev-loaddata:
 	python manage.py loaddata ${filename} --settings=config.settings.dev

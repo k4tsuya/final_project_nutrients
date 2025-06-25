@@ -15,27 +15,34 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.contrib import admin
-from django.urls import path, include
+from apps.tracker_data.views import NutrientTrackerListView
 from apps.user_info.views import (
-    register_view,
+    HomeView,
+    ProfileView,
+    about_view,
+    contact_view,
     login_view,
     logout_view,
-    HomeView,
+    register_view,
+    ingredients_view,
+    nutrients_view,
+    recipes_view,
 )
-from apps.tracker_data.views import NutrientTrackerListView
-
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
-
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import include, path, reverse
 from django.views.generic import TemplateView
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
     SpectacularSwaggerView,
 )
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 
 doc_urls = [
     path("api/v1/schema/", SpectacularAPIView.as_view(), name="schema"),
@@ -67,12 +74,31 @@ urlpatterns = [
     path("register/", register_view, name="register"),
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
-    path("tracker/", NutrientTrackerListView.as_view(), name="tracker_pagination"),
-    path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
-    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    path("profile/", ProfileView.as_view(), name="profile"),
     path(
         "tracker/",
         NutrientTrackerListView.as_view(),
         name="tracker_pagination",
     ),
+    path(
+        "api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"
+    ),
+    path(
+        "api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"
+    ),
+    path(
+        "tracker/",
+        NutrientTrackerListView.as_view(),
+        name="tracker_pagination",
+    ),
+    path("contact/", contact_view, name="contact"),
+    path("about/", about_view, name="about"),
+    path("ingredients/", ingredients_view, name="ingredients"),
+    path("nutrients/", nutrients_view, name="nutrients"),
+    path("recipes/", recipes_view, name="recipes"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )

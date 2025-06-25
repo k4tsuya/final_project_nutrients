@@ -9,6 +9,10 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
 
+from apps.user_info.models import Profile
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import BaseInput, Field, Layout, Row, Submit
+
 
 class UserRegisterForm(UserCreationForm):
     """Base form for user registration."""
@@ -60,3 +64,37 @@ class UserRegisterForm(UserCreationForm):
             msg = "Passwords do not match!"
             raise forms.ValidationError(msg)
         return password2
+
+
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ["username", "email"]
+
+
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ["image"]
+
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_id = "contactform"
+        self.helper.form_method = "post"
+        self.helper.form_class = "mt-5"
+
+        self.helper.layout = Layout(
+            "name",
+            "email",
+            "message",
+            Submit("submit", "Submit", css_class="btn-default"),
+        )
