@@ -12,6 +12,7 @@
   <div class="form-container">
     <h1>Login</h1>
     <form action="{% url 'login' %}" method="POST">
+      {% csrf_token %}
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required />
 
@@ -22,6 +23,7 @@
     </form>
     <div class="toggle-link">
       <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+      <p><a href="http://127.0.0.1:8000/">Continue as Guest</a></p>
     </div>
   </div>
 
