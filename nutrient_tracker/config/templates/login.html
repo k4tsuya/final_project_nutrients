@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include './header.html' %}
+
+</head>
+<body>
+{% block body_items %}
+
+  <div class="form-container">
+    <h1>Login</h1>
+    <form action="{% url 'login' %}" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Login</button>
+    </form>
+    <div class="toggle-link">
+      <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    const video = document.getElementById("bitaminLogo");
+    const source = video.querySelector("source");
+    const isDarkMode = document.body.classList.contains("dark-mode");
+
+    source.src = isDarkMode ? "bitamin_logo_dk.mp4" : "bitamin_logo_lt.mp4";
+    video.load();
+    video.playbackRate = 0.75;
+    video.play();
+
+    // Toggle icon
+    const icon = document.getElementById("darkModeBtn").querySelector("i");
+    icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
+}
+
+  </script>
+  {% endblock %}
+</body>
+</html>

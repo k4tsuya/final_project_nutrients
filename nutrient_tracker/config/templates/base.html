@@ -3,7 +3,6 @@
 {% load static %}
 <head>
     {% include './header.html' %}
-    <title>Document</title>
 </head>
 <body>
     <button onclick="toggleDarkMode()" id="darkModeBtn" class="dark-mode-btn" title="Toggle Dark Mode">
@@ -11,7 +10,7 @@
     </button>
 
 <div class="grid-container">
-    <a>
+    <a href="http://127.0.0.1:8000/">
     <div class="logo">
         <video id="bitaminLogo" autoplay muted playsinline preload="auto" onloadstart="this.playbackRate = 0.75;">
             <source src="{% static 'images/bitamin_logo_lt.mp4' %}" type="video/mp4">
