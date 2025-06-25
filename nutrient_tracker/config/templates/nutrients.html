@@ -10,7 +10,7 @@
         {% block body_items %}
 
 
-<input type="text" id="searchBox" placeholder="Search on nutrient ..." />
+<input type="text" id="searchBox" placeholder="Search nutrients ..." />
 <div id="ingredientContainer" class="card-container"></div>
 
 
@@ -115,6 +115,7 @@ function renderCards(ingredients) {
             <p><strong>Quantity:</strong> ${item.quantity || "N/A"}</p>
             <p><strong>Unit:</strong> ${item.unit || "N/A"}</p>
             <p><strong>Energy:</strong> ${item.enercj || "N/A"}</P>
+            <p><strong>Protein:</strong> ${item.prot || "N/A"}</p>
             <p><strong>Vitamin A:</strong> ${item.vita_rae || "N/A"}</P>
             <p><strong>Iron:</strong> ${item.fe || "N/A"}</P>
 
