@@ -1,14 +1,8 @@
 
 
-# **Master Playbook & Rehearsal Guide **
+> # **Final Presentation Playbook**
 
-**Purpose:** This is our unified script and worksheet for the final presentation. Use this document to practice your parts and collect feedback for the team.
-
----
-
-### **Full Presentation Timeline**
-
-*This is the flow of the entire presentation.*
+> #### **Full Presentation Timeline**
 
 1.  `[00:00]` **Mariana:** The Intro
 2.  `[01:30]` **Jeffrey:** The Live Demo
@@ -20,72 +14,54 @@
 ---
 
 
-## **Mariana's Playbook**
+> ## **Mariana's Playbook**
 
-**Your Role:** You are the **Project Manager** and the **Storyteller**. Your job is to set the stage with a powerful intro and bring the presentation home with a heartfelt thank you.
-
-#### **Performance #1: The Introduction**
-*   **Time Allotted:** 1 minute, 30 seconds
+> ##### **Performance #1: The Introduction**
+*   **Time Allotted:** 2 minute, 30 seconds
 *   **Your Cue:** The presentation begins. You are the first speaker.
 *   **Action:** Dennis will have Slide #1 displayed.
 
-> **Your Script:**
+> ##### (Intro - 2 Min)**
 
-### **Mariana's Introduction Script (The Final Version - 2 Min)**
+-   [ ] Good morning every one. Question: *Are you overwhelmed* by the **flood of nutrition advice on social media?** *Your Instagram says one 
+        thing, your TikTok says the complete opposite*, and you're left **wondering what's actually right** for *you*.
+-   [ ] And let's be honest **almost every nutrition app asks you to count calories**, *as health was equal* **to losing weight.**
+-   [ ] **Studies show that’s just wrong;** Here our solution:
+-   [ ] We created **Bitamin**.
+-   [ ] **An application tracking the macro and micro nutrients contained in your meals,** *classifying your diet with 3 colors, like the 
+       light system,* **green, yellow, and red,** to know if you are **talking enough good stuff for yourself or not.** **to improve in your 
+       daily nutrition decisions better.**
+-   [ ] Maybe, for example you want **to improve your gut health, manage an allergy, or sleep deeper**. 
+-   [ ] **Improving your health isn't about dieting;** it's about **understanding your body needs and setting individual goals.**
+-   [ ] *The name is our entire philosophy:* a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the 
+       **fundamental blocks of nutrition.**
 
-> **(Instructions for Mariana: This is it. Deliver with the passion of a founder who is proud of both the product and the team behind it. Click the checkbox after each point.)**
+> ##### **Who We Are**
 
-> ##### **Part 1: The Pitch & The "Bitamin" Philosophy**
-
--   [ ] Good morning. Are you ever overwhelmed by the flood of nutrition advice on social media? Your Instagram says one thing, your TikTok says the complete opposite, and you're left wondering what's actually right for *you*.
--   [ ] And let's be honest about the problem with almost every nutrition app out there. They ask you to do one thing: count calories. And they push one goal above all others: losing weight.
--   [ ] They scream the tired, old message that being 'healthy' just means getting smaller. We think that’s not just wrong; **it’s lazy**.
--   [ ] That’s why we created **Bitamin**.
--   [ ] The name is our entire philosophy: a fusion of **Bit**—the smallest unit of data, and **Amin**—from amino acids, the fundamental building blocks of life. Because improving your health isn't about dieting; it's about understanding the tiny building blocks your body needs to thrive.
-
----
-
-> ##### **Part 2: Why Bitamin is Different & Who We Are**
-
--   [ ] Bitamin is not another calorie counter. It is a **quality** tracker for **your** individual nutrition.
--   [ ] It gives you a live signal on a chart using the simple traffic light system we all understand: green, yellow, and red. This is for everyone.
--   [ ] Because *your* goals are unique. Maybe you want to improve your gut health, manage an allergy, or sleep deeper. Bitamin is designed to help you track the habits that serve **your body**, so you can finally make informed decisions everywhere.
--   [ ] So, who is the team behind Bitamin?
 -   [ ] Our backend and app functionality creators are **Liang** and **Denis**.
--   [ ] Our frontend artist, who created a fusion of minimalistic American and retro art, is **Jeffrey**, taking care that the design stays clean and simple.
--   [ ] And for the logistics, administration of processes, and tracking everything possible—that’s me, **Mariana**.
+-   [ ] Our frontend is a fusion of minimalistic American and retro art, by **Jeffrey**, launching a clean and simple design.
+-   [ ] For the logistics, administration of processes, and tracking everything possible—that’s me, **Mariana**.
 
----
 
-> ##### **Part 3: The Story of Our Project**
+> ##### **The Story of Our Project**
 
--   [ ] Now that you know the team, you might be thinking, "Where did this incredible idea come from?"
--   [ ] This isn't just a student project. This journey began when our visionary, **Liang**, connected with a real entrepreneur who needed a team to build this exact app. He didn't give us a homework assignment; he gave us a **job**.
--   [ ] This project is now set to become our internship, and after that, we plan to continue as part-time business partners.
+-   [ ] **"Where did we got this idea?"**
+-   [ ] Our visionary, **Liang**, connected with a **real entrepreneur** who  
+        gave us a **real job**.
+-   [ ] This is now set as our **internship**, and after that, we will continue as **part-time business partners.**
+>
+-   [ ] How the app works?
+-   [ ] **Jeffrey** will show you what Bitamin **can do for you**.
+-   [ ] I’ll hand you over to Jeffrey.
 
----
-
-> ##### **Part 4: The Roadmap & Transition**
-
--   [ ] So, are you curious to see how we make personalized nutrition this simple?
--   [ ] Over the next few minutes, my team and I will take you on the full journey.
--   [ ] First, **Jeffrey** will show you what Bitamin **looks and feels like**.
--   [ ] Then, **Denis** will reveal **how we built its powerful engine**.
--   [ ] And finally, **Liang** will share the story of **how our team grew through the process**.
--   [ ] So, to kick things off with the grand tour, I’ll hand you over to Jeffrey.
-
----
-
-#### **Performance #2: The Final Thanks**
-*   **Time Allotted:** 25 seconds
-*   **Your Cue:** Listen for Liang to finish his last line.
+> ##### **Performance #2: The Final Thanks**
 *   **Action:** Dennis will advance to Slide #4.
 
 > **Your Script:**
-> "And we couldn't have done any of this without our amazing support system. On behalf of all of us, thank you to our teachers, Christopher and Federica, and to all our colleagues who supported us on this journey."
+> "And we couldn't have done any of this without our amazing teachers, Christopher and Federica, and all our colleagues who supported us on this journey."
 
 ---
->
+
 
 ## **Jeffrey's Playbook**
 
@@ -146,61 +122,45 @@
 >
 ## **Liang's Playbook**
 
-**Your Role:** You are the **Backend Baker** and the **Visionary**. Your job is to talk about the team's resilience and the exciting future of the project.
+> **Your Role:** You are the **Backend Baker** and the **Visionary**. Your job is to talk about the team's resilience and the exciting future of the project.
 
 
-### **Performance #1: Challenges & Future**
+> ###### **Performance #1: Challenges & Future**
 
 *   **Time Allotted:** 2min
 *   **Your Cue:** Listen for Denis's hand-off
----
-
-### **Liang's Presentation Script (Dynamic & Catchy Version)**
 
 
-#### **Introduction (Transition from Denis)**
+> ##### **Introduction (Transition from Denis)**
 
 -   [ ] Thank you, Denis. That bakery analogy was perfect.
--   [ ] So, with the cake now built, I want to answer two simple questions for you all: **What’s next for our app?** And more importantly, **how did this project change *us*?**
+-   [ ] So, I want to answer two simple questions for you all: **What’s next for our app?** And more importantly, 
+        **how did this project change *us*?**
 
----
 
-> #### **Where Do We Go From Here?**
+> ##### let's start: 
 
--   [ ] Let's start with what's next. You might be wondering, what's the next big feature?
--   [ ] Well, we want to make our traffic light system even smarter. Soon, it won't just tell you if you're getting enough of the good stuff—it will also warn you about too much of a good thing, like an overload of certain vitamins.
--   [ ] And of course, we want to bring people together. We’re already designing features for sharing your favorite recipes and creating truly personal meal plans.
+-   [ ] You might be wondering, what's the next feature?
+-   [ ] Well, we want to make our traffic light system even smarter. Soon, it won't just tell you if you're getting enough of the good stuff—it will also **WARN** you about **too much of a good thing, like an overload of certain vitamins.**
+-   [ ] On the other hand: We’re already **designing features for sharing your favorite nutrition plans with others**
 
----
 
-> #### **How Did We Actually Pull This Off?**
+> ##### So, Was It a Smooth Ride?
 
--   [ ] That's the *what*. But the *how* is even more interesting. This project was a massive challenge, and every single one of us had to level up.
--   [ ] **Mariana?** She was the glue that held our team together. She became our project manager, our pipeline builder, and our lead researcher, guiding us through the tough spots.
--   [ ] **Jeffrey** became our artist. He taught himself the languages of the web—HTML, CSS, JavaScript—to create the beautiful, simple design you saw.
--   [ ] **Denis** became the tamer of the beast that is Django. He wrestled with the code, completely rebuilt our database, and made our app run lightning-fast.
--   [ ] And **me?** I was the engineer in the engine room, finding new ways to make our server stable and fast, no matter what we threw at it.
-
----
-
-> #### So, Was It a Smooth Ride?**
-
--   [ ] **Absolutely not.** And that’s the most important part of our story.
--   [ ] We were so excited at the start that we jumped into coding without a perfect plan. We felt nervous, we felt inexperienced.
--   [ ] I definitely felt the pressure. It made me realize, *"The more I know, the more I realize I know nothing."*
--   [ ] **But here’s the secret:** Our biggest success wasn't the code. It was the culture we built.
--   [ ] We created a **"culture of doing mistakes,"** where everyone had a voice. As Mariana said, she **"lost her fears and gained self-confidence"** here.
--   [ ] That's what happens when you have a team with an **"open mind to talk about everything."** *That* was our real magic ingredient.
-
----
+-   [ ] **Absolutely not.** 
+-   [ ] We were so excited, nervous and inexperienced at the start that we jumped into coding without a perfect plan. 
+-   [ ] **I definitely felt the pressure.** It made me realize, *"The more I know, the more I realize I know nothing."*
+-   [ ] **But here’s the secret:** Our *biggest success was the culture we built.*
+-   [ ] We created a **"culture of doing mistakes,"**. As Mariana said, she **"lost her fears and gained self-confidence"** here.
+-   [ ] That's what happens when you have a team with an **"open mind to talk about everything."** *That* was our **real magic ingredient.**
 > ...
--   [ ] And speaking of the person who was so central in talking about our vulnerabilities and strenghts, I’ll hand it back to Mariana for the final words of this presentation:
+-   [ ] And speaking of the person who was so **central in talking about our vulnerabilities and strenghts,** I’ll hand it back to **Mariana** for the final words of this presentation:
 
 ---
 
-## **Team Rehearsal Feedback**
+> ## **Team Rehearsal Feedback**
 
-### **Feedback from Day 1 (Federica)**
+``` ### **Feedback from Day 1 (Federica)**
 
 #### **Tasks for Mariana (@Mariana)**
 -   [ ] **Intro:** In the introduction, state your specific role clearly, without using the analogy yet.
@@ -267,31 +227,25 @@
 -   [ ] **Content:** Review the presentation to find more opportunities to show off the application's features.
     
 *   **Christopher suggested that:**
-Key points:
-- flow in changing speaker
-- give the croud the feeling what is coming next, give a short description about 
-  what the next speaker will talk about
-- more practice
-- work on smooth dynamics
-- introduction more catchy
-- show more about our application
-
-
-
-
-
 
 
 ### **Feedback from Day 2**
 
 *   **Federica suggested that:**
-
+     timing ... intro too long. Get a flow when reading. Do not worry if we
+    forget to talk something.
+    Not a long handover with roadmap, also a transition faster, just for
+    Jeffrey part a transition. 
+    Jeffrey cut not on what showing, cut technical things, like requests.
+    At the end just hand out to Jeffrey without saying a long time
+    Linag shouls not repeat the analogy of the roles, Denis did already.
     ________________________________________________________________
     ________________________________________________________________
     ________________________________________________________________
 
 *   **Christopher suggested that:**
-
+    don´t cut important parts of the intro. Keep all the functions.
+    Liang and Denis don´t cut parts. Training on the speed of talking
     ________________________________________________________________
     ________________________________________________________________
     ________________________________________________________________
