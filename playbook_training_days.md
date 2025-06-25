@@ -1,14 +1,8 @@
 
 
-# **Master Playbook & Rehearsal Guide **
+> # **Final Presentation Playbook**
 
-**Purpose:** This is our unified script and worksheet for the final presentation. Use this document to practice your parts and collect feedback for the team.
-
----
-
-### **Full Presentation Timeline**
-
-*This is the flow of the entire presentation.*
+> #### **Full Presentation Timeline**
 
 1.  `[00:00]` **Mariana:** The Intro
 2.  `[01:30]` **Jeffrey:** The Live Demo
@@ -20,16 +14,14 @@
 ---
 
 
-## **Mariana's Playbook**
-
-> ####**Your Role:** You are the **Project Manager** and the **Storyteller**. Your job is to set the stage with a powerful intro and bring the presentation home with a heartfelt thank you.
+> ## **Mariana's Playbook**
 
 > ##### **Performance #1: The Introduction**
 *   **Time Allotted:** 2 minute, 30 seconds
 *   **Your Cue:** The presentation begins. You are the first speaker.
 *   **Action:** Dennis will have Slide #1 displayed.
 
-> ##### (The Final Version - 2 Min)**
+> ##### (Intro - 2 Min)**
 
 -   [ ] Good morning every one. Question: *Are you overwhelmed* by the **flood of nutrition advice on social media?** *Your Instagram says one 
         thing, your TikTok says the complete opposite*, and you're left **wondering what's actually right** for *you*.
@@ -44,32 +36,25 @@
 -   [ ] *The name is our entire philosophy:* a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the 
        **fundamental blocks of nutrition.**
 
-> ##### **Part 2: Why Bitamin is Different & Who We Are**
+> ##### **Who We Are**
 
--   [ ] So, who is the team Bitamin?
 -   [ ] Our backend and app functionality creators are **Liang** and **Denis**.
--   [ ] Our frontend artist, who created a fusion of minimalistic American and retro art, is **Jeffrey**, taking care that the design stays clean and simple.
--   [ ] And for the logistics, administration of processes, and tracking everything possible—that’s me, **Mariana**.
+-   [ ] Our frontend is a fusion of minimalistic American and retro art, by **Jeffrey**, launching a clean and simple design.
+-   [ ] For the logistics, administration of processes, and tracking everything possible—that’s me, **Mariana**.
 
 
-> ##### **Part 3: The Story of Our Project**
+> ##### **The Story of Our Project**
 
--   [ ] Now that you know the team, you might be thinking, **"Where did this idea come from?"**
--   [ ] This journey began when our visionary, **Liang**, connected with a **real entrepreneur** who needed **a team to build this app.** He 
+-   [ ] **"Where did we got this idea?"**
+-   [ ] Our visionary, **Liang**, connected with a **real entrepreneur** who  
         gave us a **real job**.
--   [ ] This project is now set to become our **internship**, and after that, we plan to continue as **part-time business partners.**
-
-
-> ##### **Part 4: The Roadmap & Transition**
-
--   [ ] So, are you curious to see how the app works?
--   [ ] Over the next few minutes, you will be taken on a full journey.
+-   [ ] This is now set as our **internship**, and after that, we will continue as **part-time business partners.**
+>
+-   [ ] How the app works?
 -   [ ] **Jeffrey** will show you what Bitamin **can do for you**.
 -   [ ] I’ll hand you over to Jeffrey.
 
 > ##### **Performance #2: The Final Thanks**
-*   **Time Allotted:** 25 seconds
-*   **Your Cue:** Listen for Liang to finish his last line.
 *   **Action:** Dennis will advance to Slide #4.
 
 > **Your Script:**
