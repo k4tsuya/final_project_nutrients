@@ -22,37 +22,31 @@
 
 ## **Mariana's Playbook**
 
-**Your Role:** You are the **Project Manager** and the **Storyteller**. Your job is to set the stage with a powerful intro and bring the presentation home with a heartfelt thank you.
+> ####**Your Role:** You are the **Project Manager** and the **Storyteller**. Your job is to set the stage with a powerful intro and bring the presentation home with a heartfelt thank you.
 
-#### **Performance #1: The Introduction**
+> ##### **Performance #1: The Introduction**
 *   **Time Allotted:** 2 minute, 30 seconds
 *   **Your Cue:** The presentation begins. You are the first speaker.
 *   **Action:** Dennis will have Slide #1 displayed.
 
-> **Your Script:**
+> ##### (The Final Version - 2 Min)**
 
-### **Mariana's Introduction Script (The Final Version - 2 Min)**
-
-> **(Instructions for Mariana: This is it. Deliver with the passion of a founder who is proud of both the product and the team behind it. Click the checkbox after each point.)**
-
-> ##### **Part 1: The Pitch & The "Bitamin" Philosophy**
-
--   [ ] Good morning every one. Question: Are you overwhelmed by the flood of nutrition advice on social media? Your Instagram says one thing, your TikTok says the complete opposite, and you're left wondering what's actually right for *you*.
--   [ ] And let's be honest almost every nutrition app out there asks you to count calories, as health was just about losing weight.
--   [ ] Studies show that’s just wrong; Here our solution:
+-   [ ] Good morning every one. Question: *Are you overwhelmed* by the **flood of nutrition advice on social media?** *Your Instagram says one 
+        thing, your TikTok says the complete opposite*, and you're left **wondering what's actually right** for *you*.
+-   [ ] And let's be honest **almost every nutrition app asks you to count calories**, *as health was equal* **to losing weight.**
+-   [ ] **Studies show that’s just wrong;** Here our solution:
 -   [ ] We created **Bitamin**.
--   [ ] The name is our entire philosophy: a fusion of **Bit**—the smallest unit of data, and **Amin**—from amino acids, the fundamental building blocks of life. Improving your health isn't about dieting; it's about understanding your body needs and your individual goals.
-
----
+-   [ ] **An application tracking the macro and micro nutrients contained in your meals,** *classifying your diet with 3 colors, like the 
+       light system,* **green, yellow, and red,** to know if you are **talking enough good stuff for yourself or not.** **to improve in your 
+       daily nutrition decisions better.**
+-   [ ] Maybe, for example you want **to improve your gut health, manage an allergy, or sleep deeper**. 
+-   [ ] **Improving your health isn't about dieting;** it's about **understanding your body needs and setting individual goals.**
+-   [ ] *The name is our entire philosophy:* a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the 
+       **fundamental blocks of nutrition.**
 
 > ##### **Part 2: Why Bitamin is Different & Who We Are**
 
--   [ ] Bitamin is not another calorie counter. It is a **quality** individual nutrient tracker for micro and macro nutrients
--   [ ] It gives you a colored signal on a chart using the simple traffic light system we all understand: green, yellow, and red, to know if 
-        you are talking enough good stuff for yourself or not.
--   [ ] Because *your* goals are unique, maybe you want to improve your gut health, manage an allergy, or sleep deeper. Bitamin is designed to 
-        help you track the nutrients in each meal so you can finally make informed decisions at the grocery shop, restaurants and daily life.
--   [ ] So, who is the team behind Bitamin?
+-   [ ] So, who is the team Bitamin?
 -   [ ] Our backend and app functionality creators are **Liang** and **Denis**.
 -   [ ] Our frontend artist, who created a fusion of minimalistic American and retro art, is **Jeffrey**, taking care that the design stays clean and simple.
 -   [ ] And for the logistics, administration of processes, and tracking everything possible—that’s me, **Mariana**.
@@ -60,22 +54,20 @@
 
 > ##### **Part 3: The Story of Our Project**
 
--   [ ] Now that you know the team, you might be thinking, "Where did this incredible idea come from?"
--   [ ] This journey began when our visionary, **Liang**, connected with a real entrepreneur who needed a team to build this app. He didn't 
-        give us a homework assignment; he gave us a **job**.
--   [ ] This project is now set to become our internship, and after that, we plan to continue as part-time business partners.
+-   [ ] Now that you know the team, you might be thinking, **"Where did this idea come from?"**
+-   [ ] This journey began when our visionary, **Liang**, connected with a **real entrepreneur** who needed **a team to build this app.** He 
+        gave us a **real job**.
+-   [ ] This project is now set to become our **internship**, and after that, we plan to continue as **part-time business partners.**
 
 
 > ##### **Part 4: The Roadmap & Transition**
 
 -   [ ] So, are you curious to see how the app works?
 -   [ ] Over the next few minutes, you will be taken on a full journey.
--   [ ] First, **Jeffrey** will show you what Bitamin **can do for you**.
+-   [ ] **Jeffrey** will show you what Bitamin **can do for you**.
 -   [ ] I’ll hand you over to Jeffrey.
 
----
-
-#### **Performance #2: The Final Thanks**
+> ##### **Performance #2: The Final Thanks**
 *   **Time Allotted:** 25 seconds
 *   **Your Cue:** Listen for Liang to finish his last line.
 *   **Action:** Dennis will advance to Slide #4.
@@ -84,7 +76,7 @@
 > "And we couldn't have done any of this without our amazing teachers, Christopher and Federica, and all our colleagues who supported us on this journey."
 
 ---
->
+
 
 ## **Jeffrey's Playbook**
 
