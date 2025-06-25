@@ -1,55 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bitamin Dashboard</title>
-    <link rel="shortcut icon" type="image/x-icon" href="bitamin_icon_transparent.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    {% include "header.html" %}
 
 </head>
 <body>
 
-<button onclick="toggleDarkMode()" id="darkModeBtn" class="dark-mode-btn" title="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
-
-<div class="grid-container">
-    <div class="logo">
-        <video id="bitaminLogo" autoplay muted playsinline preload="auto" onloadstart="this.playbackRate = 0.75;">
-            <source src="bitamin_logo_lt.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
-</div>
+    {% block body_items %}
 
 
 
-    <nav class="menu">
-        <button class="icon-button" onclick="toggleMenu()">
-            <img src="bitamin_icon_transparent.png" alt="Toggle Menu" />
-        </button>
-        <ul id="menuList">
-            <li><a href="register.html">Register</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="ingredients.html">What's in your food?</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="login.html">Logout</a></li>
-    </ul>
-    
-</nav>
+
+<div class="grid-container" style="flex: auto;" justify-content="left;">
+
 
 <div class="vitamins">
     <h1>Vitamins</h1>
     <canvas id="myChart"></canvas>
-</div>  
+</div>
 
 <div class="minerals">
     <h1>Minerals</h1>
@@ -59,7 +30,7 @@
 <div class="macro">
     <h1>Macronutrients</h1>
     <canvas id="myChart4"></canvas>
-</div>  
+</div>
 
 <div class="hydration">
     <h1>Hydration</h1>
@@ -71,21 +42,9 @@
     <button onclick="resetHydration()" style="margin-top: 8px; padding: 8px 16px; border-radius: 8px; background-color: #bb3e00; color: #f2fcf6; border: none; cursor: pointer;">
         Reset
     </button>
-</div>
 
-<div class="links">
-        <div class="footer-left">
-            <p>Impressum</p>
-            <p>AGB</p>
-        </div>
-<div class="footer-center">
-    <h2>Follow Us!</h2>
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-instagram"></i>
-    <i class="fa-brands fa-youtube"></i>
-    <i class="fa-brands fa-tiktok"></i>
-</div>
 
+</div>
 </div>
 
 <script>
@@ -250,7 +209,7 @@ renderHydrationChart();
     const source = video.querySelector("source");
     const isDarkMode = document.body.classList.contains("dark-mode");
 
-    source.src = isDarkMode ? "bitamin_logo_dk.mp4" : "bitamin_logo_lt.mp4";
+    source.src = isDarkMode ? "{% static 'images/bitamin_logo_dk.mp4' %}" : "{% static 'images/bitamin_logo_lt.mp4' %}";
     video.load();
     video.playbackRate = 0.75;
     video.play();
@@ -264,6 +223,6 @@ renderHydrationChart();
 
 </script>
 
-
+{% endblock %}
 </body>
 </html>

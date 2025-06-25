@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include './header.html' %}
+</head>
+<body>
+    {% block body_items %}
+
+<div class="main">
+    <h1 style="font-size: 48px;">Contact Us</h1>
+    <h2 class="single-line">
+        If you have any questions, suggestions, or just want to say hi — we'd love to hear from you!
+    </h2>
+    <p>Email: denis@bitamin.com</p>
+    <p>Phone: +49 0800 5551234</p>
+
+</div>
+    {% endblock %}
+
+{% include 'footer.html' %}
+
+
+</body>
+</html>

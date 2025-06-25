@@ -1,65 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What's in your food?</title>
-    <link rel="shortcut icon" type="image/x-icon" href="bitamin_icon_transparent.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-
+    {% includes "header.html"}
 </head>
 <body>
 
-    <button onclick="toggleDarkMode()" id="darkModeBtn" class="dark-mode-btn" title="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
+        {% block body_items %}
 
-<div class="grid-container">
-    <a href="index.html">
-    <div class="logo">
-        <video id="bitaminLogo" autoplay muted playsinline preload="auto" onloadstart="this.playbackRate = 0.75;">
-            <source src="bitamin_logo_lt.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </a>
-</div>
-
-
-    <nav class="menu">
-        <button class="icon-button" onclick="toggleMenu()">
-            <img src="bitamin_icon_transparent.png" alt="Toggle Menu" />
-        </button>
-        <ul id="menuList">
-            <li><a href="register.html">Register</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="ingredients.html">What's in your food?</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="login.html">Logout</a></li>
-    </ul>
-
-</nav>
 
 <input type="text" id="searchBox" placeholder="Search for a food..." />
 <div id="ingredientContainer" class="card-container"></div>
 
-<div class="links">
-        <div class="footer-left">
-            <p>Impressum</p>
-            <p>AGB</p>
-        </div>
-<div class="footer-center">
-    <p style="font-size: 24px;">Follow us on social media for updates, wellness tips, and more.</p>
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-instagram"></i>
-    <i class="fa-brands fa-youtube"></i>
-    <i class="fa-brands fa-tiktok"></i>
-</div>
+
 
 </div>
 
@@ -179,6 +133,7 @@ function renderCards(ingredients) {
 
 </script>
 
+{% endblock %}
 
 </body>
 </html>
