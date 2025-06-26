@@ -22,8 +22,9 @@
 
 > ##### (Intro - 2 Min)**
 
--   [ ] Good morning every one. Question: *Are you overwhelmed* by the **flood of nutrition advice on social media?** *Your Instagram says one 
-        thing, your TikTok says the complete opposite*, and you're left **wondering what's actually right** for *you*.
+-   [ ] Good morning every one. 
+-       I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
+-       *Your **Instagram says one thing, your TikTok says the complete opposite**, and you **simply don't know what is right** for *you*
 -   [ ] And let's be honest **almost every nutrition app asks you to count calories**, *as health was equal* **to losing weight.**
 -   [ ] **Studies show that’s just wrong;** Here our solution:
 -   [ ] We created **Bitamin**.
@@ -35,11 +36,11 @@
 -   [ ] *The name is our entire philosophy:* a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the 
        **fundamental blocks of nutrition.**
 
-> ##### **Who We Are**
+> ##### ** this is our team:
 
--   [ ] Our backend and app functionality creators are **Liang** and **Denis**.
--   [ ] The frontend approach is a modern, minimalistic design, by **Jeffrey**, clean and simple.
--   [ ] For the logistics, administration of processes, and tracking everything possible—that’s me, **Mariana**.
+-   [ ] At the backend are **Liang** and **Denis** our architects
+-   [ ] At the frontend **Jeffrey**, creating a design clean and simple.
+-   [ ] At the logistics, administration of processes, that’s me, **Mariana**.
 
 
 > ##### **The Story of Our Project**
