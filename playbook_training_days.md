@@ -25,11 +25,17 @@
 -   [ ] Good morning every one. 
      -   [ ]   I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
 -   [ ] *Your **Instagram says one thing, your TikTok says the opposite**, and you **simply don't know what is right** for *you*
--   [ ] The problem **almost every nutrition counts calories for loosing weight** 
--   [ ] **Studies show that it is just wrong;** **Bitamin is the new solution**
--   [ ] **Our application is tracking the macro and micro nutrients contained in your meals,** *classifying your diet in 3 colors,light system,* **green, yellow, and red,** to know if you are **talking enough from the good stuff**
--   [ ] *The name is our entire philosophy:* a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the **fundamental blocks of nutrition.**
--   [ ] Maybe, for example you want **to improve your gut health, manage an allergy, or sleep deeper**. Your health isn't about just dieting;** it's about **understanding your body needs and setting individual goals.**
+-   [ ] The problem is that **almost every nutrition app counts calories for loosing 
+       weight** 
+-   [ ] **Studies show that it is not useful for everyone;** **Bitamin is the new solution**
+-   [ ] **Our application is tracking the macro and micro nutrients contained in your 
+        meals,** *classifying your meals quality with 3 colors,like the light system,* **green, yellow, and red,** to know if you are **talking enough from the good stuff**
+-   [ ] *The name is **Bitamine** is a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the **fundamentals for your nutrition.**
+-   [ ] Why, let's say you want **to improve your gut health, manage an allergy. Your health isn't about just dieting;** it's about **understanding your body needs and setting individual goals.**
+-   [ ] **"Who got the idea for Bitamin?"**
+-   [ ] Our visionary, **Liang**, got a **real job giver** in the real world
+-   [ ] That company gives us after tomorrow an **internship** for this project, and later 
+        we'll continue as **business partners.**
 
 
 > ##### ** this is our team:
@@ -40,10 +46,7 @@
 
 
 > 
--   [ ] **"Who got the idea for Bitamin?"**
--   [ ] Our visionary, **Liang**, got a **real job giver** in the real world
--   [ ] That company gives us after tomorrow an **internship** for this project, and later 
-        we'll continue as **business partners.**
+
 >
 -   [ ] **Jeffrey** will show now how Bitamin **can **works**.
 -   [ ] I’ll hand you over to Jeffrey.
