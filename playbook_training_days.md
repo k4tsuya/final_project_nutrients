@@ -25,16 +25,12 @@
 -   [ ] Good morning every one. 
      -   [ ]   I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
 -   [ ] *Your **Instagram says one thing, your TikTok says the complete opposite**, and you **simply don't know what is right** for *you*
--   [ ] And let's be honest **almost every nutrition app asks you to count calories**, *as health was equal* **to losing weight.**
--   [ ] **Studies show that’s just wrong;** Here our solution:
--   [ ] We created **Bitamin**.
--   [ ] **An application tracking the macro and micro nutrients contained in your meals,** *classifying your diet with 3 colors, like the 
-       light system,* **green, yellow, and red,** to know if you are **talking enough good stuff for yourself or not.** **to improve in your 
-       daily nutrition decisions better.**
--   [ ] Maybe, for example you want **to improve your gut health, manage an allergy, or sleep deeper**. 
--   [ ] **Improving your health isn't about dieting;** it's about **understanding your body needs and setting individual goals.**
--   [ ] *The name is our entire philosophy:* a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the 
-       **fundamental blocks of nutrition.**
+-   [ ] The problem **almost every nutrition counts calories for loosing weight** 
+-   [ ] **Studies show that it is just wrong;** **Bitamin is the new solution**
+-   [ ] **Our application is tracking the macro and micro nutrients contained in your meals,** *classifying your diet in 3 colors,light system,* **green, yellow, and red,** to know if you are **talking enough from the good stuff**
+-   [ ] *The name is our entire philosophy:* a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the **fundamental blocks of nutrition.**
+-   [ ] Maybe, for example you want **to improve your gut health, manage an allergy, or sleep deeper**. Your health isn't about just dieting;** it's about **understanding your body needs and setting individual goals.**
+
 
 > ##### ** this is our team:
 
