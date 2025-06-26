@@ -29,7 +29,7 @@
 -   [ ] Why, let's say you want **to improve your gut health, manage an allergy. Your health isn't about just dieting;** it's about **understanding your body needs and setting individual goals.**
 -   [ ] **"Who got the idea for Bitamin?"**
 -   [ ] Our visionary, **Liang**, got a **real job giver** in the real world
--   [ ] That company gives us after tomorrow an **internship** for this project, and later 
+-   [ ] That company gave us after tomorrow an **internship** to continue this project, and later 
         we'll continue as **business partners.**
 
 
@@ -43,7 +43,7 @@
 > 
 
 >
--   [ ] **Jeffrey** will show now how Bitamin **can **works**.
+-   [ ] **Jeffrey** will show now how Bitamin **can **work**.
 -   [ ] I’ll hand you over to Jeffrey.
 
 > ##### **Performance #2: The Final Thanks**
