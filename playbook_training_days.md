@@ -23,8 +23,8 @@
 > ##### (Intro - 2 Min)**
 
 -   [ ] Good morning every one. 
--       I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
--       *Your **Instagram says one thing, your TikTok says the complete opposite**, and you **simply don't know what is right** for *you*
+     -   [ ]   I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
+-   [ ] *Your **Instagram says one thing, your TikTok says the complete opposite**, and you **simply don't know what is right** for *you*
 -   [ ] And let's be honest **almost every nutrition app asks you to count calories**, *as health was equal* **to losing weight.**
 -   [ ] **Studies show that’s just wrong;** Here our solution:
 -   [ ] We created **Bitamin**.
