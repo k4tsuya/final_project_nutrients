@@ -40,11 +40,12 @@
 
 
 > 
--   [ ] **"Where did we got this idea?"**
+-   [ ] **"Who got the idea for Bitamin?"**
 -   [ ] Our visionary, **Liang**, got a**real entrepreneur**
--   [ ] This is now set as our **internship**, and after that, we will continue as **business partners.**
+-   [ ] Also this is after tomorrow our **internship**, and later we'll continue as 
+       **business partners.**
 >
--   [ ] **Jeffrey** will show you what Bitamin **can do for you**.
+-   [ ] **Jeffrey** will show now how Bitamin **can **works**.
 -   [ ] I’ll hand you over to Jeffrey.
 
 > ##### **Performance #2: The Final Thanks**
