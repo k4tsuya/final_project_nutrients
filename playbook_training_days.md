@@ -43,14 +43,11 @@
 -   [ ] At the logistics, administration of processes, that’s me, **Mariana**.
 
 
-> ##### **The Story of Our Project**
-
+> 
 -   [ ] **"Where did we got this idea?"**
--   [ ] Our visionary, **Liang**, connected with a **real entrepreneur** who  
-        gave us a **real job**.
--   [ ] This is now set as our **internship**, and after that, we will continue as **part-time business partners.**
+-   [ ] Our visionary, **Liang**, got a**real entrepreneur**
+-   [ ] This is now set as our **internship**, and after that, we will continue as **business partners.**
 >
--   [ ] How the app works?
 -   [ ] **Jeffrey** will show you what Bitamin **can do for you**.
 -   [ ] I’ll hand you over to Jeffrey.
 
