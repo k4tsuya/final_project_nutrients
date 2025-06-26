@@ -24,7 +24,7 @@
 
 -   [ ] Good morning every one. 
      -   [ ]   I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
--   [ ] *Your **Instagram says one thing, your TikTok says the complete opposite**, and you **simply don't know what is right** for *you*
+-   [ ] *Your **Instagram says one thing, your TikTok says the opposite**, and you **simply don't know what is right** for *you*
 -   [ ] The problem **almost every nutrition counts calories for loosing weight** 
 -   [ ] **Studies show that it is just wrong;** **Bitamin is the new solution**
 -   [ ] **Our application is tracking the macro and micro nutrients contained in your meals,** *classifying your diet in 3 colors,light system,* **green, yellow, and red,** to know if you are **talking enough from the good stuff**
@@ -41,9 +41,9 @@
 
 > 
 -   [ ] **"Who got the idea for Bitamin?"**
--   [ ] Our visionary, **Liang**, got a**real entrepreneur**
--   [ ] Also this is after tomorrow our **internship**, and later we'll continue as 
-       **business partners.**
+-   [ ] Our visionary, **Liang**, got a **real job giver** in the real world
+-   [ ] That company gives us after tomorrow an **internship** for this project, and later 
+        we'll continue as **business partners.**
 >
 -   [ ] **Jeffrey** will show now how Bitamin **can **works**.
 -   [ ] I’ll hand you over to Jeffrey.
