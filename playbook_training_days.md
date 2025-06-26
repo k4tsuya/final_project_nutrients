@@ -25,8 +25,8 @@
 -   [ ] **Studies show that it is not useful for everyone;** **Bitamin is the new solution**
 -   [ ] **Our application is tracking the macro and micro nutrients contained in your 
         meals,** *classifying your meals quality with 3 colors,like the light system,* **green, yellow, and red,** to know if you are **talking enough from the good stuff**
--   [ ] *The name is **Bitamine** is a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the **fundamentals for your nutrition.**
--   [ ] Why, let's say you want **to improve your gut health, manage an allergy. Your health isn't about just dieting;** it's about **understanding your body needs and setting individual goals.**
+-   [ ] **Bitamine** means **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the **fundamentals for your nutrition.**
+-   [ ] With Bitamin you can, for example, **improve your gut health, manage an allergy. Because your health isn't about just dieting;** it's about **understanding your body needs and setting individual goals.**
 -   [ ] **"Who got the idea for Bitamin?"**
 -   [ ] Our visionary, **Liang**, got a **real job giver** in the real world
 -   [ ] That company gave us after tomorrow an **internship** to continue this project, and later 
