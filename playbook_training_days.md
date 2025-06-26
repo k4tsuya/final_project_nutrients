@@ -16,11 +16,6 @@
 
 > ## **Mariana's Playbook**
 
-> ##### **Performance #1: The Introduction**
-*   **Time Allotted:** 2 minute, 30 seconds
-> *   **Action:** Dennis will have Slide #1 displayed.
-
-> ##### (Intro - 2 Min)**
 
 -   [ ] Good morning every one. 
      -   [ ]   I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
