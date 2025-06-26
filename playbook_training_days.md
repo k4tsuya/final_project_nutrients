@@ -17,7 +17,7 @@
 > ## **Mariana's Playbook**
 
 
--   [ ] Good morning every one. 
+-   [ ] Good morning every one. Thank you for being here. 
      -   [ ]   I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
 -   [ ] *Your **Instagram says one thing, your TikTok says the opposite**, and you **simply don't know what is right** for *you*
 -   [ ] The problem is that **almost every nutrition app counts calories for loosing 
