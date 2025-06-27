@@ -16,111 +16,95 @@
 
 > ## **Mariana's Playbook**
 
-> ##### **Performance #1: The Introduction**
-*   **Time Allotted:** 2 minute, 30 seconds
-*   **Your Cue:** The presentation begins. You are the first speaker.
-*   **Action:** Dennis will have Slide #1 displayed.
 
-> ##### (Intro - 2 Min)**
-
--   [ ] Good morning every one. Question: *Are you overwhelmed* by the **flood of nutrition advice on social media?** *Your Instagram says one 
-        thing, your TikTok says the complete opposite*, and you're left **wondering what's actually right** for *you*.
--   [ ] And let's be honest **almost every nutrition app asks you to count calories**, *as health was equal* **to losing weight.**
--   [ ] **Studies show that’s just wrong;** Here our solution:
--   [ ] We created **Bitamin**.
--   [ ] **An application tracking the macro and micro nutrients contained in your meals,** *classifying your diet with 3 colors, like the 
-       light system,* **green, yellow, and red,** to know if you are **talking enough good stuff for yourself or not.** **to improve in your 
-       daily nutrition decisions better.**
--   [ ] Maybe, for example you want **to improve your gut health, manage an allergy, or sleep deeper**. 
--   [ ] **Improving your health isn't about dieting;** it's about **understanding your body needs and setting individual goals.**
--   [ ] *The name is our entire philosophy:* a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the 
-       **fundamental blocks of nutrition.**
-
-> ##### **Who We Are**
-
--   [ ] Our backend and app functionality creators are **Liang** and **Denis**.
--   [ ] Our frontend is a fusion of minimalistic American and retro art, by **Jeffrey**, launching a clean and simple design.
--   [ ] For the logistics, administration of processes, and tracking everything possible—that’s me, **Mariana**.
+-   [ ] Good morning every one. Thank you for being here. 
+     -   [ ]   I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
+-   [ ] *Your **Instagram says one thing, your TikTok says the opposite**, and you **simply don't know what is right** for *you*
+-   [ ] The problem is that **almost every nutrition app counts calories for loosing 
+       weight** 
+-   [ ] **Studies show that it is not useful for everyone;** **Bitamin is the new solution**
+-   [ ] **Our application is tracking the macro and micro nutrients contained in your 
+        meals,** *classifying your meals quality with 3 colors,like the light system,* **green, yellow, and red,** to know if you are **talking enough from the good stuff**
+-   [ ] **Bitamine** means **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the **fundamentals for your nutrition.**
+-   [ ] With Bitamin you can, for example, **improve your gut health, manage an allergy. Because your health isn't about just dieting;** it's about **understanding your body needs and setting individual goals.**
+-   [ ] **"Who got the idea for Bitamin?"**
+-   [ ] Our visionary, **Liang**, got a **real job giver** in the real world
+-   [ ] That company gave us after tomorrow an **internship** to continue this project, and later 
+        we'll continue as **business partners.**
 
 
-> ##### **The Story of Our Project**
+> ##### ** this is our team:
 
--   [ ] **"Where did we got this idea?"**
--   [ ] Our visionary, **Liang**, connected with a **real entrepreneur** who  
-        gave us a **real job**.
--   [ ] This is now set as our **internship**, and after that, we will continue as **part-time business partners.**
+-   [ ] At the backend are **Liang** and **Denis** our architects
+-   [ ] At the frontend **Jeffrey**, creating a design clean and simple.
+-   [ ] At the logistics, administration of processes, that’s me, **Mariana**.
+
+
+> 
+
 >
--   [ ] How the app works?
--   [ ] **Jeffrey** will show you what Bitamin **can do for you**.
+-   [ ] **Jeffrey** will show now how Bitamin **can **work**.
 -   [ ] I’ll hand you over to Jeffrey.
 
 > ##### **Performance #2: The Final Thanks**
-*   **Action:** Dennis will advance to Slide #4.
+> *   **Action:** Dennis will advance to Slide #4.
 
 > **Your Script:**
 > "And we couldn't have done any of this without our amazing teachers, Christopher and Federica, and all our colleagues who supported us on this journey."
+- [ ] i want to invite you now to our Q&A section. Feel free to raise your digital hand. Take in count that we invited friends and family 
+- [ ] for today, who are not tech related. We please you to keep your questions in a simplified vocabulary, so that everyone can follow along.
+- [ ] We will also answer beginners friendly. 
 
 ---
 
 
-## **Jeffrey's Playbook**
+> ## **Jeffrey's Playbook**
 
-**Your Role:** You are the **Pâtissier / Decorator** and the **User's Guide**. Your job is to own the live demo and moderate the Q&A.
+> #### **Performance #1: The Live Demo**
+*   **Time Allotted:** 8 minutes
+> *   **Action:** Start your screen share.
 
-#### **Performance #1: The Live Demo**
-*   **Time Allotted:** 7 minutes
-*   **Your Cue:** Listen for Mariana's hand-off: "...I'll hand you over to Jeffrey."
-*   **Action:** Start your screen share.
----
-> **Your Script:**
----
+>   **Your Script:**
 > (placeholder)
----
-#### **Performance #2: Q&A Moderation**
-*   **Time Allotted:** 35 seconds
-*   **Your Cue:** Listen for Mariana to finish her final thank you.
-*   **Action:** Dennis will switch to the Q&A slide.
-
----
-   **Your Script:**
----
-> (placeholder)
----
 >
-## **Denis's Playbook **
+---
 
-**Your Role:** You are the **Backend Architect** and the **Slide Master**. Your job is to make the technical explanation simple and ensure the visual flow is perfect.
 
-#### **Performance #1: The Technical Explanation**
-*   **Time Allotted:** 45 seconds
+> ## **Denis's Playbook**
+
+> ##### **Performance #1: The Technical Explanation**
+*   **Time Allotted:** 2 min
 *   **Your Cue:** Listen for Jeffrey's hand-off: "...I'll hand you over to Denis."
-*   **Action:** Resume screen sharing and display Slide #2.
+> *   **Action:** Resume screen sharing and display Slide #2.
 
 > **Your Script:**
 
-### **Denis's Presentation Script (The Precise Bakery Analogy - 90 Sec)**
-
-#####  **Introduction (Fading in from Jeffrey)**
-
--   [ ] Thank you, Jeffrey. What you just saw looks so clean and easy to use, doesn't it?
--   [ ] But now for the big question: **How does it all actually work?**
--   [ ] I could throw a bunch of tech terms at you, but that’s no fun. To make sure everyone understands our journey, I'm going to explain our team's work by taking you on a tour of our high-tech **bakery**.
+-   [ ] Thank you, Jeffrey. The front-end looks so clean and easy to use, doesn't it?
+-   [ ] But now: **How does it all actually work?**
+-   [ ] I could throw a bunch of *tech terms at you*, but that’s no fun. To make sure everyone understands our journey, *I'm going to explain 
+        our team's work without tech terms* by taking you on a tour of our high-tech **bakery**.
 > ...
--   [ ] Imagine you are the customer. You walk up to our bakery. You see the beautiful **storefront** and the delicious-looking **cake** in the window. That's our app's design. The master **Decorator** who made it all so inviting for you? That was **Jeffrey**.
--   [ ] Now, a bakery needs to be a real business, right? It needs the lights on, the licenses paid, and a perfect system for quality control. Our **Bakery Operations Manager**, who handled all the administration and even built our automated delivery pipeline, was **Mariana**. She made sure the entire operation ran flawlessly.
--   [ ] So, where does the cake itself come from? That's the **kitchen**, my world. As **Head Baker**, my job was to manage our entire 'pantry'—the **database** where all the ingredients and recipes are stored. I also built the 'doors' to the kitchen—the **endpoints**—so orders could come in.
--   [ ] But how do you get a complex order from the storefront to the kitchen and back again instantly? That required a genius. **Liang** was the inventor of our magic ordering system. He built the **APIs**—our 'waiters'—and more importantly, he created the 'universal translator'—the **serializers**—that turns a complex baked good into a simple ticket everyone can understand.
+-   [ ] *Imagine you are the customer, walking up to our bakery*. You see the beautiful **storefront** and the delicious-looking **cake** in 
+        the window.
+        That's our app's design. The master **Decorator** who made it all so inviting for you, was **Jeffrey**.
+-   [ ] Now, a bakery needs to be a real business, right? It needs the lights on, the licenses paid, and a perfect system for quality control. 
+        Our **Bakery Operations Manager**, who handling the administration and our automated delivery pipeline, was **Mariana**. 
+-   [ ] So, who baked the cake? The bakers in the **kitchen**, that is my world. As **Head Baker**, my job was to manage our entire 'pantry'— 
+        called the **database**,  where all the ingredients and recipes are stored.
+-   [ ] I also defined where to receive the new orders, called API **endpoints**—so that the requests come in.
+-   [ ] But how do you get a *complex order from the storefront* to the kitchen and an instantly back respond? That required a genius. 
+        **Liang** was the inventor of our magic ordering system. He built the **APIs**—our 'waiters'—and more importantly, he created the 
+        'universal translator'—the **serializers**—that turns a complex baked good into a simple ticket everyone can understand.
 
 
 > ##### **Final Transition (Fading out to Liang)**
 
--   [ ] So, the simple, beautiful cake you see is only possible because a decorator, a manager, a baker, and an inventor all worked in perfect harmony.
--   [ ] But the most important story isn't just *what* each of us built, but *how* we grew as a team through that process.
+-   [ ] This was only possible because all parties worked in perfect harmony together.
+-   [ ] But the most relevant story is *how* we grew as a team through this process.
 -   [ ] To share that journey with you, I'll hand you over to the inventor of our magic ordering system, Liang.
 
 ---
->
-## **Liang's Playbook**
+> ## **Liang's Playbook**
 
 > **Your Role:** You are the **Backend Baker** and the **Visionary**. Your job is to talk about the team's resilience and the exciting future of the project.
 
@@ -158,11 +142,13 @@
 
 ---
 
+>
+>
 > ## **Team Rehearsal Feedback**
 
 ``` ### **Feedback from Day 1 (Federica)**
 
-#### **Tasks for Mariana (@Mariana)**
+> #### **Tasks for Mariana (@Mariana)**
 -   [ ] **Intro:** In the introduction, state your specific role clearly, without using the analogy yet.
 -   [ ] **Intro:** Add filtered profile pictures for each team member to the "roles" or "about us" section.
 -   [ ] **Intro:** Add a brief overview of the application's "big picture" before transitioning to Jeffrey.
@@ -172,7 +158,7 @@
     -   [ ] 3. Give a high-level overview of the main features (nutrient info, ingredient search, light system, hydration tracking).
     -   [ ] 4. Create a smooth and clear transition for Jeffrey to begin the demo.
 
-#### **Tasks for Jeffrey (@jeffrey)**
+> #### **Tasks for Jeffrey (@jeffrey)**
 -   [ ] **Content:** Write the script/text for your "About Us" section.
 -   [ ] **Demo:** Create a static slide to simulate the user login process.
 -   [ ] **Demo Pacing:** During the live demo, slow down and spend more time on each core functionality to ensure the audience understands it.
@@ -188,7 +174,7 @@
 -   [ ] **Co-ordination:**
     -   [ ] Plan and rehearse the search interaction part of the demo with @Mariana.
 
-#### **Tasks for Denis (@Denis)**
+> #### **Tasks for Denis (@Denis)**
 -   [ ] **Presentation:** Keep your technical explanation simple and focused on the "bakery/kitchen" analogy.
 
 #### **Tasks for Liang (@Liang)**
@@ -210,7 +196,7 @@
             -   Highlight Mariana's journey: "I lost my fears. Gained self-confidence."
             -   Emphasize the importance of the team environment: **"Support and an open mind to talk about everything,"** **"The culture of doing mistakes,"** and having a **"non-violent, funny, supportive"** atmosphere was crucial for success.
 
-#### **Tasks for Backend Team (@Backend_Team)**
+> #### **Tasks for Backend Team (@Backend_Team)**
 -   [ ] **Future Features:** Plan the backend architecture for future registered-user features:
     -   [ ] Comparison between selected ingredients.
     -   [ ] Individual recipe configuration.
@@ -219,7 +205,7 @@
 
 ### **Feedback from Christopher**
 
-#### **Tasks for Everyone (@All)**
+> #### **Tasks for Everyone (@All)**
 -   [ ] **Transitions:** Improve the flow and smoothness when changing speakers.
 -   [ ] **Signposting:** Clearly state what the next speaker will be talking about to guide the audience.
 -   [ ] **Practice:** Rehearse the entire presentation multiple times to improve group dynamics.
@@ -229,7 +215,7 @@
 *   **Christopher suggested that:**
 
 
-### **Feedback from Day 2**
+> ### **Feedback from Day 2**
 
 *   **Federica suggested that:**
      timing ... intro too long. Get a flow when reading. Do not worry if we
