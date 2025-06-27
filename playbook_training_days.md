@@ -16,41 +16,34 @@
 
 > ## **Mariana's Playbook**
 
-> ##### **Performance #1: The Introduction**
-*   **Time Allotted:** 2 minute, 30 seconds
-> *   **Action:** Dennis will have Slide #1 displayed.
 
-> ##### (Intro - 2 Min)**
-
--   [ ] Good morning every one. Question: *Are you overwhelmed* by the **flood of nutrition advice on social media?** *Your Instagram says one 
-        thing, your TikTok says the complete opposite*, and you're left **wondering what's actually right** for *you*.
--   [ ] And let's be honest **almost every nutrition app asks you to count calories**, *as health was equal* **to losing weight.**
--   [ ] **Studies show that’s just wrong;** Here our solution:
--   [ ] We created **Bitamin**.
--   [ ] **An application tracking the macro and micro nutrients contained in your meals,** *classifying your diet with 3 colors, like the 
-       light system,* **green, yellow, and red,** to know if you are **talking enough good stuff for yourself or not.** **to improve in your 
-       daily nutrition decisions better.**
--   [ ] Maybe, for example you want **to improve your gut health, manage an allergy, or sleep deeper**. 
--   [ ] **Improving your health isn't about dieting;** it's about **understanding your body needs and setting individual goals.**
--   [ ] *The name is our entire philosophy:* a fusion of **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the 
-       **fundamental blocks of nutrition.**
-
-> ##### **Who We Are**
-
--   [ ] Our backend and app functionality creators are **Liang** and **Denis**.
--   [ ] The frontend approach is a modern, minimalistic design, by **Jeffrey**, clean and simple.
--   [ ] For the logistics, administration of processes, and tracking everything possible—that’s me, **Mariana**.
+-   [ ] Good morning every one. Thank you for being here. 
+     -   [ ]   I Have a question for you: *Are you overwhelmed* by the **flood of nutrition advice on social media?** 
+-   [ ] *Your **Instagram says one thing, your TikTok says the opposite**, and you **simply don't know what is right** for *you*
+-   [ ] The problem is that **almost every nutrition app counts calories for loosing 
+       weight** 
+-   [ ] **Studies show that it is not useful for everyone;** **Bitamin is the new solution**
+-   [ ] **Our application is tracking the macro and micro nutrients contained in your 
+        meals,** *classifying your meals quality with 3 colors,like the light system,* **green, yellow, and red,** to know if you are **talking enough from the good stuff**
+-   [ ] **Bitamine** means **Bit**—the **smallest unit of data**, and **Amin**—from **amino acids**, the **fundamentals for your nutrition.**
+-   [ ] With Bitamin you can, for example, **improve your gut health, manage an allergy. Because your health isn't about just dieting;** it's about **understanding your body needs and setting individual goals.**
+-   [ ] **"Who got the idea for Bitamin?"**
+-   [ ] Our visionary, **Liang**, got a **real job giver** in the real world
+-   [ ] That company gave us after tomorrow an **internship** to continue this project, and later 
+        we'll continue as **business partners.**
 
 
-> ##### **The Story of Our Project**
+> ##### ** this is our team:
 
--   [ ] **"Where did we got this idea?"**
--   [ ] Our visionary, **Liang**, connected with a **real entrepreneur** who  
-        gave us a **real job**.
--   [ ] This is now set as our **internship**, and after that, we will continue as **part-time business partners.**
+-   [ ] At the backend are **Liang** and **Denis** our architects
+-   [ ] At the frontend **Jeffrey**, creating a design clean and simple.
+-   [ ] At the logistics, administration of processes, that’s me, **Mariana**.
+
+
+> 
+
 >
--   [ ] How the app works?
--   [ ] **Jeffrey** will show you what Bitamin **can do for you**.
+-   [ ] **Jeffrey** will show now how Bitamin **can **work**.
 -   [ ] I’ll hand you over to Jeffrey.
 
 > ##### **Performance #2: The Final Thanks**
