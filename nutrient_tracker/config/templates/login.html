@@ -8,12 +8,24 @@
 </head>
 <body>
 {% block body_items %}
+<div class="container">
 
-  {% csrf_token %}
+
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{ message }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+  {% endfor %}
+  {% endif %}
+</div>
+
+
 
   <div class="form-container">
     <h1>Login</h1>
-    <form action="{% url 'login' %}" method="POST">
+    <form action="{% url 'login' %}" method="POST">{% csrf_token %}
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required />
 
