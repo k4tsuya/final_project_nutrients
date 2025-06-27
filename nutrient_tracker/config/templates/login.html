@@ -9,6 +9,8 @@
 <body>
 {% block body_items %}
 
+  {% csrf_token %}
+
   <div class="form-container">
     <h1>Login</h1>
     <form action="{% url 'login' %}" method="POST">
