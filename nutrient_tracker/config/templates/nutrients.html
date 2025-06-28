@@ -106,10 +106,12 @@ function renderCards(ingredients) {
     const container = document.getElementById("ingredientContainer");
     container.innerHTML = "";
 
+
     ingredients.forEach(item => {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
+
             <h3>${item.food_name}</h3>
             <p><strong>Group:</strong> ${item.food_group || "N/A"}</p>
             <p><strong>Quantity:</strong> ${item.quantity || "N/A"}</p>
@@ -125,6 +127,13 @@ function renderCards(ingredients) {
     });
 }
 
+const abbreviation = {
+    "enercj": "kj",
+    "enercc": "kcal",
+    "water": "water",
+    "protein": "prot",
+    "calcium": "ca",
+}
 </script>
 
 {% endblock %}
