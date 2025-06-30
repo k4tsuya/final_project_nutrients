@@ -2,10 +2,17 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
-from apps.user_info.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from apps.user_info.forms import (
+    UserRegisterForm,
+    UserUpdateForm,
+    ProfileUpdateForm,
+)
 from django.contrib import messages
 
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import login, logout, authenticate
+from .forms import ContactForm
+
+# from scripts.utils import authenticate
 
 # Create your views here.
 
@@ -15,7 +22,7 @@ class HomeView(View):
 
     def get(self, request):
         """Handle GET requests to the home page."""
-        return render(request, "home.html")
+        return render(request, "index.html")
 
 
 def register_view(request):
@@ -35,13 +42,17 @@ def login_view(request):
     if request.user.is_authenticated:
         return redirect("home")
     if request.method == "POST":
-        username = request.POST.get("username")
-        password = request.POST.get("password")
-        user = authenticate(request, username=username, password=password)
+        email = request.POST["email"]
+        password = request.POST["password"]
+        user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
             return redirect("home")
-    return render(request, "login.html")
+        else:
+            messages.success(request, "Invalid username or password.")
+            return redirect("login")
+    else:
+        return render(request, "login.html")
 
 
 @login_required(login_url="login")
@@ -76,3 +87,24 @@ class ProfileView(View):
                 p_form.save()
                 messages.success(request, f"Your account has been updated!")
                 return redirect("profile")
+
+
+def contact_view(request):
+    form = ContactForm()
+    return render(request, "contact.html", {"form": form})
+
+
+def about_view(request):
+    return render(request, "about.html")
+
+
+def ingredients_view(request):
+    return render(request, "ingredients.html")
+
+
+def nutrients_view(request):
+    return render(request, "nutrients.html")
+
+
+def recipes_view(request):
+    return render(request, "recipes.html")

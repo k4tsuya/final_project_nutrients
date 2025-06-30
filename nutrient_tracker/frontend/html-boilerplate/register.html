@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register - Bitamin</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="image/x-icon" href="bitamin_icon_transparent.png" />
+  <!-- <link rel="stylesheet" href="styles.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +38,7 @@
     .form-container {
       max-width: 400px;
       margin: 0 auto;
+      margin-top: 64px;
       background-color: #a5ada8;
       padding: 32px;
       border-radius: 16px;
@@ -117,6 +119,8 @@
     .dark-mode .dark-mode-btn {
       color: #f2fcf6;
     }
+
+
   </style>
 </head>
 <body>
@@ -137,7 +141,7 @@
   <div class="form-container">
     <h1>Register</h1>
     <form action="/register" method="post">
-      <label for="name">Full Name:</label>
+      <label for="name">Username:</label>
       <input type="text" id="name" name="name" required />
 
       <label for="email">Email:</label>
@@ -151,14 +155,26 @@
     <div class="toggle-link">
       <p>Already have an account? <a href="login.html">Login here</a></p>
     </div>
+
   </div>
 
   <script>
     function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-      const icon = document.querySelector(".dark-mode-btn i");
-      icon.className = document.body.classList.contains("dark-mode") ? "fas fa-sun" : "fas fa-moon";
-    }
+    document.body.classList.toggle("dark-mode");
+
+    const video = document.getElementById("bitaminLogo");
+    const source = video.querySelector("source");
+    const isDarkMode = document.body.classList.contains("dark-mode");
+
+    source.src = isDarkMode ? "bitamin_logo_dk.mp4" : "bitamin_logo_lt.mp4";
+    video.load();
+    video.playbackRate = 0.75;
+    video.play();
+
+    // Toggle icon
+    const icon = document.getElementById("darkModeBtn").querySelector("i");
+    icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
+}
   </script>
 </body>
 </html>

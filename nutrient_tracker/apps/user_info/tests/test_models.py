@@ -18,3 +18,15 @@ class TestModels(TestCase):
     def test_user(self):
         self.assertEqual(self.user.username, "testuser")
         self.assertEqual(self.user.password, "testpassword")
+
+    def test_profile(self):
+        self.assertEqual(self.profile.user, self.user)
+
+    def test_favorites(self):
+        self.assertEqual(self.favorites.user, self.user)
+
+    def test_history(self):
+        self.assertEqual(self.history.user, self.user)
+
+    def test_tracked_nutrients(self):
+        self.assertEqual(self.tracked_nutrients.user, self.user)

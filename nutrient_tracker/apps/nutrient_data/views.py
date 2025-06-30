@@ -36,3 +36,9 @@ def nutrient_detail(request, pk):
         limit_m2m_field(request.user.history.nutrient)
         request.user.history.nutrient.add(nutrient)
     return render(request, "nutrient_detail.html", {"nutrient": nutrient})
+
+
+# to grab the measurement unit from the nutrient
+# write {{ nutrient.measurement_unit }} inside the template
+# as the content either refers to nutrients or nutrient
+# depending on if you use the singular or plural form

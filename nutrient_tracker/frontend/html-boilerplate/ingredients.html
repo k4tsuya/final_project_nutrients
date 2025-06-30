@@ -3,259 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ingredients</title>
+    <title>What's in your food?</title>
     <link rel="shortcut icon" type="image/x-icon" href="bitamin_icon_transparent.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-<style>
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
-.logo { grid-area: header; }
-.menu { grid-area: menu; }
-.links { grid-area: footer; }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-body {
-    font-family: "League Spartan", sans-serif;
-}
-
-
-.dark-mode .grid-container {
-    background-color: #19201c;
-}
-
-.dark-mode .logo {
-    color: #f2fcf6;
-}
-
-.dark-mode .menu a {
-    background-color: #3a4b41;
-    color: #f2fcf6;
-}
-
-.dark-mode .menu a:hover {
-    background-color: #546c5e;
-}
-
-.dark-mode .links {
-    background-color: #3a4b41;
-    color: #f2fcf6;
-}
-
-.grid-container {
-    flex: 1;
-    display: grid;
-    grid-template-areas:
-    'header header header header header header'
-    'menu left main main right empty'
-    'footer footer footer footer footer footer';
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
-    gap: 8px;
-    background-color: #f2fcf6;
-    padding: 16px;
-}
-
-.grid-container > div {
-    padding: 8px;
-    font-size: 16px;
-}
-
-.logo {
-    position: relative;
-    grid-area: header;
-    text-align: center;
-}
-
-.logo-top {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-}
-
-.dark-mode-btn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    color: #19201c;
-}
-
-.dark-mode .dark-mode-btn {
-    color: #f2fcf6;
-}
-
-.logo > video {
-    border-radius: 16px;
-}
-
-
-.menu {
-    grid-area: menu;
-}
-
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li {
-    margin-bottom: 8px;
-}
-
-.menu a {
-    text-decoration: none;
-    display: block;
-    padding: 8px;
-    border-radius: 8px;
-    background-color: #657c6a;
-    color: #f2fcf6;
-    text-align: center;
-    }
-
-.menu a:hover {
-    background-color: #a2b9a7;
-}
-
-.main {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-}
-
-.main h1 {
-    margin-bottom: 16px;
-}
-
-.main h2 {
-    margin-bottom: 16px;
-}
-
-.main p {
-    margin-bottom: 16px;
-}
-
-.dark-mode .main {
-    color: #f2fcf6;
-}
-
-.single-line {
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.links {
-    grid-area: footer;
-    border-radius: 8px;
-    background-color: #657c6a;
-    color:#f2fcf6;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    flex-wrap: wrap;
-    margin-top: auto;
-}
-
-.footer-left {
-    text-align: left;
-}
-
-.footer-center {
-    text-align: center;
-    flex: 1;
-}
-
-button.icon-button {
-    background:none;
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
-    cursor: context-menu;
-    transition: background-color 0.2s ease;
-    }
-
-    button.icon-button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    button.icon-button img {
-        width: 50%;
-        height: 50%;
-    }
-
-    #searchBox {
-  width: 100%;
-  max-width: 400px;
-  max-height: 32px;
-  padding: 10px;
-  margin: 20px auto;
-  display: block;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.card {
-  flex: 1 1 calc(25% - 16px);
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-  background-color: #fff;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-.card p {
-  margin: 4px 0;
-  font-size: 14px;
-}
-
-    @media (max-width: 768px) {
-    .grid-container {
-        grid-template-areas:
-        'header'
-        'menu'
-        'left'
-        'main'
-        'right'
-        'footer';
-        grid-template-columns: 1fr;
-    }
-    }
-
-</style>
 </head>
 <body>
 
@@ -274,7 +29,6 @@ button.icon-button {
 </div>
 
 
-
     <nav class="menu">
         <button class="icon-button" onclick="toggleMenu()">
             <img src="bitamin_icon_transparent.png" alt="Toggle Menu" />
@@ -282,7 +36,7 @@ button.icon-button {
         <ul id="menuList">
             <li><a href="register.html">Register</a></li>
             <li><a href="login.html">Login</a></li>
-            <li><a href="ingredients.html">Ingredient List</a></li>
+            <li><a href="ingredients.html">What's in your food?</a></li>
             <li><a href="recipes.html">Recipes</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -334,10 +88,6 @@ button.icon-button {
     // Toggle icon
     const icon = document.getElementById("darkModeBtn").querySelector("i");
     icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function sleep(ms) {
@@ -419,7 +169,7 @@ function renderCards(ingredients) {
             <p><strong>Quantity:</strong> ${item.quantity || "N/A"}</p>
             <p><strong>Unit:</strong> ${item.unit || "N/A"}</p>
             <p><strong>Energy:</strong> ${item.enercj || "N/A"}</P>
-            <p><strong>VitaminA:</strong> ${item.vita_rae || "N/A"}</P>
+            <p><strong>Vitamin A:</strong> ${item.vita_rae || "N/A"}</P>
             <p><strong>Iron:</strong> ${item.fe || "N/A"}</P>
 
         `;
