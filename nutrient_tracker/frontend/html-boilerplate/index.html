@@ -11,17 +11,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 <style>
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
+
 .logo { grid-area: header; }
 .menu { grid-area: menu; }
-.chart1 { grid-area: left; }
-.chart2 { grid-area: main; }
-.chart3 { grid-area: right; }
+.vitamins { grid-area: left; }
+.minerals { grid-area: main; }
+.macro { grid-area: middle;}
+.hydration { grid-area: right; }
 .links { grid-area: footer; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     font-family: "League Spartan", sans-serif;
@@ -37,17 +49,18 @@ body {
 }
 
 .dark-mode .menu a {
-    background-color: #3a4b41;
+    background-color: #657c6a;
     color: #f2fcf6;
 }
 
 .dark-mode .menu a:hover {
-    background-color: #546c5e;
+    background-color: #a2b9a7;
 }
 
-.dark-mode .chart1,
-.dark-mode .chart2,
-.dark-mode .chart3 {
+.dark-mode .vitamins,
+.dark-mode .minerals,
+.dark-mode .macro,
+.dark-mode .hydration {
     background-color: #2a3330;
     color: #f2fcf6;
 }
@@ -58,13 +71,13 @@ body {
 }
 
 .grid-container {
+    flex: 1;
     display: grid;
-    /* grid-template-columns: auto 30% 30% 30%; */
     grid-template-areas:
     'header header header header header header'
-    'menu left main right empty empty'
+    'menu left main middle right empty'
     'footer footer footer footer footer footer';
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
     gap: 8px;
     background-color: #f2fcf6;
     padding: 16px;
@@ -73,6 +86,15 @@ body {
 .grid-container > div {
     padding: 8px;
     font-size: 16px;
+}
+
+.grid-container > .vitamins,
+.grid-container > .minerals,
+.grid-container > .macro,
+.grid-container > .hydration 
+
+{
+    margin-left: 32px;
 }
 
 .logo {
@@ -92,7 +114,8 @@ body {
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #444;
+    position: absolute;
+    color: #19201c;
 }
 
 .dark-mode .dark-mode-btn {
@@ -123,39 +146,59 @@ body {
     display: block;
     padding: 8px;
     border-radius: 8px;
-    background-color: #a5ada8;
+    background-color: #657c6a;
     color: #f2fcf6;
     text-align: center;
     }
 
 .menu a:hover {
-    background-color: #657c6a;
+    background-color: #a2b9a7;
 }
 
-.chart1, .chart2, .chart3 {
+.vitamins, .minerals, .macro, .hydration {
     grid-area: main;
     border-radius: 8px;
     background-color: #f2fcf6;
     padding: 16px;
 }
 
-.chart1 {
+.vitamins {
     grid-area: left;
 }
 
-.chart2 {
+.minerals {
     grid-area: main;
 }
 
-.chart3 {
+.macro {
+    grid-area: middle;
+}
+
+.hydration {
     grid-area: right;
+    
 }
 
 .links {
     grid-area: footer;
+    border-radius: 8px;
     background-color: #657c6a;
     color:#f2fcf6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
     text-align: center;
+    flex: 1;
 }
 
 button.icon-button {
@@ -167,14 +210,14 @@ button.icon-button {
     transition: background-color 0.2s ease;
     }
 
-    button.icon-button:hover {
+button.icon-button:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    }
+}
 
-    button.icon-button img {
+button.icon-button img {
         width: 50%;
         height: 50%;
-    }
+}
 
     @media (max-width: 768px) {
     .grid-container {
@@ -192,6 +235,10 @@ button.icon-button {
 </style>
 </head>
 <body>
+
+<button onclick="toggleDarkMode()" id="darkModeBtn" class="dark-mode-btn" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
 
 <div class="grid-container">
     <div class="logo">
@@ -211,32 +258,54 @@ button.icon-button {
         <ul id="menuList">
             <li><a href="register.html">Register</a></li>
             <li><a href="login.html">Login</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="ingredients.html">Ingredient List</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Logout</a></li>
     </ul>
-    <button onclick="toggleDarkMode()" id="darkModeBtn" class="dark-mode-btn" title="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
+    
 </nav>
 
-<div class="chart1">
+<div class="vitamins">
     <h1>Vitamins</h1>
     <canvas id="myChart"></canvas>
 </div>  
 
-<div class="chart2">
+<div class="minerals">
     <h1>Minerals</h1>
     <canvas id="myChart2"></canvas>
 </div>
 
-<div class="chart3">
+<div class="macro">
+    <h1>Macronutrients</h1>
+    <canvas id="myChart4"></canvas>
+</div>  
+
+<div class="hydration">
     <h1>Hydration</h1>
     <canvas id="myChart3"></canvas>
-</div> 
+    <button onclick="addHydration(250)" style="margin-top: 12px; padding: 8px 16px; border-radius: 8px; background-color: #657c6a; color: #f2fcf6; border: none; cursor: pointer;">
+        + 250ml
+    </button>
 
-<div class="links"><p>***Links to socials? or something else??***</p></div>
+    <button onclick="resetHydration()" style="margin-top: 8px; padding: 8px 16px; border-radius: 8px; background-color: #bb3e00; color: #f2fcf6; border: none; cursor: pointer;">
+        Reset
+    </button>
+</div>
+
+<div class="links">
+        <div class="footer-left">
+            <p>Impressum</p>
+            <p>AGB</p>
+        </div>
+<div class="footer-center">
+    <h2>Follow Us!</h2>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-youtube"></i>
+    <i class="fa-brands fa-tiktok"></i>
+</div>
 
 </div>
 
@@ -246,12 +315,12 @@ button.icon-button {
     new Chart(ctx, {
         type: 'doughnut',
         data: {
-        labels: ['Vitamin A', 'Vitamin B12', 'Vitamin C', 'Vitamnin D'],
+        labels: ['Vitamin A', 'Vitamin B12', 'Vitamin C', 'Vitamin D'],
         datasets: [{
-            label: 'Example Dataset',
+            label: 'Essential Vitamin',
             data: [12, 19, 3, 5],
             backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a', '#79ADDC'],
-            borderWidth: 1
+            borderWidth: 0
         }]
         },
         options: {
@@ -270,30 +339,9 @@ button.icon-button {
         data: {
             labels: ['Calcium', 'Magnesium', 'Potassium', 'Iron'],
             datasets: [{
-                label: 'Another Dataset',
+                label: 'Essential Mineral',
                 data: [8, 14, 9, 6],
                 backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a', '#79ADDC'],
-                borderWidth: 1,
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    })
-
-    const ctx3 = document.getElementById('myChart3').getContext('2d');
-    new Chart(ctx3, {
-        type: 'pie',
-        data: {
-            labels: ['Consumed', 'Remaining'],
-            datasets: [{
-                data: [6,4],
-                backgroundColor: ['#79ADDC', '#bb3e00'],
                 borderWidth: 0,
             }]
         },
@@ -307,6 +355,109 @@ button.icon-button {
         }
     })
 
+    const ctx4 = document.getElementById('myChart4').getContext('2d');
+new Chart(ctx4, {
+    type: 'doughnut',
+    data: {
+        labels: ['Carbs', 'Protein', 'Fat'],
+        datasets: [{
+            label: 'Energy Sources',
+            data: [40, 30, 30],
+            backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a'],
+            borderWidth: 0,
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+    let consumed = 0;
+const goal = 2000;
+let hydrationChart; // global chart reference
+
+function getProgressColor(value, goal) {
+    const percentage = (value / goal) * 100;
+    if (percentage >= 90) return '#657c6a'; // green
+    if (percentage >= 51) return '#f7ad45'; // yellow
+    return '#bb3e00'; // red
+}
+
+function renderHydrationChart() {
+    const ctx3 = document.getElementById('myChart3').getContext('2d');
+
+    if (hydrationChart) {
+        hydrationChart.destroy();
+    }
+
+    hydrationChart = new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+            labels: ['Consumed', 'Remaining'],
+            datasets: [{
+                data: [consumed, goal - consumed],
+                backgroundColor: [getProgressColor(consumed, goal), '#e0e0e0'],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            cutout: '50%',
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            return `${context.label}: ${context.parsed}`;
+                        }
+                    }
+                },
+                centerText: { display: true }
+            }
+        },
+        plugins: [{
+            id: 'centerText',
+            beforeDraw(chart) {
+                const { width, height } = chart;
+                const ctx = chart.ctx;
+                ctx.restore();
+                const fontSize = (height / 300).toFixed(2);
+                ctx.font = `${fontSize}em League Spartan`;
+                ctx.textBaseline = "middle";
+
+                const text = `${consumed}/${goal} mL`;
+                const textX = Math.round((width - ctx.measureText(text).width) / 2);
+                const textY = height / 2;
+
+                const isDarkMode = document.body.classList.contains("dark-mode");
+                ctx.fillStyle = isDarkMode ? "#f2fcf6" : "#19201c";
+                ctx.fillText(text, textX, textY);
+                ctx.save();
+            }
+        }]
+    });
+}
+
+function addHydration(amount) {
+    if (consumed + amount <= goal) {
+        consumed += amount;
+    } else {
+        consumed = goal;
+    }
+    renderHydrationChart();
+}
+
+function resetHydration() {
+    consumed = 0;
+    renderHydrationChart();
+}
+
+// Initial chart render
+renderHydrationChart();
     // Toggle menu function for small screens
     function toggleMenu() {
         const menu = document.getElementById('menuList');
@@ -328,6 +479,8 @@ button.icon-button {
     // Toggle icon
     const icon = document.getElementById("darkModeBtn").querySelector("i");
     icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
+
+    renderHydrationChart();
 }
 
 </script>
