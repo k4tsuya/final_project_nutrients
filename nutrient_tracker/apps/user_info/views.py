@@ -9,8 +9,11 @@ from apps.user_info.forms import (
 )
 from django.contrib import messages
 
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import login, logout, authenticate
 from .forms import ContactForm
+
+# from scripts.utils import authenticate
+
 # Create your views here.
 
 
@@ -39,9 +42,9 @@ def login_view(request):
     if request.user.is_authenticated:
         return redirect("home")
     if request.method == "POST":
-        email = request.POST.get("email")
-        password = request.POST.get("password")
-        user = authenticate(request, email=email, password=password)
+        email = request.POST["email"]
+        password = request.POST["password"]
+        user = authenticate(email=email, password=password)
         if user is not None:
             login(request, user)
             return redirect("home")
