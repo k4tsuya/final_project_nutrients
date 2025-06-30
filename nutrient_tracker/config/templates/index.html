@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+
+</head>
+<body>
+
+    {% block body_items %}
+
+
+
+
+<div class="grid-container" style="flex: auto;">
+
+
+<div class="vitamins">
+    <h1>Vitamins</h1>
+    <canvas id="myChart"></canvas>
+</div>
+
+<div class="minerals">
+    <h1>Minerals</h1>
+    <canvas id="myChart2"></canvas>
+</div>
+
+<div class="macro">
+    <h1>Macronutrients</h1>
+    <canvas id="myChart4"></canvas>
+</div>
+
+<div class="hydration">
+    <h1>Hydration</h1>
+    <canvas id="myChart3"></canvas>
+    <button onclick="addHydration(250)" style="margin-top: 12px; padding: 8px 16px; border-radius: 8px; background-color: #657c6a; color: #f2fcf6; border: none; cursor: pointer;">
+        + 250ml
+    </button>
+
+    <button onclick="resetHydration()" style="margin-top: 8px; padding: 8px 16px; border-radius: 8px; background-color: #bb3e00; color: #f2fcf6; border: none; cursor: pointer;">
+        Reset
+    </button>
+
+
+</div>
+</div>
+
+<script>
+    // Chart.js initialization
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+        labels: ['Vitamin A', 'Vitamin B12', 'Vitamin C', 'Vitamin D'],
+        datasets: [{
+            label: 'Essential Vitamin',
+            data: [12, 19, 3, 5],
+            backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a', '#79ADDC'],
+            borderWidth: 0
+        }]
+        },
+        options: {
+        responsive: true,
+        scales: {
+            y: {
+            beginAtZero: true
+            }
+        }
+        }
+    });
+
+    const ctx2 = document.getElementById('myChart2').getContext('2d');
+    new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['Calcium', 'Magnesium', 'Potassium', 'Iron'],
+            datasets: [{
+                label: 'Essential Mineral',
+                data: [8, 14, 9, 6],
+                backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a', '#79ADDC'],
+                borderWidth: 0,
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    })
+
+    const ctx4 = document.getElementById('myChart4').getContext('2d');
+new Chart(ctx4, {
+    type: 'doughnut',
+    data: {
+        labels: ['Carbs', 'Protein', 'Fat'],
+        datasets: [{
+            label: 'Energy Sources',
+            data: [40, 30, 30],
+            backgroundColor: ['#bb3e00', '#f7ad45', '#657c6a'],
+            borderWidth: 0,
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+    let consumed = 0;
+const goal = 2000;
+let hydrationChart; // global chart reference
+
+function getProgressColor(value, goal) {
+    const percentage = (value / goal) * 100;
+    if (percentage >= 90) return '#657c6a'; // green
+    if (percentage >= 51) return '#f7ad45'; // yellow
+    return '#bb3e00'; // red
+}
+
+function renderHydrationChart() {
+    const ctx3 = document.getElementById('myChart3').getContext('2d');
+
+    if (hydrationChart) {
+        hydrationChart.destroy();
+    }
+
+    hydrationChart = new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+            labels: ['Consumed', 'Remaining'],
+            datasets: [{
+                data: [consumed, goal - consumed],
+                backgroundColor: [getProgressColor(consumed, goal), '#e0e0e0'],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            cutout: '50%',
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            return `${context.label}: ${context.parsed}`;
+                        }
+                    }
+                },
+                centerText: { display: true }
+            }
+        },
+        plugins: [{
+            id: 'centerText',
+            beforeDraw(chart) {
+                const { width, height } = chart;
+                const ctx = chart.ctx;
+                ctx.restore();
+                const fontSize = (height / 300).toFixed(2);
+                ctx.font = `${fontSize}em League Spartan`;
+                ctx.textBaseline = "middle";
+
+                const text = `${consumed}/${goal} mL`;
+                const textX = Math.round((width - ctx.measureText(text).width) / 2);
+                const textY = height / 2;
+
+                const isDarkMode = document.body.classList.contains("dark-mode");
+                ctx.fillStyle = isDarkMode ? "#f2fcf6" : "#19201c";
+                ctx.fillText(text, textX, textY);
+                ctx.save();
+            }
+        }]
+    });
+}
+
+function addHydration(amount) {
+    if (consumed + amount <= goal) {
+        consumed += amount;
+    } else {
+        consumed = goal;
+    }
+    renderHydrationChart();
+}
+
+function resetHydration() {
+    consumed = 0;
+    renderHydrationChart();
+}
+
+// Initial chart render
+renderHydrationChart();
+    // Toggle menu function for small screens
+    function toggleMenu() {
+        const menu = document.getElementById('menuList');
+        menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+    }
+
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    const video = document.getElementById("bitaminLogo");
+    const source = video.querySelector("source");
+    const isDarkMode = document.body.classList.contains("dark-mode");
+
+    source.src = isDarkMode ? "{% static 'images/bitamin_logo_dk.mp4' %}" : "{% static 'images/bitamin_logo_lt.mp4' %}";
+    video.load();
+    video.playbackRate = 0.75;
+    video.play();
+
+    // Toggle icon
+    const icon = document.getElementById("darkModeBtn").querySelector("i");
+    icon.className = isDarkMode ? "fas fa-sun" : "fas fa-moon";
+
+    renderHydrationChart();
+}
+
+</script>
+
+{% endblock %}
+</body>
+</html>

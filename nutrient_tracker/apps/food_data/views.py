@@ -8,11 +8,12 @@ from .serializers import IngredientSerializer
 
 # Create your views here.
 
+
 class IngredientListView(generics.ListAPIView):
     queryset = Ingredient.objects.all()
     serializer_class = IngredientSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ['food_name', 'food_group']
+    search_fields = ["food_name", "food_group"]
 
 def recipe_list(request):
     recipes = Recipe.objects.all()
