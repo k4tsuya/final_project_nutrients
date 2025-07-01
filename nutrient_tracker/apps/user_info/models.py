@@ -4,6 +4,7 @@ from apps.tracker_data.models import NutrientTracker
 from apps.user_info.enums import Gender, Role
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from PIL import Image
 
 
 class User(AbstractUser):
