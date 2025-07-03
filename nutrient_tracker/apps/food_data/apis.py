@@ -91,13 +91,32 @@ class IngredientNutrientValue(generics.ListAPIView):
     pagination_class = PageNumberPagination
     pagination_class.page_size = 10
 
+    abbreviation = {
+        "enercj": "kj",
+        "enercc": "kcal",
+        "water": "water",
+        "protein": "prot",
+        "calcium": "ca",
+        "iron": "fe",
+        "potassium": "k",
+        "sodium": "na",
+    }
+
+    def abbreviation_filter(self, query):
+        for key, value in self.abbreviation.items():
+            if query in key:
+                return value
+        return query
+
     def get_queryset(self) -> QuerySet:
         """Return the queryset."""
         query = self.request.query_params.get("search")
         if getattr(self, "swagger_fake_view", False):
             return Ingredient.objects.none()
         try:
-            filter_by_nutrient = Ingredient.objects.order_by("-" + query)
+            filter_by_nutrient = Ingredient.objects.order_by(
+                "-" + self.abbreviation_filter(query)
+            )
             return filter_by_nutrient
         except:
             raise Http404
