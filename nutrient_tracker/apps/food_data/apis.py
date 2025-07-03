@@ -114,9 +114,6 @@ class IngredientNutrientValue(generics.ListAPIView):
         if getattr(self, "swagger_fake_view", False):
             return Ingredient.objects.none()
         try:
-            # filter_by_nutrient = Ingredient.objects.order_by(
-            #     "-" + self.abbreviation[query]
-            # )
             filter_by_nutrient = Ingredient.objects.order_by(
                 "-" + self.abbreviation_filter(query)
             )
