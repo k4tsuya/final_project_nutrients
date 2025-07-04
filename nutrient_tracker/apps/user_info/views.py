@@ -17,12 +17,13 @@ from .forms import ContactForm
 class HomeView(View):
     """View for the home page."""
 
-    def get(self, request):
+    def get(self, request) -> render:
         """Handle GET requests to the home page."""
         return render(request, "index.html")
 
 
-def register_view(request):
+def register_view(request) -> render:
+    """Register a new user."""
     if request.user.is_authenticated:
         return redirect("home")
     if request.method == "POST":
@@ -35,7 +36,8 @@ def register_view(request):
     return render(request, "register.html", {"form": form})
 
 
-def login_view(request):
+def login_view(request) -> render:
+    """Login a user."""
     if request.user.is_authenticated:
         return redirect("home")
     if request.method == "POST":
@@ -56,13 +58,16 @@ def login_view(request):
 
 
 @login_required(login_url="login")
-def logout_view(request):
+def logout_view(request) -> redirect:
+    """Logout a user."""
     logout(request)
     return redirect("home")
 
 
 class ProfileView(View):
-    def get(self, request):
+    """Profile view."""
+
+    def get(self, request) -> render:
         if not request.user.is_authenticated:
             return redirect("login")
         else:
@@ -74,7 +79,8 @@ class ProfileView(View):
             }
             return render(request, "profile.html", context)
 
-    def post(self, request):
+    def post(self, request) -> redirect:
+        """Post profile data."""
         if not request.user.is_authenticated:
             return redirect("login")
         else:
@@ -89,22 +95,27 @@ class ProfileView(View):
                 return redirect("profile")
 
 
-def contact_view(request):
+def contact_view(request: str) -> render:
+    """Contact us view."""
     form = ContactForm()
     return render(request, "contact.html", {"form": form})
 
 
-def about_view(request):
+def about_view(request: str) -> render:
+    """About us view."""
     return render(request, "about.html")
 
 
-def ingredients_view(request):
+def ingredients_view(request: str) -> render:
+    """Ingredients view."""
     return render(request, "ingredients.html")
 
 
-def nutrients_view(request):
+def nutrients_view(request: str) -> render:
+    """Nutrients view."""
     return render(request, "nutrients.html")
 
 
-def recipes_view(request):
+def recipes_view(request: str) -> render:
+    """Recipes view."""
     return render(request, "recipes.html")
