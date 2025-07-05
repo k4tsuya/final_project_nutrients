@@ -102,7 +102,8 @@ class IngredientNutrientValue(generics.ListAPIView):
         "sodium": "na",
     }
 
-    def abbreviation_filter(self, query):
+    def abbreviation_filter(self, query: str) -> str:
+        """Query the nutrient by its abbreviation."""
         for key, value in self.abbreviation.items():
             if query in key:
                 return value
